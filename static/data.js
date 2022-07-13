@@ -163,37 +163,29 @@ export const projects = [
     title: 'Nomad Travel',
     description:
       'SPA created with GoogleMaps and Travel APIs. Fetches popular restaurants, hotels, and attractions within map window boundaries. Autocomplete search allows users to quickly search and navigate anywhere on the map. Places marked on the map can be filtered by rating, price and other categories.',
-    tech: ['react', 'css', 'materialui', 'api', 'google maps'],
+    tech: ['reactjs', 'css', 'materialui', 'api', 'google maps'],
   },
-  // {
-  //   title: 'project.Me',
-  //   description:
-  //     'A to-do app, but with a twist. Fullstack app allows registered users to save tasks, goals, and other activities. Users progress through goals as tasks are completed. Basic backend stores and protects unique user data in a database.',
-  //   tech: [
-  //     'express',
-  //     'mongoDb',
-  //     'react',
-  //     'css',
-  //     'redux',
-  //     'api',
-  //     'authentication',
-  //   ],
-  // },
+  {
+    title: 'project.Me',
+    description:
+      'A fullstack to-do list app allows registered users to save tasks, goals, and other activities. Users progress through goals as tasks are completed. Basic backend stores and protects unique user data in a database.',
+    tech: ['express', 'mongoDb', 'reactjs', 'css', 'redux', 'api', 'jwt'],
+  },
   {
     title: 'La Bodega',
     description:
-      'E-commerce app that allows registered users to add items to a cart or wishlist, and rate and review products. Products are managed with Shopify and Sanity IO headless CMS',
-    tech: ['react', 'scss', 'rest', 'stripe'],
+      'E-commerce app for pop up shop. Users can add items to their cart, and rate and review products. Client admins can post future events, manage users, and manage products with Shopify and headless CMS',
+    tech: ['nextjs', 'scss', 'stripe'],
   },
   // {
   //   title: 'Martial Masters Academy',
   //   description: 'A website for the best martial arts gym in all of Portland.',
   //   tech: ['next.js', 'react', 'css', 'api', 'stripe'],
   // },
-  // {
-  //   title: 'Portfolio',
-  //   description:
-  //     'This website was built with React. Styled and designed by me with CSS3. An ongoing labor of love.',
-  //   tech: ['react', 'css', 'framer motion'],
-  // },
+  {
+    title: 'Portfolio',
+    description:
+      'This website was built with NextJS. Styled and designed by me with CSS3. An ongoing labor of love.',
+    tech: ['nextjs', 'css', 'framer motion'],
+  },
 ];
