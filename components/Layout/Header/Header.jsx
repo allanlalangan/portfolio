@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { GiBullHorns } from 'react-icons/gi';
 import { FaTwitter, FaFileDownload, FaGithub } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import Switch from '../../Switch/Switch';
 
 const Header = () => {
   return (
@@ -30,6 +31,7 @@ const Header = () => {
         </button>
       </aside>
       <nav className={styles['nav']}>
+        <Switch />
         <ul className={styles['nav-links']}>
           <Link href='/about'>
             <li className={styles['nav-links__link']}>me</li>

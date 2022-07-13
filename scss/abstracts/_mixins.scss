@@ -7,7 +7,7 @@
   }
 }
 
-@mixin flex($direction, $justifyContent: null, $alignItems: null) {
+@mixin flex($direction: row, $justifyContent: null, $alignItems: null) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justifyContent;

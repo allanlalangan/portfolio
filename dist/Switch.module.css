@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container .switch {
+  border: 1px solid black;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+.container .label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container .icon {
+  font-size: 1.5rem;
+}
+.container .radio {
+  display: none;
+}
+.container .radio:checked + .label {
+  color: hsl(345deg, 75%, 60%);
+}/*# sourceMappingURL=Switch.module.css.map */
