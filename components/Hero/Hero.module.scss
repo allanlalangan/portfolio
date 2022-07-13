@@ -1,0 +1,68 @@
+@use '../../scss/abstracts/colors' as colors;
+@use '../../scss/abstracts/variables' as var;
+@use '../../scss/abstracts/mixins' as mixins;
+
+.hero {
+  height: var.$mainContentHeight;
+  padding: 0 1rem;
+  @include mixins.flex-column();
+  justify-content: center;
+}
+
+.greeting,
+.name,
+.title {
+  @include mixins.breakpoint('>=md') {
+    margin-left: 1rem;
+  }
+}
+
+.greeting {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 800;
+  @include mixins.breakpoint('>=sm') {
+    font-size: 4rem;
+  }
+  @include mixins.breakpoint('>=lg') {
+    font-size: 4.5rem;
+  }
+}
+.title {
+  color: colors.$text;
+  font-size: 2rem;
+  font-weight: 700;
+  @include mixins.breakpoint('>=md') {
+    padding-left: 1rem;
+  }
+}
+.brief {
+  width: fit-content;
+  color: colors.$prim;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 70%;
+  @include mixins.breakpoint('>=sm') {
+    font-size: 1.5rem;
+    width: 60%;
+  }
+  @include mixins.breakpoint('>=md') {
+    width: 70%;
+    font-size: 2rem;
+  }
+  @include mixins.breakpoint('>=lg') {
+    font-size: 1.75rem;
+    width: 40%;
+  }
+}
+
+.action-button {
+  @include mixins.filled-button(colors.$prim, 1rem, 2rem, 1.5rem);
+  @include mixins.action-button-text();
+  @include mixins.shadow(0px, 1px, 5px, 1px, 0.2);
+  margin: 1rem auto;
+}

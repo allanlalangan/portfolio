@@ -1,0 +1,21 @@
+@use '../abstracts/colors' as colors;
+@use '../abstracts/variables' as var;
+@use '../util/' as util;
+
+body {
+  font-size: 18px;
+  font-family: util.$font;
+  color: colors.$text;
+
+  background: colors.$gradientBg;
+}
+
+main {
+  padding: var.$headerHeight 0 1rem 0;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}

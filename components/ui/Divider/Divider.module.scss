@@ -1,0 +1,8 @@
+@use '../../../scss/abstracts/colors' as colors;
+
+.divider {
+  margin: 0 auto;
+  background-color: colors.$divider;
+  width: calc(100% - 2rem);
+  height: 1px;
+}
