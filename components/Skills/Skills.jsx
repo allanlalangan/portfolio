@@ -8,7 +8,7 @@ const Skills = () => {
       <figure
         className={`${styles['icon-container']} col-4-xs col-2-sm col-1-md`}
       >
-        <Image
+        <img
           alt='html5 icon'
           className={styles['svg-icon']}
           src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
@@ -17,7 +17,7 @@ const Skills = () => {
       <figure
         className={`${styles['icon-container']} col-4-xs col-2-sm col-1-md`}
       >
-        <Image
+        <img
           alt='css3 icon'
           className={styles['svg-icon']}
           src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
@@ -26,7 +26,7 @@ const Skills = () => {
       <figure
         className={`${styles['icon-container']} col-4-xs col-2-sm col-1-md`}
       >
-        <Image
+        <img
           alt='javascript icon'
           className={styles['svg-icon']}
           src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
@@ -35,7 +35,7 @@ const Skills = () => {
       <figure
         className={`${styles['icon-container']} col-4-xs col-2-sm col-1-md`}
       >
-        <Image
+        <img
           alt='reactjs icon'
           className={styles['svg-icon']}
           src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
@@ -44,7 +44,7 @@ const Skills = () => {
       <figure
         className={`${styles['icon-container']} col-4-xs col-2-sm col-1-md`}
       >
-        <Image
+        <img
           alt='redux icon'
           className={styles['svg-icon']}
           src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg'
@@ -53,7 +53,7 @@ const Skills = () => {
       <figure
         className={`${styles['icon-container']} col-4-xs col-3-sm col-1-md`}
       >
-        <Image
+        <img
           alt='sass icon'
           className={styles['svg-icon']}
           src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
@@ -62,7 +62,7 @@ const Skills = () => {
       <figure
         className={`${styles['icon-container']} col-4-xs col-3-sm col-1-md`}
       >
-        <Image
+        <img
           alt='materialui icon'
           className={styles['svg-icon']}
           src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg'
@@ -73,7 +73,7 @@ const Skills = () => {
       >
         <FaGithub aria-label='github icon' className={styles['skills__icon']} />
       </figure>
-      {/* <Image
+      {/* <img
         alt='icon'
         className={styles['svg-icon']}
         src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'
@@ -81,7 +81,7 @@ const Skills = () => {
       <figure
         className={`${styles['icon-container']} col-4-xs col-3-sm col-1-md`}
       >
-        <Image
+        <img
           alt='npm icon'
           className={styles['svg-icon']}
           src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg'

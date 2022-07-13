@@ -1,0 +1,6 @@
+.divider {
+  margin: 0 auto;
+  background-color: hsl(215deg, 75%, 80%);
+  width: calc(100% - 2rem);
+  height: 1px;
+}/*# sourceMappingURL=Divider.module.css.map */

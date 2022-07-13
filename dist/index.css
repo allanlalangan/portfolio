@@ -10,6 +10,7 @@ html:focus-within {
 *,
 *::before,
 *::after {
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -101,7 +102,7 @@ body {
 }
 
 main {
-  padding: 8vh 0 1rem 0;
+  margin: 8vh 0 0 0;
 }
 
 button {

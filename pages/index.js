@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 // components
+import { Hero, Skills, Divider } from '../components';
 
 export default function Home() {
   return (
@@ -10,9 +11,12 @@ export default function Home() {
         <title>Allan LaDev | Web Developer</title>
         <meta name='description' content='Create Next App' />
       </Head>
-      <div>
-        <h1>Create Next App</h1>
-      </div>
+      <>
+        <Hero />
+        <Divider />
+        <Skills />
+        <Divider />
+      </>
     </>
   );
 }

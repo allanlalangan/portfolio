@@ -1,0 +1,32 @@
+.skills {
+  padding: 1rem 0;
+  margin: 1rem 0;
+  background-color: hsl(230deg, 35%, 25%);
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.icon-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 0em) {
+  .icon-container {
+    padding: 0.5rem 0;
+  }
+}
+@media (min-width: 56.25em) {
+  .icon-container {
+    padding: 0;
+  }
+}
+
+.svg-icon {
+  width: 3rem;
+}
+
+.skills__icon {
+  font-size: 3rem;
+  color: white;
+}/*# sourceMappingURL=Skills.module.css.map */
