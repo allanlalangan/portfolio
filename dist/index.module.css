@@ -1,0 +1,15 @@
+.heading {
+  padding: 1rem;
+  text-align: center;
+}
+
+.action-button {
+  color: hsl(230deg, 75%, 95%);
+  background-color: hsl(215deg, 85%, 50%);
+  border-radius: 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}/*# sourceMappingURL=index.module.css.map */

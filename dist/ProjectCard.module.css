@@ -1,0 +1,83 @@
+.container {
+  padding: 1.5rem;
+}
+.container .project-header {
+  width: 100%;
+}
+.container .project-header__title {
+  padding: 0.5rem 0;
+}
+
+.links .button-group {
+  display: flex;
+  width: 100%;
+}
+.links .button-group .button-divider {
+  width: 2px;
+  height: 100%;
+  background-color: hsl(215deg, 75%, 80%);
+}
+.links .button-group .project-link-button {
+  width: 100%;
+  color: hsl(230deg, 75%, 95%);
+  background-color: hsl(230deg, 35%, 25%);
+  border-radius: 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 37.5em) {
+  .links .button-group .project-link-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.links .button-group .project-link-button .project-link-button__icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.links .button-group .project-link-button .project-link-button__text {
+  padding: 0 0.5rem;
+}
+.links .button-group .project-link-button--github {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.links .button-group .project-link-button--live {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.previews {
+  border: 1px solid hsl(240deg, 75%, 60%);
+  border-radius: 0.5rem;
+  width: 50%;
+  height: 400px;
+  margin: 1rem;
+}
+
+.bezels-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.bezels-container .bezels {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}/*# sourceMappingURL=ProjectCard.module.css.map */
