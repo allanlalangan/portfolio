@@ -1,0 +1,12 @@
+@use '../scss/abstracts/mixins' as mixins;
+@use '../scss/abstracts/colors' as colors;
+
+.heading {
+  padding: 1rem;
+  text-align: center;
+}
+
+.action-button {
+  @include mixins.filled-button(colors.$sec, 1.5rem);
+  @include mixins.action-button-text();
+}

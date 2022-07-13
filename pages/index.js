@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import styles from './index.module.scss';
+import { projects, about } from '../static/data';
 
 // components
-import { Hero, Skills, Divider } from '../components';
+import { Hero, Skills, Divider, ProjectCard } from '../components';
 
 export default function Home() {
   return (
@@ -16,6 +18,17 @@ export default function Home() {
         <Divider />
         <Skills />
         <Divider />
+        <h1 className={styles.heading}>Recent Projects</h1>
+
+        <Divider />
+        <section>
+          {projects.map((project) => (
+            <ProjectCard key={project} project={project} />
+          ))}
+        </section>
+        <button className={styles['action-button']}>
+          {about.actionCall_2}
+        </button>
       </>
     </>
   );
