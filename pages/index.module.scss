@@ -2,8 +2,12 @@
 @use '../scss/abstracts/colors' as colors;
 
 .heading {
-  padding: 1rem;
+  padding: 1rem 0;
+  margin: 1rem 0;
+
   text-align: center;
+  color: colors.$contrastText;
+  background-color: colors.$bg--dark;
 }
 
 .action-button {

@@ -177,11 +177,12 @@ export const projects = [
       'E-commerce app for pop up shop. Users can add items to their cart, and rate and review products. Client admins can post future events, manage users, and manage products with Shopify and headless CMS',
     tech: ['nextjs', 'scss', 'stripe'],
   },
-  // {
-  //   title: 'Martial Masters Academy',
-  //   description: 'A website for the best martial arts gym in all of Portland.',
-  //   tech: ['next.js', 'react', 'css', 'api', 'stripe'],
-  // },
+  {
+    title: 'Martial Masters Academy',
+    description:
+      'A responsive landing page I made for my dear friends, who happen to run the best martial arts gym in all of Portland.',
+    tech: ['next.js', 'react', 'css', 'api', 'stripe'],
+  },
   {
     title: 'Portfolio',
     description:

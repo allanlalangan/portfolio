@@ -5,7 +5,7 @@ const ProjectCard = ({ project: { title, description, tech } }) => {
   return (
     <article className={`${styles['container']} grid-row`}>
       <section className={`${styles['project-header']} col-12-md`}>
-        <h2 className={`${styles['project-header__title']} col-3-md`}>
+        <h2 className={`${styles['project-header__title']} col-12-md`}>
           {title}
         </h2>
         <section className={`${styles.links} col-6-md`}>

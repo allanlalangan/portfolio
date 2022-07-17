@@ -16,8 +16,6 @@ export default function Home() {
       <>
         <Hero />
         <Divider />
-        <Skills />
-        <Divider />
         <h1 className={styles.heading}>Recent Projects</h1>
 
         <Divider />
@@ -26,6 +24,8 @@ export default function Home() {
             <ProjectCard key={project} project={project} />
           ))}
         </section>
+        <Divider />
+        <Skills />
         <button className={styles['action-button']}>
           {about.actionCall_2}
         </button>

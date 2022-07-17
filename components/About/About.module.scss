@@ -1,0 +1,33 @@
+@use '../../scss/abstracts/mixins' as mixins;
+@use '../../scss/abstracts/colors' as colors;
+@use '../../scss/abstracts/variables' as var;
+
+.container {
+  article {
+    padding: 1rem;
+  }
+}
+
+.about-me {
+  @include mixins.breakpoint('>=md') {
+    width: 50%;
+  }
+}
+
+.skills {
+  color: colors.$contrastText;
+  background-color: colors.$bg--dark;
+}
+
+.currently-learning {
+  @include mixins.breakpoint('>=md') {
+    width: 50%;
+  }
+}
+
+.svg-icon {
+  width: 3rem;
+}
+.font-icon {
+  font-size: 3rem;
+}

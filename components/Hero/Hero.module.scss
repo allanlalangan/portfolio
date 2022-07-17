@@ -66,3 +66,7 @@
   @include mixins.shadow(0px, 1px, 5px, 1px, 0.2);
   margin: 1rem auto;
 }
+
+.action-button:hover {
+  filter: brightness(1.25);
+}
