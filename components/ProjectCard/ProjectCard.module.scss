@@ -2,12 +2,17 @@
 @use '../../scss/abstracts/mixins' as mixins;
 
 .container {
+  // height: 75vh;
   padding: 1.5rem;
+  background-color: colors.$bg;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 
   .project-header {
     width: 100%;
   }
   .project-header__title {
+    font-size: 1.5rem;
     padding: 0.5rem 0;
   }
 }
@@ -15,7 +20,7 @@
 .links {
   .button-group {
     @include mixins.flex-row();
-    width: 100%;
+    width: 50%;
 
     .button-divider {
       width: 2px;
@@ -25,7 +30,7 @@
 
     .project-link-button {
       width: 100%;
-      @include mixins.filled-button(colors.$bg--dark, 1.5rem);
+      @include mixins.filled-button(colors.$card--dark, 1.5rem);
       @include mixins.action-button-text();
 
       @include mixins.flex(column, center, center);
@@ -55,20 +60,13 @@
 }
 
 .previews {
+  padding: 1rem;
   border: 1px solid colors.$prim;
   border-radius: 0.5rem;
-  width: 50%;
-  height: 400px;
-  margin: 1rem;
+  height: 100%;
+  width: 100%;
 }
 
-.bezels-container {
-  @include mixins.flex(row, flex-start, center);
-
-  position: relative;
-
-  .bezels {
-    position: relative;
-    @include mixins.flex(row, center, flex-end);
-  }
+.previews-container {
+  padding: 1rem;
 }
