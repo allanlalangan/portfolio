@@ -31,15 +31,21 @@ const Header = () => {
         </button>
       </aside>
       <nav className={styles['nav']}>
-        <Switch />
+        {/* <Switch /> */}
         <ul className={styles['nav-links']}>
           <Link href='/about'>
             <li className={styles['nav-links__link']}>me</li>
           </Link>
           <Link href='/'>
+            <li className={styles['nav-links__link']}>skills</li>
+          </Link>
+          <Link href='/'>
+            <li className={styles['nav-links__link']}>projects</li>
+          </Link>
+          <Link href='/'>
             <li className={`${styles['nav-links__link']} ${styles['cv-link']}`}>
               <span className={`${styles['cv-link__text']}`}>CV</span>
-              <FaFileDownload className={styles['nav-icon']} />
+              <FaFileDownload className={styles['cv-icon']} />
             </li>
           </Link>
           <Link href='/'>

@@ -4,6 +4,8 @@
 
 .header {
   width: 100%;
+  padding: 0 2rem;
+
   position: fixed;
   top: 0;
   display: flex;
@@ -11,9 +13,9 @@
   justify-content: space-between;
   height: var.$headerHeight;
 
-  background-color: colors.$headerBg;
+  background-color: colors.$bg;
   z-index: 1000;
-  @include mixins.shadow(0px, 1px, 2.5px, 1px, 0.2);
+  @include mixins.shadow(0px, 0px, 2.5px, 1px, 0.2);
 
   @include mixins.breakpoint('>=md') {
     justify-content: space-between;
@@ -22,7 +24,6 @@
 
 .main-banner {
   width: 100%;
-  padding: 0 2rem;
   @include mixins.flex(row, center, center);
 
   @include mixins.breakpoint('>=sm') {
@@ -36,6 +37,7 @@
 }
 
 .main-title {
+  margin-left: 0.125rem;
   font-weight: 900;
   font-size: 1.75rem;
   display: none;
@@ -61,13 +63,14 @@
 .home-icon {
   font-size: 2.5rem;
   @include mixins.breakpoint('>=sm') {
-    font-size: 3rem;
+    // font-size: 3rem;
+    font-size: 1;
   }
   display: flex;
   background-color: colors.$bg;
-  border-radius: 50%;
-  padding: 0.25rem;
-  @include mixins.shadow(0px, 1px, 3px, 0px, 0.1);
+  // border-radius: 50%;
+  // padding: 0.25rem;
+  // @include mixins.shadow(0px, 1px, 3px, 0px, 0.1);
 }
 
 .menu-button__container {
@@ -96,16 +99,16 @@
 
   @include mixins.breakpoint('>=sm') {
     @include mixins.flex-row();
-    width: 50%;
+    // width: 50%;
   }
   @include mixins.breakpoint('>=md') {
     @include mixins.flex-row();
-    width: 50%;
+    // width: 50%;
   }
-  @include mixins.breakpoint('>=lg') {
-    @include mixins.flex-row();
-    width: 35%;
-  }
+  // @include mixins.breakpoint('>=lg') {
+  //   @include mixins.flex-row();
+  //   width: 35%;
+  // }
 
   height: 100%;
 
@@ -115,14 +118,11 @@
     display: none;
 
     @include mixins.action-button-text();
-    text-transform: uppercase;
 
     @include mixins.breakpoint('>=sm') {
       height: 100%;
       margin: 0;
       padding: 0;
-
-      border-bottom: 3px solid colors.$sec;
     }
 
     @include mixins.breakpoint('>=md') {
@@ -138,17 +138,23 @@
       cursor: pointer;
 
       .social-icon {
+        color: colors.$prim;
         font-size: 1.5rem;
       }
-      .nav-icon {
+      .cv-icon {
         font-size: 1rem;
       }
     }
 
     .cv-link {
+      @include mixins.filled-button(colors.$prim, 1.5rem, 0.5rem, 1.5rem);
       .cv-link__text {
         padding: 0 0.25rem;
       }
+    }
+
+    .cv-link:hover {
+      filter: brightness(1.25);
     }
   }
 }
