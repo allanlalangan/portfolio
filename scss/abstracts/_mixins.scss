@@ -39,6 +39,7 @@
   background-color: $backgroundColor;
   border-radius: $borderRad;
   padding: $paddingY $paddingX;
+  transition: all 0.25s ease;
 }
 
 @mixin shadow($offsetX, $offsetY, $blur, $spread, $alpha) {
