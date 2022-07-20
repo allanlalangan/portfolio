@@ -4,7 +4,7 @@
 
 .hero {
   height: var.$mainContentHeight;
-  padding: 0 1rem;
+  padding: 0 2rem;
   @include mixins.flex(column);
   justify-content: center;
 }
@@ -18,7 +18,7 @@
 }
 
 .greeting {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 

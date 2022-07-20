@@ -5,10 +5,10 @@ const Hero = () => {
   return (
     <section className={styles['hero']}>
       <article className={styles['hero-text']}>
-        <p className={styles.brief}>{about.brief}</p>
+        <h3 className={styles.brief}>{about.brief}</h3>
         <p className={styles.greeting}>{about.greeting}</p>
         <h1 className={styles.name}>{about.name}</h1>
-        <p className={styles.title}>{about.title}</p>
+        <h2 className={styles.title}>{about.title}</h2>
       </article>
       <button className={styles['action-button']}>{about.actionCall}</button>
     </section>
