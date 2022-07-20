@@ -4,12 +4,10 @@ import styles from './ProjectCard.module.scss';
 const ProjectCard = ({ project: { title, description, tech } }) => {
   return (
     <article className={`${styles['container']} grid-row`}>
-      <section className={`${styles['project-header']} col-12-md`}>
-        <h3 className={`${styles['project-header__title']} col-12-md`}>
-          {title}
-        </h3>
-      </section>
-      <section className={`${styles.links} col-12-md`}>
+      {/* <section className={`${styles['project-header']} col-6-md`}> */}
+      <h3 className={`${styles['project-header__title']} col-6-md`}>{title}</h3>
+      {/* </section> */}
+      <section className={`${styles.links} col-6-md`}>
         <div className={styles['button-group']}>
           <button
             className={`${styles['project-link-button']} ${styles['project-link-button--github']}`}
@@ -31,8 +29,13 @@ const ProjectCard = ({ project: { title, description, tech } }) => {
         </div>
       </section>
 
-      <section className={`${styles['previews-container']} col-6-md`}>
-        <figure className={styles.previews}></figure>
+      <section className={`${styles['previews']} col-6-md`}>
+        <figure
+          className={`${styles['__preview']} ${styles['__preview--desktop']}`}
+        ></figure>
+        <figure
+          className={`${styles['__preview']} ${styles['__preview--mobile']}`}
+        ></figure>
       </section>
       <article className={`${styles['project-info']} col-6-md`}>
         <p>{description}</p>

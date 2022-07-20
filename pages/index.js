@@ -4,7 +4,7 @@ import styles from './index.module.scss';
 import { projects, about } from '../static/data';
 
 // components
-import { Hero, Skills, Divider, ProjectCard } from '../components';
+import { Hero, Skills, Divider, ProjectCard, About } from '../components';
 
 export default function Home() {
   return (
@@ -15,10 +15,7 @@ export default function Home() {
       </Head>
       <>
         <Hero />
-        <Divider />
-        <h2 className={styles.heading}>Skills</h2>
-        <Skills />
-        <Divider />
+        {/* <Divider /> */}
         <h2 className={styles.heading}>Recent Projects</h2>
         <section className={styles.projects}>
           {projects.map((project) => (
@@ -26,6 +23,11 @@ export default function Home() {
           ))}
         </section>
         {/* <Divider /> */}
+        <h2 className={styles.heading}>More About Me</h2>
+        <About />
+        {/* <Divider /> */}
+        <h2 className={styles.heading}>Skills</h2>
+        <Skills />
         <button className={styles['action-button']}>
           {about.actionCall_2}
         </button>

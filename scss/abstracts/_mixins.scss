@@ -7,6 +7,16 @@
   }
 }
 
+@mixin preview--desktop($h) {
+  height: $h;
+  width: (16/9) * $h;
+}
+
+@mixin preview--mobile($w) {
+  width: $w;
+  height: (16/9) * $w;
+}
+
 @mixin flex($direction: row, $justifyContent: null, $alignItems: null) {
   display: flex;
   flex-direction: $direction;
@@ -29,17 +39,17 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-@mixin filled-button(
-  $backgroundColor,
-  $borderRad: null,
-  $paddingY: 1rem,
-  $paddingX: 2rem
-) {
+@mixin filled-button($backgroundColor, $borderRad: 1rem, $pY: 1rem, $pX: 2rem) {
   color: colors.$contrastText;
   background-color: $backgroundColor;
   border-radius: $borderRad;
-  padding: $paddingY $paddingX;
+  padding: $pY $pX;
   transition: all 0.25s ease;
+}
+
+@mixin filled-button--hover() {
+  // box-shadow: 0px 0px 2.5px 1px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.25);
 }
 
 @mixin shadow($offsetX, $offsetY, $blur, $spread, $alpha) {

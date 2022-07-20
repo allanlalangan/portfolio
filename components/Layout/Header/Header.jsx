@@ -33,14 +33,14 @@ const Header = () => {
       <nav className={styles['nav']}>
         {/* <Switch /> */}
         <ul className={styles['nav-links']}>
-          <Link href='/about'>
-            <li className={styles['nav-links__link']}>me</li>
+          <Link href='/'>
+            <li className={styles['nav-links__link']}>projects</li>
           </Link>
           <Link href='/'>
             <li className={styles['nav-links__link']}>skills</li>
           </Link>
-          <Link href='/'>
-            <li className={styles['nav-links__link']}>projects</li>
+          <Link href='/about'>
+            <li className={styles['nav-links__link']}>me</li>
           </Link>
           <Link href='/'>
             <li className={`${styles['nav-links__link']} ${styles['cv-link']}`}>

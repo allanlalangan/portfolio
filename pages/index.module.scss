@@ -4,6 +4,7 @@
 .heading {
   @include mixins.flex(row, center, center);
   width: fit-content;
+  margin-top: 5rem;
   margin-left: 2rem;
   padding: 1rem 0;
   font-size: 2.5rem;
@@ -16,6 +17,6 @@
 }
 
 .action-button {
-  @include mixins.filled-button(colors.$sec, 1.5rem);
+  @include mixins.filled-button(colors.$sec);
   @include mixins.action-button-text();
 }

@@ -147,14 +147,14 @@
     }
 
     .cv-link {
-      @include mixins.filled-button(colors.$prim, 1.5rem, 0.5rem, 1.5rem);
+      @include mixins.filled-button(colors.$prim, 0.75rem, 0.5rem, 1.5rem);
       .cv-link__text {
         padding: 0 0.25rem;
       }
     }
 
     .cv-link:hover {
-      filter: brightness(1.25);
+      @include mixins.filled-button--hover;
     }
   }
 }

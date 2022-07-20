@@ -16,7 +16,7 @@ import {
 const About = () => {
   return (
     <section className={styles.container}>
-      <h2>Hello</h2>
+      <h2 className={`${styles.heading} ${styles.greeting}`}>Hello 👋</h2>
       <article className={styles['about-me']}>
         <p>
           I&apos;m Allan; a Portland, OR based front end developer, life long
@@ -26,7 +26,7 @@ const About = () => {
         </p>
       </article>
 
-      <h2>Skills</h2>
+      {/* <h2>Skills</h2>
       <article className={styles.skills}>
         <h3>Fundamentals</h3>
         <figure>
@@ -55,19 +55,19 @@ const About = () => {
             Material UI
           </figcaption>
         </figure>
-      </article>
+      </article> */}
 
-      <h2>What I am currently learning:</h2>
+      {/* <h2 className={`${styles.heading}`}>What I am currently learning:</h2>
 
       <article className={`${styles['currently-learning']}`}>
-        <h3>ARIA and accessibility</h3>
+        <h3 className={styles.subheading}>ARIA and accessibility</h3>
         <p>
           Inclusivity is important! Tech is growing fast and I believe its our
           responsibility as developers to ensure no one gets left behind during
           its evolution. Design, semantic HTML, and ARIA are a few ways to make
           apps more accessible. The web should be for everyone!
         </p>
-        <h3>Sass</h3>
+        <h3 className={styles.subheading}>Sass</h3>
         <figure>
           <SiSass size={'3rem'} />
           <p>
@@ -85,8 +85,7 @@ const About = () => {
           </p>
         </figure>
         <p></p>
-      </article>
-      <p></p>
+      </article> */}
     </section>
   );
 };
