@@ -51,7 +51,7 @@ const About = () => {
           <SassIcon className={styles['svg-icon']} />
           <MuiIcon className={styles['svg-icon']} />
           <figcaption>
-            Custom design, templates, themes and components with Sass and
+            Custom design, templates, themes and styled components with Sass and
             Material UI
           </figcaption>
         </figure>

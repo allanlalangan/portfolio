@@ -162,19 +162,18 @@ export const projects = [
   {
     title: 'Nomad Travel',
     description:
-      'SPA created with GoogleMaps and Travel APIs. Fetches popular restaurants, hotels, and attractions within map window boundaries. Autocomplete search allows users to quickly search and navigate anywhere on the map. Places marked on the map can be filtered by rating, price and other categories.',
+      'Locate popular restaurants, hotels, and attractions anywhere in the world',
     tech: ['reactjs', 'css', 'materialui', 'api', 'google maps'],
   },
   {
     title: 'project.Me',
     description:
-      'A fullstack to-do list app allows registered users to save tasks, goals, and other activities. Users progress through goals as tasks are completed. Basic backend stores and protects unique user data in a database.',
+      'A fullstack to-do list app allows registered users to save tasks, goals.',
     tech: ['express', 'mongoDb', 'reactjs', 'css', 'redux', 'api', 'jwt'],
   },
   {
     title: 'La Bodega',
-    description:
-      'E-commerce app for pop up shop. Users can add items to their cart, and rate and review products. Client admins can post future events, manage users, and manage products with Shopify and headless CMS',
+    description: 'E-commerce app for pop up shop.',
     tech: ['nextjs', 'scss', 'stripe'],
   },
   {
