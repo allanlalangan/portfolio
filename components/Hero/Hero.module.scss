@@ -33,7 +33,6 @@
   }
 }
 .title {
-  color: colors.$text;
   font-size: 2rem;
   font-weight: 700;
   @include mixins.breakpoint('>=md') {
@@ -42,7 +41,7 @@
 }
 .brief {
   width: fit-content;
-  color: colors.$prim;
+  color: map-get(colors.$primary, 'main');
   font-size: 1.5rem;
   font-weight: 700;
   width: 70%;
@@ -61,7 +60,7 @@
 }
 
 .action-button {
-  @include mixins.filled-button(colors.$prim);
+  @include mixins.filled-button(map-get(colors.$primary, 'main'));
   @include mixins.action-button-text();
   margin: 1rem auto;
 }

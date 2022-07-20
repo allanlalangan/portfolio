@@ -1,5 +1,6 @@
 @use '../util/breakpoints' as *;
 @use '../abstracts/colors' as colors;
+@use '../abstracts/variables' as var;
 
 @mixin breakpoint($size) {
   @media (min-width: map-get($breakpoints-up, $size)) {
@@ -39,9 +40,26 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-@mixin filled-button($backgroundColor, $borderRad: 1rem, $pY: 1rem, $pX: 2rem) {
-  color: colors.$contrastText;
+@mixin filled-button(
+  $backgroundColor,
+  $borderRad: var.$borderRad__action-button,
+  $pY: 1rem,
+  $pX: 2rem
+) {
+  color: map-get(colors.$text, 'contrast');
   background-color: $backgroundColor;
+  border-radius: $borderRad;
+  padding: $pY $pX;
+  transition: all 0.25s ease;
+}
+@mixin outlined-button(
+  $borderColor,
+  $borderRad: var.$borderRad__action-button,
+  $pY: 1rem,
+  $pX: 2rem
+) {
+  border: 2px solid $borderColor;
+  background-color: inherit;
   border-radius: $borderRad;
   padding: $pY $pX;
   transition: all 0.25s ease;

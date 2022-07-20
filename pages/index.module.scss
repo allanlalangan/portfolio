@@ -8,7 +8,7 @@
   margin-left: 2rem;
   padding: 1rem 0;
   font-size: 2.5rem;
-  border-bottom: 5px solid colors.$prim;
+  border-bottom: 5px solid map-get(colors.$primary, 'main');
 }
 
 .projects {
@@ -17,6 +17,6 @@
 }
 
 .action-button {
-  @include mixins.filled-button(colors.$sec);
+  @include mixins.filled-button(map-get(colors.$secondary, 'main'));
   @include mixins.action-button-text();
 }

@@ -25,6 +25,6 @@
     display: none;
   }
   .radio:checked + .label {
-    color: colors.$ter;
+    color: map-get(colors.$secondary, 'light');
   }
 }

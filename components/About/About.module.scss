@@ -26,8 +26,8 @@
 }
 
 .skills {
-  color: colors.$contrastText;
-  background-color: colors.$bg--dark;
+  // color: map-get(colors.$text, 'contrast');
+  // background-color: map-get(colors.$background, 'dark');
 }
 
 .currently-learning {

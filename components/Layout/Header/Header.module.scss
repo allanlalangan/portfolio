@@ -13,7 +13,7 @@
   justify-content: space-between;
   height: var.$headerHeight;
 
-  background-color: colors.$bg;
+  background-color: map-get(colors.$background, 'light');
   z-index: 1000;
   @include mixins.shadow(0px, 0px, 2.5px, 1px, 0.2);
 
@@ -67,7 +67,7 @@
     font-size: 1;
   }
   display: flex;
-  background-color: colors.$bg;
+  background-color: map-get(colors.$background, 'light');
   // border-radius: 50%;
   // padding: 0.25rem;
   // @include mixins.shadow(0px, 1px, 3px, 0px, 0.1);
@@ -85,7 +85,7 @@
   }
 
   .menu-button {
-    color: colors.$text;
+    // color: map-get(colors.$text, 'main');
     @include mixins.flex-column();
 
     .burger-icon {
@@ -138,7 +138,7 @@
       cursor: pointer;
 
       .social-icon {
-        color: colors.$prim;
+        color: map-get(colors.$primary, 'main');
         font-size: 1.5rem;
       }
       .cv-icon {
@@ -147,7 +147,12 @@
     }
 
     .cv-link {
-      @include mixins.filled-button(colors.$prim, 0.75rem, 0.5rem, 1.5rem);
+      @include mixins.filled-button(
+        map-get(colors.$primary, 'main'),
+        0.5rem,
+        0.5rem,
+        1.5rem
+      );
       .cv-link__text {
         padding: 0 0.25rem;
       }
