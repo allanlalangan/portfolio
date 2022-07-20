@@ -3,11 +3,30 @@ import styles from './ProjectCard.module.scss';
 
 const ProjectCard = ({ project: { title, description, tech } }) => {
   return (
-    <article className={`${styles['container']} grid-row`}>
-      {/* <section className={`${styles['project-header']} col-6-md`}> */}
-      <h3 className={`${styles['project-header__title']} col-6-md`}>{title}</h3>
-      {/* </section> */}
-      <section className={`${styles.links} col-6-md`}>
+    <article className={`${styles['container']}`}>
+      <section className={styles['project-header']}>
+        <h3 className={styles.__title}>{title}</h3>
+      </section>
+      <ul className={styles['tech-list']}>
+        {tech?.map((t) => (
+          <li className={styles.tech} key={t}>
+            {t}
+          </li>
+        ))}
+      </ul>
+
+      <section className={`${styles['previews']} `}>
+        <figure
+          className={`${styles['__preview']} ${styles['__preview--desktop']}`}
+        ></figure>
+        {/* <figure
+          className={`${styles['__preview']} ${styles['__preview--mobile']}`}
+        ></figure> */}
+      </section>
+      <article className={`${styles['project-info']} `}>
+        <p>{description}</p>
+      </article>
+      <section className={`${styles.links}`}>
         <div className={styles['button-group']}>
           <button
             className={`${styles['project-link-button']} ${styles['project-link-button--github']}`}
@@ -28,23 +47,6 @@ const ProjectCard = ({ project: { title, description, tech } }) => {
           </button>
         </div>
       </section>
-
-      <section className={`${styles['previews']} col-6-md`}>
-        <figure
-          className={`${styles['__preview']} ${styles['__preview--desktop']}`}
-        ></figure>
-        <figure
-          className={`${styles['__preview']} ${styles['__preview--mobile']}`}
-        ></figure>
-      </section>
-      <article className={`${styles['project-info']} col-6-md`}>
-        <p>{description}</p>
-        <ul>
-          {tech?.map((t) => (
-            <li key={t}>{t}</li>
-          ))}
-        </ul>
-      </article>
     </article>
   );
 };

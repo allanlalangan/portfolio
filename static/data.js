@@ -163,29 +163,28 @@ export const projects = [
     title: 'Nomad Travel',
     description:
       'Locate popular restaurants, hotels, and attractions anywhere in the world',
-    tech: ['reactjs', 'css', 'materialui', 'api', 'google maps'],
+    tech: ['react', 'css', 'materialui'],
   },
   {
     title: 'project.Me',
     description:
       'A fullstack to-do list app allows registered users to save tasks, goals.',
-    tech: ['express', 'mongoDb', 'reactjs', 'css', 'redux', 'api', 'jwt'],
+    tech: ['express', 'mongodb', 'react', 'sass', 'redux'],
   },
   {
     title: 'La Bodega',
     description: 'E-commerce app for pop up shop.',
-    tech: ['nextjs', 'scss', 'stripe'],
+    tech: ['next', 'sass', 'stripe'],
   },
   {
     title: 'Martial Masters Academy',
     description:
       'A responsive landing page I made for my dear friends, who happen to run the best martial arts gym in all of Portland.',
-    tech: ['next.js', 'react', 'css', 'api', 'stripe'],
+    tech: ['next', 'sass'],
   },
   {
     title: 'Portfolio',
-    description:
-      'This website was built with NextJS. Styled and designed by me with CSS3. An ongoing labor of love.',
-    tech: ['nextjs', 'css', 'framer motion'],
+    description: '',
+    tech: ['next', 'sass'],
   },
 ];
