@@ -16,16 +16,16 @@ export default function Home() {
       <>
         <Hero />
         <Divider />
-        <h1 className={styles.heading}>Recent Projects</h1>
-
+        <h2 className={styles.heading}>Skills</h2>
+        <Skills />
         <Divider />
-        <section>
+        <h2 className={styles.heading}>Recent Projects</h2>
+        <section className={styles.projects}>
           {projects.map((project) => (
-            <ProjectCard key={project} project={project} />
+            <ProjectCard key={project.title} project={project} />
           ))}
         </section>
-        <Divider />
-        <Skills />
+        {/* <Divider /> */}
         <button className={styles['action-button']}>
           {about.actionCall_2}
         </button>
