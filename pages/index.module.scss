@@ -25,6 +25,34 @@
   }
 }
 
+.skills {
+  color: map-get(colors.$text, 'contrast');
+  background-color: map-get(colors.$card, 'dark');
+  padding: 2rem;
+  margin: 4rem;
+
+  border-radius: 0.75rem;
+
+  figure {
+    margin-bottom: 1rem;
+  }
+}
+
+.currently-learning {
+  @include mixins.breakpoint('>=md') {
+    width: 50%;
+  }
+}
+
+.svg-icon {
+  width: 3rem;
+  margin: 0.5rem;
+}
+.font-icon {
+  font-size: 3rem;
+  margin: 0.5rem;
+}
+
 .action-button {
   @include mixins.filled-button(map-get(colors.$secondary, 'main'));
   @include mixins.action-button-text();
