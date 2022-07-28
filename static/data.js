@@ -158,33 +158,42 @@ export const skills = [
   },
 ];
 
+import nomad from '../assets/nomad-travel.png';
+import dashboard from '../assets/dashboard.png';
+import mma from '../assets/mma.png';
+
 export const projects = [
   {
     title: 'Nomad Travel',
     description:
       'Locate popular restaurants, hotels, and attractions anywhere in the world',
     tech: ['react', 'css', 'materialui'],
+    image: { src: nomad, alt: '' },
   },
   {
     title: 'project.Me',
     description:
       'A fullstack to-do list app allows registered users to save tasks, goals.',
     tech: ['express', 'mongodb', 'react', 'sass', 'redux'],
-  },
-  {
-    title: 'La Bodega',
-    description: 'E-commerce app for pop up shop.',
-    tech: ['next', 'sass', 'stripe'],
+    image: { src: dashboard, alt: '' },
   },
   {
     title: 'Martial Masters Academy',
     description:
       'A responsive landing page I made for my dear friends, who happen to run the best martial arts gym in all of Portland.',
     tech: ['next', 'sass'],
+    image: { src: mma, alt: '' },
+  },
+  {
+    title: 'La Bodega',
+    description: 'E-commerce app for pop up shop.',
+    tech: ['next', 'sass', 'stripe'],
+    image: { src: nomad, alt: '' },
   },
   {
     title: 'Portfolio',
     description: '',
     tech: ['next', 'sass'],
+    image: { src: nomad, alt: '' },
   },
 ];

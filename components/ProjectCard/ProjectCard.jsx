@@ -3,7 +3,7 @@ import { FaGithub, FaLink } from 'react-icons/fa';
 import styles from './ProjectCard.module.scss';
 import nomad from '../../assets/nomad-travel.png';
 
-const ProjectCard = ({ project: { title, description, tech } }) => {
+const ProjectCard = ({ project: { title, description, tech, image } }) => {
   return (
     <article className={`${styles['container']}`}>
       <section className={styles['project-header']}>
@@ -19,7 +19,7 @@ const ProjectCard = ({ project: { title, description, tech } }) => {
 
       <section className={`${styles['previews']} `}>
         <figure className={`${styles['__preview']}`}>
-          <Image className={styles.__image} src={nomad} alt='' />
+          <Image className={styles.__image} src={image.src} alt={image.alt} />
         </figure>
         {/* <figure
           className={`${styles['__preview']} ${styles['__preview--mobile']}`}
