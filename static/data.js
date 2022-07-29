@@ -166,7 +166,7 @@ export const projects = [
   {
     title: 'Nomad Travel',
     description:
-      'Locate popular restaurants, hotels, and attractions anywhere in the world',
+      'Locate and filter popular restaurants, hotels, and attractions anywhere in the world.',
     tech: ['react', 'css', 'material ui', 'google maps', 'rest api'],
     image: { src: nomad, alt: '' },
   },
@@ -181,7 +181,7 @@ export const projects = [
       'react router',
       'sass',
       'redux',
-      'json web tokens',
+      'web tokens',
     ],
     image: { src: dashboard, alt: '' },
   },

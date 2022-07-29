@@ -15,7 +15,7 @@
 
   background-color: map-get(colors.$background, 'light');
   z-index: 1000;
-  @include mixins.shadow(0px, 0px, 2.5px, 1px, 0.2);
+  // @include mixins.shadow(0px, 0px, 15px, 2px, 0.1);
 
   @include mixins.breakpoint('>=md') {
     justify-content: space-between;

@@ -35,7 +35,7 @@ export default function Home() {
           ))}
         </section>
         {/* <Divider /> */}
-        <h2 className={styles.heading}>Skills</h2>
+        <h2 className={styles.heading}>Primary Skills</h2>
         <Skills />
 
         <h2 className={styles.heading}>More About Me</h2>

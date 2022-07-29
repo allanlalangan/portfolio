@@ -21,68 +21,105 @@
   grid-column: span 12;
   grid-row: span 1;
 
-  @include mixins.breakpoint('>=xs') {
+  @include mixins.flex(column, center, flex-start);
+  @include mixins.breakpoint('>=sm') {
+    @include mixins.flex(row, flex-start, center);
   }
-  @include mixins.flex(row, flex-start, center);
 
   .__title {
     border-bottom: 5px solid map-get(colors.$primary, 'main');
     font-size: 2rem;
     padding-bottom: 0.5rem;
   }
+
+  .progress-message {
+    margin-top: 1rem;
+    padding: 0.25rem 1rem;
+    border: 2px solid map-get(colors.$primary, 'main');
+    border-radius: 0.35rem;
+    @include mixins.breakpoint('>=sm') {
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+    // background-color: map-get(colors.$primary, 'light');
+  }
 }
 
-.tech-list {
-  @include mixins.action-button-text();
+.tech-heading {
+  padding: 1rem;
   @include mixins.breakpoint('>=xs') {
+    grid-column: 1 / 13;
+  }
+  @include mixins.breakpoint('>=md') {
+    grid-column: 7 / 13;
+    grid-row: 3 / 4;
+  }
+  @include mixins.breakpoint('>=lg') {
+    grid-column: 1 / 9;
+    grid-row: 10 / 11;
+  }
+}
+.tech-list {
+  // @include mixins.action-button-text();
+  @include mixins.breakpoint('>=xs') {
+    padding: 1rem;
     grid-column: span 12;
     grid-row: 6 / 7;
   }
   @include mixins.breakpoint('>=md') {
-    grid-column: 1 / 7;
-    grid-row: 7 / 9;
+    padding: 0 1rem 1rem 1rem;
+    grid-column: 7 / 13;
+    grid-row: 4 / 8;
     @include mixins.flex(row, flex-start, center);
   }
   @include mixins.breakpoint('>=lg') {
-    grid-column: 1 / 13;
-    grid-row: 2 / 3;
+    padding: 1rem;
+    grid-column: 1 / 9;
+    grid-row: 11 / 13;
     @include mixins.flex(row, flex-start, center);
   }
 
   .tech {
-    padding: 0 1rem;
+    @include mixins.flex(column, center, center);
+    @include mixins.breakpoint('>=xs') {
+      padding-bottom: 1rem;
+    }
+  }
+  .tech-icon {
+    font-size: 2rem;
   }
 }
 .project-info {
-  padding: 1rem 0;
   grid-column: span 12;
   grid-row: 2 / 3;
-  @include mixins.flex(column, center, center);
+  padding: 1rem 0;
+  @include mixins.flex(column, flex-start, flex-start);
 
   @include mixins.breakpoint('>=md') {
-    grid-column: 7 / 13;
-    grid-row: 2 / 7;
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
   }
   @include mixins.breakpoint('>=lg') {
+    padding: 1rem;
     grid-column: 9 / 13;
-    grid-row: 3 / 7;
+    grid-row: 2 / 6;
   }
 }
 
 .previews {
-  @include mixins.flex(column, center, center);
+  @include mixins.flex(column, flex-start, center);
   @include mixins.breakpoint('>=xs') {
     grid-column: span 12;
-    grid-row: 3 / 6;
+    grid-row: 3 / 5;
   }
   @include mixins.breakpoint('>=md') {
-    padding: 1rem;
+    padding: 1rem 0;
     grid-column: 1 / 7;
-    grid-row: 2 / 7;
+    grid-row: 3 / 8;
   }
   @include mixins.breakpoint('>=lg') {
     grid-column: 1 / 9;
-    grid-row: 3 / 13;
+    grid-row: 2 / 10;
   }
 
   .__preview {
@@ -120,12 +157,13 @@
     grid-row: 7 / 8;
   }
   @include mixins.breakpoint('>=md') {
-    grid-column: 7 / 13;
-    grid-row: 7 / 9;
+    grid-column: 1 / 13;
+    grid-row: 8 / 9;
   }
   @include mixins.breakpoint('>=lg') {
+    padding: 0 1rem;
     grid-column: 9 / span 4;
-    grid-row: 7 / 9;
+    grid-row: 11 / 13;
   }
 
   .button-group {
@@ -133,7 +171,7 @@
     @include mixins.breakpoint('>=sm') {
       @include mixins.flex();
     }
-    @include mixins.breakpoint('>=md') {
+    @include mixins.breakpoint('>=lg') {
       @include mixins.flex(column);
     }
 
@@ -180,7 +218,7 @@
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
       }
-      @include mixins.breakpoint('>=md') {
+      @include mixins.breakpoint('>=lg') {
         border-top-right-radius: var.$borderRad__action-button;
         border-bottom-right-radius: var.$borderRad__action-button;
       }
@@ -190,7 +228,7 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
-      @include mixins.breakpoint('>=md') {
+      @include mixins.breakpoint('>=lg') {
         border-top-left-radius: var.$borderRad__action-button;
         border-bottom-left-radius: var.$borderRad__action-button;
       }
