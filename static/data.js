@@ -167,33 +167,41 @@ export const projects = [
     title: 'Nomad Travel',
     description:
       'Locate popular restaurants, hotels, and attractions anywhere in the world',
-    tech: ['react', 'css', 'materialui'],
+    tech: ['react', 'css', 'material ui', 'google maps', 'rest api'],
     image: { src: nomad, alt: '' },
   },
   {
     title: 'project.Me',
     description:
       'A fullstack to-do list app allows registered users to save tasks, goals.',
-    tech: ['express', 'mongodb', 'react', 'sass', 'redux'],
+    tech: [
+      'express',
+      'mongodb',
+      'react',
+      'react router',
+      'sass',
+      'redux',
+      'json web tokens',
+    ],
     image: { src: dashboard, alt: '' },
   },
   {
     title: 'Martial Masters Academy',
     description:
       'A responsive landing page I made for my dear friends, who happen to run the best martial arts gym in all of Portland.',
-    tech: ['next', 'sass'],
+    tech: ['next', 'tailwind css', 'google places'],
     image: { src: mma, alt: '' },
   },
-  {
-    title: 'La Bodega',
-    description: 'E-commerce app for pop up shop.',
-    tech: ['next', 'sass', 'stripe'],
-    image: { src: nomad, alt: '' },
-  },
-  {
-    title: 'Portfolio',
-    description: '',
-    tech: ['next', 'sass'],
-    image: { src: nomad, alt: '' },
-  },
+  // {
+  //   title: 'La Bodega',
+  //   description: 'E-commerce app for pop up shop.',
+  //   tech: ['next', 'sass', 'stripe'],
+  //   image: { src: nomad, alt: '' },
+  // },
+  // {
+  //   title: 'Portfolio',
+  //   description: '',
+  //   tech: ['next', 'sass'],
+  //   image: { src: nomad, alt: '' },
+  // },
 ];
