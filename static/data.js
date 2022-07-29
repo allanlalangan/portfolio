@@ -188,7 +188,7 @@ export const projects = [
   {
     title: 'Martial Masters Academy',
     description:
-      'A responsive landing page I made for my dear friends, who happen to run the best martial arts gym in all of Portland.',
+      'A responsive landing page I made for the best martial arts gym in all of Portland.',
     tech: ['next', 'tailwind css', 'google places'],
     image: { src: mma, alt: '' },
   },
