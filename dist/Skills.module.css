@@ -1,3 +1,4 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
 .skills {
   padding: 1rem 0;
   margin: 1rem 0;
@@ -8,8 +9,9 @@
 .icon-container {
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 @media (min-width: 0em) {
   .icon-container {
@@ -20,6 +22,18 @@
   .icon-container {
     padding: 0;
   }
+}
+.icon-container figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  color: hsl(230deg, 75%, 95%);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .svg-icon {

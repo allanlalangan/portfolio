@@ -11,20 +11,21 @@ const Header = () => {
       <div className={styles['main-banner']}>
         <Link className={styles['home-link']} href='/'>
           <figure className={styles.logo}>
-            <GiBullHorns
+            <span className={styles['home-icon']}>👹</span>
+            {/* <GiBullHorns
               style={{ fill: 'url(#logo-gradient)' }}
               className={styles['home-icon']}
-            />
-            <span className={styles['main-title']}>Dev</span>
+            /> */}
+            <span className={styles['main-title']}>laDev</span>
           </figure>
         </Link>
       </div>
-      <svg position='absolute' width='0' height='0'>
+      {/* <svg position='absolute' width='0' height='0'>
         <linearGradient id='logo-gradient' x1='%' y1='100%' x2='0%' y2='0%'>
           <stop stopColor='#ff1d4e' offset='20%' />
           <stop stopColor='#000000' offset='90%' />
         </linearGradient>
-      </svg>
+      </svg> */}
       <aside className={styles['menu-button__container']}>
         <button className={styles['menu-button']}>
           <GiHamburgerMenu className={styles['burger-icon']} />

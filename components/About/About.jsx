@@ -16,13 +16,12 @@ import {
 const About = () => {
   return (
     <section className={styles.container}>
-      <h2 className={`${styles.heading} ${styles.greeting}`}>Hello 👋</h2>
+      <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello 👋</h2>
       <article className={styles['about-me']}>
         <p>
           I&apos;m Allan; a Portland, OR based front end developer, life long
           learner, and dreamer. I build responsive web apps that are easy to
-          use, intuitive and fun, all while ensuring an accessible user
-          experience. All styled, themed and designed by me.
+          use, and look good. All styled, themed and designed by me.
         </p>
       </article>
 

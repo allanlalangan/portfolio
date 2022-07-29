@@ -29,6 +29,7 @@
   .__title {
     border-bottom: 5px solid map-get(colors.$primary, 'main');
     font-size: 2rem;
+    font-weight: 500;
     padding-bottom: 0.5rem;
   }
 
@@ -47,8 +48,12 @@
 }
 
 .tech-heading {
+  width: fit-content;
   padding-left: 1rem;
   padding-top: 1rem;
+  font-weight: 500;
+  border-bottom: 5px solid map-get(colors.$secondary, 'main');
+
   @include mixins.breakpoint('>=xs') {
     grid-column: 1 / 13;
   }

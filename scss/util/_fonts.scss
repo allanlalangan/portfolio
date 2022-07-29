@@ -1,5 +1,3 @@
-// @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
-
 @font-face {
   font-family: 'Syne';
   src: url('../../assets/fonts/Syne/Syne-Regular.ttf') format('truetype');
@@ -30,5 +28,10 @@
   font-style: normal;
   font-weight: 800;
 }
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('../../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf')
+    format('truetype');
+}
 
-$font: 'Syne', sans-serif;
+$font: 'SpaceGrotesk', sans-serif;

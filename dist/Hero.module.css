@@ -1,7 +1,7 @@
 /* offset-x | offset-y | blur-radius | spread-radius | color */
 .hero {
   height: 92vh;
-  padding: 0 1rem;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,13 +16,14 @@
 }
 
 .greeting {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 
 .name {
   font-size: 3rem;
-  font-weight: 800;
+  letter-spacing: 2px;
+  font-weight: 700;
 }
 @media (min-width: 37.5em) {
   .name {
@@ -36,9 +37,9 @@
 }
 
 .title {
-  color: hsl(220deg, 25%, 15%);
+  color: hsl(240deg, 75%, 60%);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 @media (min-width: 56.25em) {
   .title {
@@ -52,7 +53,7 @@
   width: fit-content;
   color: hsl(240deg, 75%, 60%);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
   width: 70%;
 }
 @media (min-width: 37.5em) {
@@ -77,12 +78,16 @@
 .action-button {
   color: hsl(230deg, 75%, 95%);
   background-color: hsl(240deg, 75%, 60%);
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
   padding: 1rem 2rem;
+  transition: all 0.25s ease;
   font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
   margin: 1rem auto;
+}
+
+.action-button:hover {
+  filter: brightness(1.25);
 }/*# sourceMappingURL=Hero.module.css.map */

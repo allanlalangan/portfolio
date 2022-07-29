@@ -6,7 +6,7 @@ export const about = {
   brief: 'Responsive, beautiful, intuitive and fun user experiences',
   brief_2: 'I build things!',
   actionCall: 'View my work',
-  actionCall_2: "Let's build something together! ",
+  actionCall_2: 'Get in touch',
   actionCall_3: 'I can show you better than I can tell you...',
   cv: '/',
 };

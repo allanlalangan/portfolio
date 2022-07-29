@@ -1,15 +1,15 @@
 /* offset-x | offset-y | blur-radius | spread-radius | color */
 .header {
   width: 100%;
+  padding: 0 2rem;
   position: fixed;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 8vh;
-  background-color: hsl(220deg, 70%, 85%);
+  background-color: hsl(205deg, 60%, 90%);
   z-index: 1000;
-  box-shadow: 0px 1px 2.5px 1px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 56.25em) {
   .header {
@@ -19,7 +19,6 @@
 
 .main-banner {
   width: 100%;
-  padding: 0 2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -41,6 +40,7 @@
 }
 
 .main-title {
+  margin-left: 0.125rem;
   font-weight: 900;
   font-size: 1.75rem;
   display: none;
@@ -65,16 +65,13 @@
 }
 
 .home-icon {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   display: flex;
-  background-color: hsl(205deg, 60%, 90%);
-  border-radius: 50%;
-  padding: 0.25rem;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 }
 @media (min-width: 37.5em) {
   .home-icon {
-    font-size: 3rem;
+    font-size: 1;
   }
 }
 
@@ -93,7 +90,6 @@
   }
 }
 .menu-button__container .menu-button {
-  color: hsl(220deg, 25%, 15%);
   display: flex;
   flex-direction: column;
 }
@@ -108,28 +104,19 @@
 @media (min-width: 37.5em) {
   .nav {
     display: flex;
-    width: 50%;
   }
 }
 @media (min-width: 56.25em) {
   .nav {
     display: flex;
-    width: 50%;
-  }
-}
-@media (min-width: 75em) {
-  .nav {
-    display: flex;
-    width: 35%;
   }
 }
 .nav .nav-links {
   width: 100%;
   display: none;
   font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 @media (min-width: 37.5em) {
@@ -137,7 +124,6 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    border-bottom: 3px solid hsl(215deg, 85%, 50%);
   }
 }
 @media (min-width: 56.25em) {
@@ -154,11 +140,22 @@
   cursor: pointer;
 }
 .nav .nav-links .nav-links__link .social-icon {
+  color: hsl(240deg, 75%, 60%);
   font-size: 1.5rem;
 }
-.nav .nav-links .nav-links__link .nav-icon {
+.nav .nav-links .nav-links__link .cv-icon {
   font-size: 1rem;
+}
+.nav .nav-links .cv-link {
+  color: hsl(230deg, 75%, 95%);
+  background-color: hsl(240deg, 75%, 60%);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.25s ease;
 }
 .nav .nav-links .cv-link .cv-link__text {
   padding: 0 0.25rem;
+}
+.nav .nav-links .cv-link:hover {
+  filter: brightness(1.25);
 }/*# sourceMappingURL=Header.module.css.map */

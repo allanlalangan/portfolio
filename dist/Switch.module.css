@@ -1,3 +1,4 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
 .container {
   display: flex;
   flex-direction: row;
@@ -26,5 +27,5 @@
   display: none;
 }
 .container .radio:checked + .label {
-  color: hsl(345deg, 75%, 60%);
+  color: hsl(215deg, 85%, 70%);
 }/*# sourceMappingURL=Switch.module.css.map */

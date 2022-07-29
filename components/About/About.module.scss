@@ -11,15 +11,14 @@
   }
 }
 
-.heading {
+.greeting {
   font-size: 2rem;
-}
-
-.subheading {
-  font-size: 1.5rem;
+  letter-spacing: 1px;
 }
 
 .about-me {
+  font-size: 1.25rem;
+  line-height: 1.75;
   @include mixins.breakpoint('>=md') {
     width: 50%;
   }
