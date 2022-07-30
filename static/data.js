@@ -1,9 +1,9 @@
 export const about = {
-  name: 'Allan Lalangan',
+  name: { first: 'Allan', last: 'Lalangan' },
   alias: 'Allan LaDev',
   title: 'Front End Developer',
   greeting: 'Hello, World! I am',
-  brief: 'Responsive, beautiful, intuitive and fun user experiences',
+  brief: 'I build responsive and beautiful web apps that are easy to use',
   brief_2: 'I build things!',
   actionCall: 'View my work',
   actionCall_2: 'Get in touch',
@@ -15,7 +15,7 @@ export const contact = {
   me: { email: 'allanlalangan@gmail.com', phone: '666-420-1312' },
   socialMedia: [
     { name: 'linkedin', icon: '', url: '/' },
-    { name: 'instagram', icon: '', url: '/' },
+    { name: 'twitter', icon: '', url: '/' },
     { name: 'github', icon: '', url: 'https://github.com/allanlalangan' },
   ],
 };
@@ -167,13 +167,13 @@ export const projects = [
     title: 'Nomad Travel',
     description:
       'Locate and filter popular restaurants, hotels, and attractions anywhere in the world.',
-    tech: ['react', 'css', 'material ui', 'google maps', 'rest api'],
+    tech: ['react', 'css', 'material ui', 'google platform', 'rest api'],
     image: { src: nomad, alt: '' },
   },
   {
     title: 'project.Me',
     description:
-      'A fullstack to-do list app allows registered users to save tasks, goals.',
+      'A fullstack to-do list app. Registered users can save goals..and view the weather.',
     tech: [
       'express',
       'mongodb',
@@ -188,8 +188,8 @@ export const projects = [
   {
     title: 'Martial Masters Academy',
     description:
-      'A responsive landing page I made for the best martial arts gym in all of Portland.',
-    tech: ['next', 'tailwind css', 'google places'],
+      'A responsive landing page for the best martial arts gym in all of Portland',
+    tech: ['next', 'tailwind css', 'google platform', 'headless cms', 'seo'],
     image: { src: mma, alt: '' },
   },
   // {

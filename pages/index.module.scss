@@ -4,9 +4,9 @@
 .heading {
   @include mixins.flex(row, center, center);
   width: fit-content;
-  margin-top: 5rem;
+  margin: 4rem 0;
   margin-left: 2rem;
-  padding: 0.5rem 0;
+  padding: 1rem 1rem 1rem 0;
   font-weight: 600;
   font-size: 2.5rem;
   border-bottom: 5px solid map-get(colors.$primary, 'main');
@@ -19,10 +19,10 @@
     padding: 0 2rem;
   }
   @include mixins.breakpoint('>=md') {
-    padding: 0 4rem;
+    padding: 0 3rem;
   }
   @include mixins.breakpoint('>=lg') {
-    padding: 0 6rem;
+    padding: 0 8rem;
   }
 }
 
