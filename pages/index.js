@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from './index.module.scss';
-import { projects, about } from '../static/data';
+import { projects, about } from '../public/data';
 
 // components
 import { Hero, Skills, Divider, ProjectCard, About } from '../components';

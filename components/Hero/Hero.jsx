@@ -1,4 +1,4 @@
-import { about } from '../../static/data';
+import { about } from '../../public/data';
 import styles from './Hero.module.scss';
 
 const Hero = () => {
