@@ -7,14 +7,6 @@
   justify-content: center;
 }
 
-@media (min-width: 56.25em) {
-  .greeting,
-.name,
-.title {
-    margin-left: 1rem;
-  }
-}
-
 .greeting {
   font-size: 1.25rem;
   font-weight: 500;
@@ -23,7 +15,6 @@
 .name {
   font-size: 3rem;
   letter-spacing: 2px;
-  font-weight: 700;
 }
 @media (min-width: 37.5em) {
   .name {
@@ -44,6 +35,7 @@
 @media (min-width: 56.25em) {
   .title {
     padding-left: 1rem;
+    border-bottom: 5px solid hsl(240deg, 75%, 60%);
   }
 }
 
@@ -55,6 +47,7 @@
   font-size: 1.5rem;
   font-weight: 400;
   width: 70%;
+  padding-top: 1rem;
 }
 @media (min-width: 37.5em) {
   .brief {
@@ -70,7 +63,7 @@
 }
 @media (min-width: 75em) {
   .brief {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     width: 40%;
   }
 }
@@ -81,7 +74,7 @@
   border-radius: 0.75rem;
   padding: 1rem 2rem;
   transition: all 0.25s ease;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
