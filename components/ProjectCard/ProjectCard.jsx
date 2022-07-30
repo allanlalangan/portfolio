@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaGithub, FaLink } from 'react-icons/fa';
+import { FaGithub, FaLink, FaSearch } from 'react-icons/fa';
 import { AiFillApi } from 'react-icons/ai';
 import {
   SiCss3,
@@ -15,6 +15,7 @@ import {
   SiGooglemaps,
   SiReactrouter,
   SiJsonwebtokens,
+  SiDatabricks,
 } from 'react-icons/si';
 import styles from './ProjectCard.module.scss';
 import nomad from '../../assets/nomad-travel.png';
@@ -34,6 +35,8 @@ const TechIcon = ({ tech, styles }) => {
   if (tech.includes('rest')) return <AiFillApi className={styles} />;
   if (tech.includes('router')) return <SiReactrouter className={styles} />;
   if (tech.includes('token')) return <SiJsonwebtokens className={styles} />;
+  if (tech.includes('cms')) return <SiDatabricks className={styles} />;
+  if (tech.includes('seo')) return <FaSearch className={styles} />;
 };
 
 const ProjectCard = ({ project: { title, description, tech, image } }) => {
@@ -48,9 +51,12 @@ const ProjectCard = ({ project: { title, description, tech, image } }) => {
       <h3 className={styles['tech-heading']}>Tech Stack</h3>
       <ul className={`${styles['tech-list']} grid-row`}>
         {tech?.map((t) => (
-          <li className={`${styles.tech} col-4-xs col-3-lg`} key={t}>
+          <li
+            className={`${styles.tech} col-6-xs col-4-sm col-12-md col-3-lg`}
+            key={t}
+          >
             <TechIcon tech={t} styles={styles['tech-icon']} />
-            <span>{t}</span>
+            <span className={styles['tech-caption']}>{t}</span>
           </li>
         ))}
       </ul>
