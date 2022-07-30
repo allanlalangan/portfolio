@@ -28,17 +28,17 @@ export default function Home() {
       <>
         <Hero />
         {/* <Divider /> */}
-        <h2 className={styles.heading}>Recent Projects</h2>
+        <h1 className={styles.heading}>Recent Projects</h1>
         <section className={styles.projects}>
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </section>
         {/* <Divider /> */}
-        <h2 className={styles.heading}>Primary Skills</h2>
+        <h1 className={styles.heading}>Primary Skills</h1>
         <Skills />
 
-        <h2 className={styles.heading}>More About Me</h2>
+        <h1 className={styles.heading}>More About Me</h1>
         <About />
         {/* <Divider /> */}
         <button className={styles['action-button']}>
