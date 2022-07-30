@@ -1,11 +1,16 @@
 /* offset-x | offset-y | blur-radius | spread-radius | color */
 .container {
   min-height: calc(92vh - 5rem);
-  padding: 4rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+@media (min-width: 56.25em) {
+  .container {
+    padding: 4rem;
+  }
 }
 .container article {
   padding: 1rem;
@@ -16,20 +21,44 @@
   letter-spacing: 1px;
 }
 
-.about-me {
-  font-size: 1.5rem;
+.__subheading {
+  margin-bottom: 1rem;
+}
+
+.bio {
+  font-size: 1.25rem;
   line-height: 1.75;
 }
 @media (min-width: 56.25em) {
-  .about-me {
-    width: 50%;
+  .bio {
+    width: 60%;
   }
+}
+.bio .__text {
+  padding-bottom: 1.25rem;
+  padding-left: 1rem;
 }
 
 @media (min-width: 56.25em) {
   .currently-learning {
     width: 50%;
   }
+}
+.currently-learning .icon {
+  margin: 0 0.5rem;
+  font-size: 2rem;
+}
+.currently-learning .__blurb {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  padding-bottom: 1rem;
+}
+
+.email {
+  display: inline;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 .svg-icon {

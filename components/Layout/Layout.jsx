@@ -1,3 +1,4 @@
+import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import styles from './Layout.module.scss';
 
@@ -6,6 +7,7 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <main className={styles['main-content']}>{children}</main>
+      <Footer />
     </>
   );
 };

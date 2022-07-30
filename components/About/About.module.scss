@@ -4,7 +4,10 @@
 
 .container {
   min-height: calc((100vh - var.$headerHeight) - 5rem);
-  padding: 4rem;
+  padding: 2rem;
+  @include mixins.breakpoint('>=md') {
+    padding: 4rem;
+  }
   // padding: 0 4rem 4rem 4rem;
   @include mixins.flex(column, center, flex-start);
   article {
@@ -17,11 +20,20 @@
   letter-spacing: 1px;
 }
 
-.about-me {
-  font-size: 1.5rem;
+.__subheading {
+  margin-bottom: 1rem;
+}
+
+.bio {
+  font-size: 1.25rem;
   line-height: 1.75;
   @include mixins.breakpoint('>=md') {
-    width: 50%;
+    width: 60%;
+  }
+
+  .__text {
+    padding-bottom: 1.25rem;
+    padding-left: 1rem;
   }
 }
 
@@ -34,6 +46,24 @@
   @include mixins.breakpoint('>=md') {
     width: 50%;
   }
+
+  .icon {
+    margin: 0 0.5rem;
+    font-size: 2rem;
+  }
+  .__blurb {
+    font-size: 1.25rem;
+
+    line-height: 1.75;
+    padding-bottom: 1rem;
+  }
+}
+
+.email {
+  display: inline;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 .svg-icon {

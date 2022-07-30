@@ -35,8 +35,6 @@
   }
 }
 .project-header .__title {
-  font-size: 2rem;
-  font-weight: 500;
   padding-bottom: 0.5rem;
   border-bottom: 5px solid hsl(240deg, 75%, 60%);
 }
@@ -56,13 +54,11 @@
 }
 
 .tech-heading {
-  height: fit;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1rem 0;
   padding-left: 1rem;
-  font-weight: 500;
   border-bottom: 5px solid hsl(215deg, 85%, 50%);
 }
 @media (min-width: 0em) {
@@ -104,7 +100,7 @@
 }
 @media (min-width: 75em) {
   .tech-list {
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     grid-column: 1/13;
     grid-row: 11/13;
     display: flex;

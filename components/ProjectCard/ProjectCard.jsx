@@ -18,7 +18,6 @@ import {
   SiDatabricks,
 } from 'react-icons/si';
 import styles from './ProjectCard.module.scss';
-import nomad from '../../assets/nomad-travel.png';
 
 const TechIcon = ({ tech, styles }) => {
   if (tech === 'css') return <SiCss3 className={styles} />;
@@ -43,7 +42,7 @@ const ProjectCard = ({ project: { title, description, tech, image } }) => {
   return (
     <article className={`${styles['container']}`}>
       <section className={styles['project-header']}>
-        <h3 className={styles.__title}>{title}</h3>
+        <h2 className={styles.__title}>{title}</h2>
         <span className={styles['progress-message']}>
           currently building...
         </span>

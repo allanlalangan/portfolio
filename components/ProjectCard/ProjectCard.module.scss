@@ -30,8 +30,6 @@
   }
 
   .__title {
-    font-size: 2rem;
-    font-weight: 500;
     padding-bottom: 0.5rem;
     border-bottom: 5px solid map-get(colors.$primary, 'main');
   }
@@ -52,11 +50,9 @@
 }
 
 .tech-heading {
-  height: fit;
   width: fit-content;
   padding: 1rem 0;
   padding-left: 1rem;
-  font-weight: 500;
   border-bottom: 5px solid map-get(colors.$secondary, 'main');
 
   @include mixins.breakpoint('>=xs') {
@@ -87,7 +83,7 @@
     @include mixins.flex(row, flex-start, center);
   }
   @include mixins.breakpoint('>=lg') {
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     // grid-column: 1 / 9; //odd
     grid-column: 1 / 13;
     grid-row: 11 / 13;

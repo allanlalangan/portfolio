@@ -1,4 +1,4 @@
-import { SiNextdotjs, SiSass } from 'react-icons/si';
+import { SiNextdotjs, SiSass, SiTailwindcss } from 'react-icons/si';
 import styles from './About.module.scss';
 import { FaGithub } from 'react-icons/fa';
 
@@ -12,16 +12,30 @@ import {
   MuiIcon,
   NpmIcon,
 } from '../ui/icons';
+import Link from 'next/link';
 
 const About = () => {
   return (
     <section className={styles.container}>
       <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello 👋</h2>
-      <article className={styles['about-me']}>
-        <p>
+      <article className={styles.bio}>
+        <p className={styles.__text}>
           I&apos;m Allan; a Portland, OR based web developer, life long learner,
           and perpetual dreamer. I build responsive web apps that are easy to
           use, and look good. All styled, themed and designed by me.
+        </p>
+
+        <h3 className={styles.__subheading}>Contact</h3>
+
+        <p className={styles.__text}>
+          I am currently available for employment. If we seem like a good fit,
+          please, get in touch! Contact me at{' '}
+          {
+            <Link href='mailto:allanlalangan@gmail.com'>
+              <span className={styles.email}>allanlalangan@gmail.com</span>
+            </Link>
+          }
+          , tell me about your project!
         </p>
       </article>
 
@@ -59,31 +73,23 @@ const About = () => {
       {/* <h2 className={`${styles.heading}`}>What I am currently learning:</h2>
 
       <article className={`${styles['currently-learning']}`}>
-        <h3 className={styles.subheading}>ARIA and accessibility</h3>
-        <p>
+        <h3 className={styles.__subheading}>ARIA and accessibility</h3>
+        <p className={styles.__blurb}>
           Inclusivity is important! Tech is growing fast and I believe its our
           responsibility as developers to ensure no one gets left behind during
           its evolution. Design, semantic HTML, and ARIA are a few ways to make
           apps more accessible. The web should be for everyone!
         </p>
-        <h3 className={styles.subheading}>Sass</h3>
-        <figure>
-          <SiSass size={'3rem'} />
-          <p>
-            I love CSS and I strongly believe in using pure CSS in my projects.
-            SASS has made styling an easier and more streamlined process with
-            mixins, variables etc.
-          </p>
+        <h3 className={styles.__subheading}>Styling Options</h3>
+        <figure className={styles.icons}>
+          <SiSass className={styles.icon} />
+          <SiTailwindcss className={styles.icon} />
         </figure>
-        <h3>Next.js</h3>
-        <figure>
-          <SiNextdotjs size={'3rem'} />
-          <p>
-            React is my go to library for building interfaces, which may change,
-            considering how powerful NextJS is!
-          </p>
-        </figure>
-        <p></p>
+        <p className={styles.__blurb}>
+          I love CSS and I strongly believe in using pure CSS in my projects.
+          SASS has made styling an easier and more streamlined process with
+          mixins, variables etc.
+        </p>
       </article> */}
     </section>
   );
