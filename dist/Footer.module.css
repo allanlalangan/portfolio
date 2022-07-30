@@ -1,0 +1,10 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.container {
+  height: 25vh;
+  padding: 2rem 3rem;
+  background-color: hsl(205deg, 60%, 90%);
+}
+
+.heading {
+  font-size: 1.5rem;
+}/*# sourceMappingURL=Footer.module.css.map */

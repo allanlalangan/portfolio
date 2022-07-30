@@ -1,0 +1,13 @@
+@use '../../../scss/abstracts/colors' as colors;
+@use '../../../scss/abstracts/variables' as var;
+@use '../../../scss/abstracts/mixins' as mixins;
+
+.container {
+  height: 25vh;
+  padding: 2rem 3rem;
+  background-color: map-get(colors.$background, 'light');
+}
+
+.heading {
+  font-size: 1.5rem;
+}
