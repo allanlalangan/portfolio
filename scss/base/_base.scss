@@ -3,7 +3,7 @@
 @use '../util/' as util;
 
 body {
-  font-size: 18px;
+  font-size: 16px;
   font-family: util.$font;
   color: map-get(colors.$text, 'main');
 
