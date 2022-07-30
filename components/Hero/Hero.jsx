@@ -5,10 +5,13 @@ const Hero = () => {
   return (
     <section className={styles['hero']}>
       <article className={styles['hero-text']}>
-        <h3 className={styles.brief}>{about.brief}</h3>
         <p className={styles.greeting}>{about.greeting}</p>
-        <h1 className={styles.name}>{about.name}</h1>
-        <h2 className={styles.title}>{about.title}</h2>
+        <h1 className={styles.name}>
+          <span className={styles.first}>{about.name.first}</span>
+          <span className={styles.last}> {about.name.last}</span>
+        </h1>
+        <span className={styles.title}>{about.title}</span>
+        <p className={styles.brief}>{about.brief}</p>
       </article>
       <button className={styles['action-button']}>{about.actionCall}</button>
     </section>
