@@ -134,8 +134,7 @@
 
     .nav-links__link {
       padding: 0 1rem;
-      @include mixins.flex-row();
-      align-items: center;
+      @include mixins.flex(row, center, center);
       cursor: pointer;
 
       .social-icon {

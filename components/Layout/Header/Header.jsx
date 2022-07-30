@@ -45,7 +45,7 @@ const Header = () => {
           </Link>
           <Link href='/'>
             <li className={`${styles['nav-links__link']} ${styles['cv-link']}`}>
-              <span className={`${styles['cv-link__text']}`}>CV</span>
+              <span className={`${styles['cv-link__text']}`}>cv</span>
               <FaFileDownload className={styles['cv-icon']} />
             </li>
           </Link>
