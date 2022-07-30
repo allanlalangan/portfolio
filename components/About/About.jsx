@@ -19,8 +19,8 @@ const About = () => {
       <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello 👋</h2>
       <article className={styles['about-me']}>
         <p>
-          I&apos;m Allan; a Portland, OR based front end developer, life long
-          learner, and dreamer. I build responsive web apps that are easy to
+          I&apos;m Allan; a Portland, OR based web developer, life long learner,
+          and perpetual dreamer. I build responsive web apps that are easy to
           use, and look good. All styled, themed and designed by me.
         </p>
       </article>

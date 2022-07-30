@@ -5,6 +5,7 @@
 .container {
   min-height: calc((100vh - var.$headerHeight) - 5rem);
   padding: 4rem;
+  // padding: 0 4rem 4rem 4rem;
   @include mixins.flex(column, center, flex-start);
   article {
     padding: 1rem;
@@ -17,7 +18,7 @@
 }
 
 .about-me {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.75;
   @include mixins.breakpoint('>=md') {
     width: 50%;
