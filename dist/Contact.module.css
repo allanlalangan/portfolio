@@ -1,0 +1,36 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (min-width: 56.25em) {
+  .container {
+    padding: 4rem;
+    padding-top: 2rem;
+  }
+}
+.container article {
+  padding: 1rem;
+}
+
+.text {
+  font-size: 1.25rem;
+  line-height: 1.75;
+}
+@media (min-width: 56.25em) {
+  .text {
+    width: 60%;
+  }
+}
+.text .email {
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.text .email:hover {
+  color: hsl(240deg, 75%, 60%);
+  border-bottom: 3px solid hsl(240deg, 75%, 60%);
+}/*# sourceMappingURL=Contact.module.css.map */

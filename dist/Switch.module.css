@@ -27,5 +27,5 @@
   display: none;
 }
 .container .radio:checked + .label {
-  color: hsl(215deg, 85%, 70%);
+  color: hsl(210deg, 85%, 70%);
 }/*# sourceMappingURL=Switch.module.css.map */
