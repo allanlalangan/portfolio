@@ -3,7 +3,8 @@ export const about = {
   alias: 'Allan LaDev',
   title: 'Front End Developer',
   greeting: 'Hello, World! I am',
-  brief: 'I build responsive and beautiful web apps that are easy to use',
+  brief:
+    'I build responsive and beautifully designed websites that are easy to use.',
   brief_2: 'I build things!',
   actionCall: 'View my work',
   actionCall_2: 'Get in touch',
