@@ -24,19 +24,6 @@ const About = () => {
           and perpetual dreamer. I build responsive web apps that are easy to
           use, and look good. All styled, themed and designed by me.
         </p>
-
-        <h3 className={styles.__subheading}>Contact</h3>
-
-        <p className={styles.__text}>
-          I am currently available for employment. If we seem like a good fit,
-          please, get in touch! Contact me at{' '}
-          {
-            <Link href='mailto:allanlalangan@gmail.com'>
-              <span className={styles.email}>allanlalangan@gmail.com</span>
-            </Link>
-          }
-          , tell me about your project!
-        </p>
       </article>
 
       {/* <h2>Skills</h2>

@@ -1,0 +1,36 @@
+@use '../../scss/abstracts/mixins' as mixins;
+@use '../../scss/abstracts/colors' as colors;
+@use '../../scss/abstracts/variables' as var;
+
+.container {
+  // min-height: calc(((100vh - var.$headerHeight) - 5rem) / 2);
+  padding: 2rem;
+  @include mixins.breakpoint('>=md') {
+    padding: 4rem;
+    padding-top: 2rem;
+  }
+  // padding: 0 4rem 4rem 4rem;
+  @include mixins.flex(column, center, flex-start);
+  article {
+    padding: 1rem;
+  }
+}
+
+.text {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  @include mixins.breakpoint('>=md') {
+    width: 60%;
+  }
+
+  .email {
+    border-bottom: 3px solid rgba($color: #fff, $alpha: 0);
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  .email:hover {
+    color: map-get(colors.$primary, 'main');
+    border-bottom: 3px solid map-get(colors.$primary, 'main');
+  }
+}
