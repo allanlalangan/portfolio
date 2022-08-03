@@ -4,7 +4,7 @@
 .heading {
   @include mixins.flex(row, center, center);
   width: fit-content;
-  margin: 4rem 0;
+  // margin: 4rem 0;
   margin-left: 2rem;
   padding: 1rem 1rem 1rem 0;
   font-weight: 700;
@@ -12,8 +12,16 @@
   border-bottom: 5px solid map-get(colors.$primary, 'main');
 }
 
+.projects-heading {
+  color: map-get(colors.$primary, 'light');
+  @include mixins.breakpoint('>=lg') {
+    // color: map-get(colors.$text, 'main');
+  }
+}
+
 .projects {
-  margin-top: 1rem;
+  // background-color: map-get(colors.$card, 'dark');
+  position: relative;
   padding: 0 1rem;
   @include mixins.breakpoint('>=sm') {
     padding: 0 2rem;
@@ -24,6 +32,26 @@
   @include mixins.breakpoint('>=lg') {
     padding: 0 8rem;
   }
+}
+
+.projects::before {
+  content: '';
+  background: map-get(colors.$card, 'dark');
+  height: 107%;
+  @include mixins.breakpoint('>=md') {
+    height: 112%;
+  }
+  @include mixins.breakpoint('>=lg') {
+    height: 114.5%;
+  }
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  // clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
+
+  z-index: -1;
 }
 
 .skills {

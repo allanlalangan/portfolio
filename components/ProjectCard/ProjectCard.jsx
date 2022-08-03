@@ -77,18 +77,14 @@ const ProjectCard = ({ project: { title, description, tech, image } }) => {
             className={`${styles['project-link-button']} ${styles['project-link-button--github']}`}
           >
             <FaGithub className={styles['project-link-button__icon']} />
-            <span className={styles['project-link-button__text']}>
-              Source Code
-            </span>
+            <span className={styles['project-link-button__text']}>Code</span>
           </button>
           <div className={styles['button-divider']} />
           <button
             className={`${styles['project-link-button']} ${styles['project-link-button--live']}`}
           >
             <FaLink className={styles['project-link-button__icon']} />
-            <span className={styles['project-link-button__text']}>
-              Live Demo
-            </span>
+            <span className={styles['project-link-button__text']}>Live</span>
           </button>
         </div>
       </section>

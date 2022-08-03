@@ -4,7 +4,14 @@ import styles from './index.module.scss';
 import { projects, about } from '../public/data';
 
 // components
-import { Hero, Skills, Divider, ProjectCard, About } from '../components';
+import {
+  Hero,
+  Skills,
+  Divider,
+  ProjectCard,
+  About,
+  Contact,
+} from '../components';
 import {
   CssIcon,
   HtmlIcon,
@@ -28,22 +35,26 @@ export default function Home() {
       <>
         <Hero />
         {/* <Divider /> */}
-        <h1 className={styles.heading}>Recent Projects</h1>
+        <h1 className={`${styles.heading} ${styles['projects-heading']}`}>
+          Recent Projects
+        </h1>
         <section className={styles.projects}>
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </section>
         {/* <Divider /> */}
-        <h1 className={styles.heading}>Primary Skills</h1>
+        {/* <h1 className={styles.heading}>Primary Skills</h1> */}
         <Skills />
 
         <h1 className={styles.heading}>More About Me</h1>
         <About />
         {/* <Divider /> */}
-        <button className={styles['action-button']}>
+        <h1 className={styles.heading}>Contact</h1>
+        <Contact />
+        {/* <button className={styles['action-button']}>
           {about.actionCall_2}
-        </button>
+        </button> */}
       </>
     </>
   );
