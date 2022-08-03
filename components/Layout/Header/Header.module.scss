@@ -39,7 +39,7 @@
 .main-title {
   // color: map-get(colors.$primary, 'main');
   margin-left: 0.125rem;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 1.75rem;
   display: none;
 
@@ -117,8 +117,10 @@
     width: 100%;
     // on mobile
     display: none;
-
-    @include mixins.action-button-text();
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
 
     @include mixins.breakpoint('>=sm') {
       height: 100%;
@@ -147,6 +149,8 @@
     }
 
     .cv-link {
+      @include mixins.action-button-text();
+
       @include mixins.filled-button(
         map-get(colors.$primary, 'main'),
         0.5rem,
