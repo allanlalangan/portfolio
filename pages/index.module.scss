@@ -42,7 +42,7 @@
     height: 112%;
   }
   @include mixins.breakpoint('>=lg') {
-    height: 114.5%;
+    height: 110%;
   }
   width: 100%;
   left: 0;
@@ -52,6 +52,10 @@
   clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
 
   z-index: -1;
+}
+
+.about {
+  position: relative;
 }
 
 .skills {
@@ -70,6 +74,35 @@
 .currently-learning {
   @include mixins.breakpoint('>=md') {
     width: 50%;
+  }
+}
+
+.contact {
+  position: relative;
+}
+
+.contact-heading {
+  margin-top: 4rem;
+  color: map-get(colors.$primary, 'light');
+}
+
+.contact::before {
+  content: '';
+  background: map-get(colors.$card, 'dark');
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 75%;
+  position: absolute;
+  // clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
+
+  z-index: -1;
+  @include mixins.breakpoint('>=md') {
+    height: 100%;
+  }
+  @include mixins.breakpoint('>=lg') {
+    height: 100%;
   }
 }
 
