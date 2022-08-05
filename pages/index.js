@@ -48,10 +48,16 @@ export default function Home() {
         <Skills />
 
         <h1 className={styles.heading}>More About Me</h1>
-        <About />
+        <section className={styles.about}>
+          <About />
+        </section>
         {/* <Divider /> */}
-        <h1 className={styles.heading}>Contact</h1>
-        <Contact />
+        <h1 className={`${styles.heading} ${styles['contact-heading']}`}>
+          Contact
+        </h1>
+        <section className={styles.contact}>
+          <Contact />
+        </section>
         {/* <button className={styles['action-button']}>
           {about.actionCall_2}
         </button> */}

@@ -3,7 +3,8 @@
 @use '../../scss/abstracts/variables' as var;
 
 .container {
-  // min-height: calc(((100vh - var.$headerHeight) - 5rem) / 2);
+  background-color: map-get(colors.$card, 'dark');
+  color: map-get(colors.$text, 'contrast');
   padding: 2rem;
   @include mixins.breakpoint('>=md') {
     padding: 4rem;
@@ -23,14 +24,18 @@
     width: 60%;
   }
 
+  strong {
+    color: map-get(colors.$primary, 'light');
+  }
+
   .email {
-    border-bottom: 3px solid rgba($color: #fff, $alpha: 0);
+    border-bottom: 3px solid map-get(colors.$primary, 'main');
 
     cursor: pointer;
     transition: all 0.25s ease;
   }
   .email:hover {
-    color: map-get(colors.$primary, 'main');
-    border-bottom: 3px solid map-get(colors.$primary, 'main');
+    color: map-get(colors.$primary, 'light');
+    border-bottom: 3px solid map-get(colors.$secondary, 'main');
   }
 }
