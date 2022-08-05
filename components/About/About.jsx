@@ -16,19 +16,33 @@ import Link from 'next/link';
 
 const About = () => {
   return (
-    <section className={styles.container}>
-      <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello 👋</h2>
-      <article className={styles.bio}>
-        <p className={styles.__text}>
-          I&apos;m Allan; a Portland, OR based web developer, life long learner,
-          and perpetual dreamer. I build responsive web apps that are easy to
-          use, and look good. All styled, themed and designed by me.
-        </p>
-      </article>
+    <>
+      <div className={styles.pattern}></div>
+      <section className={styles.container}>
+        <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello 👋</h2>
+        <article className={styles.bio}>
+          <p className={styles.__text}>
+            I&apos;m Allan; a Portland, OR based web developer, life long
+            learner, and perpetual dreamer. I build responsive web apps that are
+            easy to use, and look good. All styled, themed and designed by me.
+          </p>
+        </article>
 
-      {/* <h2>Skills</h2>
-      <article className={styles.skills}>
-        <h3>Fundamentals</h3>
+        <h2>Skills</h2>
+        <article className={styles.skills}>
+          <h3>My main tools consist of:</h3>
+          <ul>
+            <li>ReactJS, hooks and React Router</li>
+            <li>Javascript / ES6</li>
+            <li>Semantic html</li>
+            <li>
+              Styling and design with modern CSS, Sass and frameworks such as
+              Material UI and Tailwind CSS
+            </li>
+            <li>State management with Redux + RTK</li>
+            <li>Familiar with MERN stack, JSON Web Tokens (JWT)</li>
+          </ul>
+          {/* <h3>Fundamentals</h3>
         <figure>
           <HtmlIcon className={styles['svg-icon']} />
           <CssIcon className={styles['svg-icon']} />
@@ -54,31 +68,32 @@ const About = () => {
             Custom design, templates, themes and styled components with Sass and
             Material UI
           </figcaption>
-        </figure>
-      </article> */}
+        </figure> */}
+        </article>
 
-      {/* <h2 className={`${styles.heading}`}>What I am currently learning:</h2>
+        <h2 className={`${styles.heading}`}>What I am currently learning:</h2>
 
-      <article className={`${styles['currently-learning']}`}>
-        <h3 className={styles.__subheading}>ARIA and accessibility</h3>
-        <p className={styles.__blurb}>
-          Inclusivity is important! Tech is growing fast and I believe its our
-          responsibility as developers to ensure no one gets left behind during
-          its evolution. Design, semantic HTML, and ARIA are a few ways to make
-          apps more accessible. The web should be for everyone!
-        </p>
-        <h3 className={styles.__subheading}>Styling Options</h3>
-        <figure className={styles.icons}>
-          <SiSass className={styles.icon} />
-          <SiTailwindcss className={styles.icon} />
-        </figure>
-        <p className={styles.__blurb}>
-          I love CSS and I strongly believe in using pure CSS in my projects.
-          SASS has made styling an easier and more streamlined process with
-          mixins, variables etc.
-        </p>
-      </article> */}
-    </section>
+        <article className={`${styles['currently-learning']}`}>
+          <h3 className={styles.__subheading}>ARIA and accessibility</h3>
+          <p className={styles.__blurb}>
+            Inclusivity is important! Tech is growing fast and I believe its our
+            responsibility as developers to ensure no one gets left behind
+            during its evolution. Design, semantic HTML, and ARIA are a few ways
+            to make apps more accessible. The web should be for everyone!
+          </p>
+          <h3 className={styles.__subheading}>Styling Options</h3>
+          <figure className={styles.icons}>
+            <SiSass className={styles.icon} />
+            <SiTailwindcss className={styles.icon} />
+          </figure>
+          <p className={styles.__blurb}>
+            I love CSS and I strongly believe in using pure CSS in my projects.
+            SASS has made styling an easier and more streamlined process with
+            mixins, variables etc.
+          </p>
+        </article>
+      </section>
+    </>
   );
 };
 export default About;

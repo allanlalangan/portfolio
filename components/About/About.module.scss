@@ -17,7 +17,7 @@
 
 .greeting {
   font-size: 2rem;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
 }
 
 .__subheading {
@@ -30,16 +30,10 @@
   @include mixins.breakpoint('>=md') {
     width: 60%;
   }
-
-  .__text {
-    padding-bottom: 1.25rem;
-    padding-left: 1rem;
-  }
 }
 
 .skills {
-  // color: map-get(colors.$text, 'contrast');
-  // background-color: map-get(colors.$background, 'dark');
+  font-size: 1.25rem;
 }
 
 .currently-learning {
@@ -71,4 +65,26 @@
 }
 .font-icon {
   font-size: 3rem;
+}
+
+.pattern {
+  position: absolute;
+  top: -12rem;
+  width: 100%;
+  height: calc(100% + 20rem);
+  display: flex;
+  // background-color: map-get(colors.$primary, 'main');
+  z-index: -1;
+}
+
+.pattern::before {
+  content: '';
+  background-image: url('../../assets/topography.svg');
+  position: absolute;
+  background-repeat: repeat;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.05;
 }
