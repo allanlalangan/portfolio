@@ -3,10 +3,19 @@
 
 .skills {
   padding: 6rem 0 12rem 0;
-  // margin-bottom: 3rem;
+  @include mixins.breakpoint('>=sm') {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include mixins.breakpoint('>=lg') {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include mixins.breakpoint('>=xl') {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
   background-color: map-get(colors.$card, 'dark');
-  // @include mixins.shadow(0px, 1px, 5px, 2px, 0.3);
-  // clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8vw), 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
 }
 
