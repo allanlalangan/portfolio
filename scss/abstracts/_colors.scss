@@ -23,11 +23,13 @@ $text: (
 );
 
 $background: (
+  'main': hsl(220, 70%, 85%),
   'light': hsl(205, 60%, 90%),
   'dark': hsl(230, 35%, 15%),
 );
 
 $card: (
+  'test': hsl(205, 60%, 90%),
   'light': hsl(205, 60%, 90%),
   'dark': hsl(230, 35%, 25%),
 );
@@ -39,12 +41,16 @@ $bezel: (
 
 $divider: hsl(215, 75%, 80%);
 
-$success: hsl(140, 65%, 65%);
-$error: hsl(0, 75%, 60%);
-$info: hsl(200, 65%, 65%);
+$system: (
+  'success': hsl(140, 65%, 65%),
+  'error': hsl(0, 75%, 60%),
+  'info': hsl(200, 65%, 65%),
+  'lightThemeIcon': map-get($secondary, 'light'),
+  'darkThemeIcon': map-get($primary, 'light'),
+);
 
 $gradientBg: linear-gradient(
-  30deg,
+  20deg,
   hsl(220, 95%, 80%) 0%,
   hsl(220, 70%, 85%) 25%,
 

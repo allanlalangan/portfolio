@@ -3,33 +3,20 @@ import { FaSun, FaMoon } from 'react-icons/fa';
 import styles from './Switch.module.scss';
 
 const Switch = () => {
-  const [theme, setTheme] = useState('default');
+  const [darkTheme, setDarkTheme] = useState(false);
   return (
-    <form className={styles['container']}>
-      {/* <span className={styles['switch']}></span> */}
-      <input
-        checked={theme === 'default'}
-        className={styles['radio']}
-        type='radio'
-        onChange={(e) => setTheme(e.target.id)}
-        id='default'
-        name='theme'
-      />
-      <label className={styles['label']} htmlFor='default'>
-        <FaSun className={styles['icon']} />
-      </label>
-      <input
-        checked={theme === 'dark'}
-        className={styles['radio']}
-        type='radio'
-        onChange={(e) => setTheme(e.target.id)}
-        id='dark'
-        name='theme'
-      />
-      <label className={styles['label']} htmlFor='dark'>
-        <FaMoon className={styles['icon']} />
-      </label>
-    </form>
+    <aside className={styles['container']}>
+      <button
+        className={styles.switch}
+        onClick={() => setDarkTheme(!darkTheme)}
+      >
+        {!darkTheme ? (
+          <FaSun className={`${styles['icon']} ${styles['sun']}`} />
+        ) : (
+          <FaMoon className={`${styles['icon']} ${styles['moon']}`} />
+        )}
+      </button>
+    </aside>
   );
 };
 export default Switch;

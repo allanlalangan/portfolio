@@ -6,25 +6,16 @@
   position: relative;
 
   .switch {
-    border: 1px solid black;
-    position: absolute;
-    transform: translateX(-50%);
-    width: 50%;
-    height: 100%;
-    z-index: -1;
-  }
-
-  .label {
+    padding: 0 1rem;
     @include mixins.flex(row, center, center);
-  }
-
-  .icon {
-    font-size: 1.5rem;
-  }
-  .radio {
-    display: none;
-  }
-  .radio:checked + .label {
-    color: map-get(colors.$secondary, 'light');
+    .icon {
+      font-size: 1.5rem;
+    }
+    .sun {
+      color: map-get(colors.$system, 'lightThemeIcon');
+    }
+    .moon {
+      color: map-get(colors.$system, 'darkThemeIcon');
+    }
   }
 }

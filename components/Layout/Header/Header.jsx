@@ -32,7 +32,6 @@ const Header = () => {
         </button>
       </aside>
       <nav className={styles['nav']}>
-        {/* <Switch /> */}
         <ul className={styles['nav-links']}>
           <Link href='/'>
             <li className={styles['nav-links__link']}>projects</li>
@@ -60,6 +59,7 @@ const Header = () => {
             </li>
           </Link>
         </ul>
+        <Switch />
       </nav>
     </header>
   );
