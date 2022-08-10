@@ -1,5 +1,7 @@
 /* offset-x | offset-y | blur-radius | spread-radius | color */
 .container {
+  background-color: hsl(230deg, 35%, 20%);
+  color: hsl(230deg, 75%, 90%);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -25,12 +27,15 @@
     width: 60%;
   }
 }
+.text strong {
+  color: hsl(240deg, 75%, 80%);
+}
 .text .email {
-  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  border-bottom: 3px solid hsl(240deg, 75%, 60%);
   cursor: pointer;
   transition: all 0.25s ease;
 }
 .text .email:hover {
-  color: hsl(240deg, 75%, 60%);
-  border-bottom: 3px solid hsl(240deg, 75%, 60%);
+  color: hsl(240deg, 75%, 80%);
+  border-bottom: 3px solid hsl(210deg, 85%, 50%);
 }/*# sourceMappingURL=Contact.module.css.map */

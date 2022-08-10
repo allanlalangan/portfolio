@@ -23,20 +23,24 @@
   // background-color: map-get(colors.$card, 'dark');
   position: relative;
   padding: 0 1rem;
+  padding-bottom: 4rem;
   @include mixins.breakpoint('>=sm') {
-    padding: 0 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   @include mixins.breakpoint('>=md') {
-    padding: 0 3rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
   @include mixins.breakpoint('>=lg') {
-    padding: 0 8rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
   }
 }
 
 .projects::before {
   content: '';
-  background: map-get(colors.$card, 'dark');
+  background: map-get(colors.$section, 'dark');
   height: 107%;
   @include mixins.breakpoint('>=md') {
     height: 112%;
@@ -88,7 +92,7 @@
 
 .contact::before {
   content: '';
-  background: map-get(colors.$card, 'dark');
+  background: map-get(colors.$section, 'dark');
   height: 100%;
   width: 100%;
   left: 0;

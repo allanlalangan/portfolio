@@ -5,27 +5,23 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  margin: 0 1rem;
 }
 .container .switch {
-  border: 1px solid black;
-  position: absolute;
-  transform: translateX(-50%);
-  width: 50%;
-  height: 100%;
-  z-index: -1;
-}
-.container .label {
+  border: 2px solid hsl(240deg, 75%, 60%);
+  border-radius: 45%;
+  padding: 0.25rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.container .icon {
-  font-size: 1.5rem;
+.container .switch .icon {
+  font-size: 1.25rem;
 }
-.container .radio {
-  display: none;
-}
-.container .radio:checked + .label {
+.container .switch .sun {
   color: hsl(210deg, 85%, 70%);
+}
+.container .switch .moon {
+  color: hsl(240deg, 75%, 80%);
 }/*# sourceMappingURL=Switch.module.css.map */

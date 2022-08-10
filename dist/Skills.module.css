@@ -1,9 +1,27 @@
 /* offset-x | offset-y | blur-radius | spread-radius | color */
 .skills {
-  padding: 6rem 0 12rem 0;
-  background-color: hsl(230deg, 35%, 25%);
+  padding: 2rem 0 12rem 0;
+  background-color: hsl(230deg, 35%, 20%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
+}
+@media (min-width: 37.5em) {
+  .skills {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 75em) {
+  .skills {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 96em) {
+  .skills {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 .icon-container {
@@ -29,7 +47,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
-  color: hsl(230deg, 75%, 95%);
+  color: hsl(230deg, 75%, 90%);
 }
 
 .svg-icon {

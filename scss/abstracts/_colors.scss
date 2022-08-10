@@ -19,19 +19,23 @@ $grey: (
 
 $text: (
   'main': hsl(220, 25%, 15%),
-  'contrast': hsl(230, 75%, 95%),
+  'contrast': hsl(230, 75%, 90%),
 );
 
 $background: (
   'main': hsl(220, 70%, 85%),
   'light': hsl(205, 60%, 90%),
-  'dark': hsl(230, 35%, 15%),
+  'dark': hsl(230, 30%, 15%),
+);
+
+$section: (
+  'light': hsl(205, 60%, 90%),
+  'dark': hsl(230, 35%, 20%),
 );
 
 $card: (
-  'test': hsl(205, 60%, 90%),
   'light': hsl(205, 60%, 90%),
-  'dark': hsl(230, 35%, 25%),
+  'dark': hsl(230, 30%, 25%),
 );
 
 $bezel: (

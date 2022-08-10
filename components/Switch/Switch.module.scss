@@ -4,12 +4,15 @@
 .container {
   @include mixins.flex(row, center, center);
   position: relative;
+  margin: 0 1rem;
 
   .switch {
-    padding: 0 1rem;
+    border: 2px solid map-get(colors.$primary, 'main');
+    border-radius: 45%;
+    padding: 0.25rem;
     @include mixins.flex(row, center, center);
     .icon {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
     .sun {
       color: map-get(colors.$system, 'lightThemeIcon');

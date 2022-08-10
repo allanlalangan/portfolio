@@ -98,18 +98,11 @@
 }
 
 .nav {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 100%;
-}
-@media (min-width: 37.5em) {
-  .nav {
-    display: flex;
-  }
-}
-@media (min-width: 56.25em) {
-  .nav {
-    display: flex;
-  }
 }
 .nav .nav-links {
   width: 100%;
@@ -153,7 +146,7 @@
   font-weight: 600;
   letter-spacing: 1.75px;
   text-transform: uppercase;
-  color: hsl(230deg, 75%, 95%);
+  color: hsl(230deg, 75%, 90%);
   background-color: hsl(240deg, 75%, 60%);
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;

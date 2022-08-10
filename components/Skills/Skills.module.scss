@@ -2,7 +2,7 @@
 @use '../../scss/abstracts/mixins' as mixins;
 
 .skills {
-  padding: 6rem 0 12rem 0;
+  padding: 2rem 0 12rem 0;
   @include mixins.breakpoint('>=sm') {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -15,7 +15,7 @@
     padding-left: 4rem;
     padding-right: 4rem;
   }
-  background-color: map-get(colors.$card, 'dark');
+  background-color: map-get(colors.$section, 'dark');
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
 }
 

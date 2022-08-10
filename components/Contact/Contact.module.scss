@@ -3,7 +3,7 @@
 @use '../../scss/abstracts/variables' as var;
 
 .container {
-  background-color: map-get(colors.$card, 'dark');
+  background-color: map-get(colors.$section, 'dark');
   color: map-get(colors.$text, 'contrast');
   padding: 2rem;
   @include mixins.breakpoint('>=md') {
