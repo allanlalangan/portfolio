@@ -61,3 +61,11 @@ $gradientBg: linear-gradient(
   map-get($background, 'light') 85%,
   hsl(220, 90%, 80%) 100%
 );
+$gradientBg-dark: linear-gradient(
+  20deg,
+  hsl(230, 35%, 20%) 0%,
+  map-get($background, 'dark') 25%,
+
+  map-get($background, 'dark') 85%,
+  hsl(230, 35%, 20%) 100%
+);

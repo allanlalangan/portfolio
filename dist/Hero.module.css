@@ -89,12 +89,12 @@
 
 .pattern::before {
   content: "";
-  background-image: url("../../assets/topography-dark.svg");
+  background-image: url("../../assets/topography-light.svg");
   position: absolute;
   background-repeat: repeat;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.05;
+  opacity: 0.5;
 }/*# sourceMappingURL=Hero.module.css.map */
