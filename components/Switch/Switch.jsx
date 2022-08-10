@@ -1,16 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useContext } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import { ThemeContext } from '../../store/ThemeContextProvider';
 import styles from './Switch.module.scss';
 
 const Switch = () => {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const { theme, switchTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    console.log(theme);
+  }, [theme]);
+
   return (
     <aside className={styles['container']}>
-      <button
-        className={styles.switch}
-        onClick={() => setDarkTheme(!darkTheme)}
-      >
-        {!darkTheme ? (
+      <button className={styles.switch} onClick={switchTheme}>
+        {theme === 'light' ? (
           <FaSun className={`${styles['icon']} ${styles['sun']}`} />
         ) : (
           <FaMoon className={`${styles['icon']} ${styles['moon']}`} />

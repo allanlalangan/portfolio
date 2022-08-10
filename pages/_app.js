@@ -1,11 +1,14 @@
 import '../scss/index.scss';
 import { Layout } from '../components/';
+import ThemeContextProvider from '../store/ThemeContextProvider';
 
 function App({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeContextProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeContextProvider>
   );
 }
 
