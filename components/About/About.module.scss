@@ -5,6 +5,7 @@
 .container {
   min-height: calc((100vh - var.$headerHeight) - 5rem);
   padding: 2rem;
+  margin-bottom: 4rem;
   @include mixins.breakpoint('>=md') {
     padding: 4rem;
   }
@@ -28,7 +29,10 @@
   font-size: 1.25rem;
   line-height: 1.75;
   @include mixins.breakpoint('>=md') {
-    width: 60%;
+    width: 50%;
+  }
+  .__text {
+    margin-bottom: 1rem;
   }
 }
 
@@ -53,43 +57,9 @@
   }
 }
 
-.email {
-  display: inline;
-  cursor: pointer;
-  font-weight: 500;
-  text-decoration: underline;
-}
-
 .svg-icon {
   width: 3rem;
 }
 .font-icon {
   font-size: 3rem;
-}
-
-.pattern {
-  position: absolute;
-  top: -12rem;
-  width: 100%;
-  height: calc(100% + 20rem);
-  display: flex;
-  // background-color: map-get(colors.$primary, 'main');
-  z-index: -1;
-}
-
-.pattern::before {
-  content: '';
-  position: absolute;
-  background-repeat: repeat;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.5;
-}
-.light.pattern::before {
-  background-image: url('../../assets/topography-light.svg');
-}
-.dark.pattern::before {
-  background-image: url('../../assets/topography-dark.svg');
 }
