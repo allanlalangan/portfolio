@@ -61,11 +61,12 @@
 .tech-heading {
   width: fit-content;
   border-bottom: 5px solid map-get(colors.$secondary, 'main');
-
+  margin-top: 1rem;
   @include mixins.breakpoint('>=xs') {
     grid-column: 1 / 13;
   }
   @include mixins.breakpoint('>=md') {
+    margin-top: 0;
     margin-left: 1rem;
     grid-column: 7 / 13;
     grid-row: 3 / 4;
@@ -78,6 +79,7 @@
 }
 .tech-list {
   // @include mixins.action-button-text();
+  height: fit-content;
   @include mixins.breakpoint('>=xs') {
     padding: 1rem;
     grid-column: span 12;
@@ -106,6 +108,7 @@
     @include mixins.breakpoint('>=md') {
       @include mixins.flex(row, flex-start, center);
       padding: 0;
+      margin-bottom: 0.5rem;
     }
     @include mixins.breakpoint('>=lg') {
       @include mixins.flex(column, center, center);
@@ -153,6 +156,7 @@
 
 .previews {
   height: fit-content;
+  padding: 1rem;
   @include mixins.flex(column, flex-start, center);
   @include mixins.breakpoint('>=xs') {
     grid-column: span 12;
