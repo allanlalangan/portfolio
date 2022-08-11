@@ -40,7 +40,9 @@ const TechIcon = ({ tech, styles }) => {
   if (tech.includes('seo')) return <FaSearch className={styles} />;
 };
 
-const ProjectCard = ({ project: { title, description, tech, image } }) => {
+const ProjectCard = ({
+  project: { title, description, tech, image, repo, url },
+}) => {
   const { theme } = useContext(ThemeContext);
   return (
     <article className={`${styles['container']} ${styles[theme]}`}>
@@ -76,19 +78,33 @@ const ProjectCard = ({ project: { title, description, tech, image } }) => {
       </article>
       <section className={`${styles.links}`}>
         <div className={styles['button-group']}>
-          <button
-            className={`${styles['project-link-button']} ${styles['project-link-button--github']} ${styles[theme]}`}
+          <a
+            className={styles.link}
+            href={repo}
+            target='_blank'
+            rel='noreferrer noopener'
           >
-            <FaGithub className={styles['project-link-button__icon']} />
-            <span className={styles['project-link-button__text']}>Code</span>
-          </button>
+            <button
+              className={`${styles['project-link-button']} ${styles['project-link-button--github']} ${styles[theme]}`}
+            >
+              <FaGithub className={styles['project-link-button__icon']} />
+              <span className={styles['project-link-button__text']}>Code</span>
+            </button>
+          </a>
           <div className={styles['button-divider']} />
-          <button
-            className={`${styles['project-link-button']} ${styles['project-link-button--live']} ${styles[theme]}`}
+          <a
+            className={styles.link}
+            href={repo}
+            target='_blank'
+            rel='noreferrer noopener'
           >
-            <FaLink className={styles['project-link-button__icon']} />
-            <span className={styles['project-link-button__text']}>Live</span>
-          </button>
+            <button
+              className={`${styles['project-link-button']} ${styles['project-link-button--live']} ${styles[theme]}`}
+            >
+              <FaLink className={styles['project-link-button__icon']} />
+              <span className={styles['project-link-button__text']}>Live</span>
+            </button>
+          </a>
         </div>
       </section>
     </article>

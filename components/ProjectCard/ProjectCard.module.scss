@@ -45,7 +45,7 @@
 
   .progress-message {
     font-weight: 500;
-    color: map-get(colors.$primary, 'main');
+    // color: map-get(colors.$primary, 'main');
     margin-top: 1rem;
     padding: 0.25rem 1rem;
     border: 2px solid map-get(colors.$primary, 'main');
@@ -219,13 +219,12 @@
 
   .button-group {
     width: 100%;
-    @include mixins.flex();
+    @include mixins.flex(row, center, center);
     @include mixins.breakpoint('>=sm') {
-      @include mixins.flex();
     }
     @include mixins.breakpoint('>=lg') {
       height: 100%;
-      @include mixins.flex(column, flex-end);
+      @include mixins.flex(column, flex-end, center);
     }
 
     .button-divider {
@@ -237,6 +236,9 @@
       }
     }
 
+    .link {
+      width: 100%;
+    }
     .project-link-button {
       margin-top: 0.5rem;
       width: 100%;
