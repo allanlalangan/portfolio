@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { useContext } from 'react';
+import { ThemeContext } from '../../store/ThemeContextProvider';
 import { FaGithub, FaLink, FaSearch } from 'react-icons/fa';
 import { AiFillApi } from 'react-icons/ai';
 import {
@@ -39,8 +41,9 @@ const TechIcon = ({ tech, styles }) => {
 };
 
 const ProjectCard = ({ project: { title, description, tech, image } }) => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <article className={`${styles['container']}`}>
+    <article className={`${styles['container']} ${styles[theme]}`}>
       <section className={styles['project-header']}>
         <h2 className={styles.__title}>{title}</h2>
         <span className={styles['progress-message']}>
@@ -74,14 +77,14 @@ const ProjectCard = ({ project: { title, description, tech, image } }) => {
       <section className={`${styles.links}`}>
         <div className={styles['button-group']}>
           <button
-            className={`${styles['project-link-button']} ${styles['project-link-button--github']}`}
+            className={`${styles['project-link-button']} ${styles['project-link-button--github']} ${styles[theme]}`}
           >
             <FaGithub className={styles['project-link-button__icon']} />
             <span className={styles['project-link-button__text']}>Code</span>
           </button>
           <div className={styles['button-divider']} />
           <button
-            className={`${styles['project-link-button']} ${styles['project-link-button--live']}`}
+            className={`${styles['project-link-button']} ${styles['project-link-button--live']} ${styles[theme]}`}
           >
             <FaLink className={styles['project-link-button__icon']} />
             <span className={styles['project-link-button__text']}>Live</span>

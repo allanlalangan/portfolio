@@ -15,6 +15,7 @@
 .name {
   font-size: 3rem;
   letter-spacing: 2px;
+  transition: color 0.5s ease;
 }
 @media (min-width: 37.5em) {
   .name {
@@ -28,10 +29,9 @@
 }
 
 .title {
-  color: hsl(240deg, 75%, 60%);
   font-size: 2rem;
   font-weight: 600;
-  border-bottom: 5px solid hsl(240deg, 75%, 60%);
+  transition: color 0.5s ease, border-bottom 0.5s ease;
 }
 @media (min-width: 56.25em) {
   .title {
@@ -39,8 +39,23 @@
   }
 }
 
-.brief {
+.title.light {
+  border-bottom: 5px solid hsl(240deg, 75%, 60%);
+}
+
+.title.dark {
+  border-bottom: 5px solid hsl(210deg, 85%, 50%);
+}
+
+.light {
   color: hsl(240deg, 75%, 60%);
+}
+
+.dark {
+  color: hsl(210deg, 85%, 50%);
+}
+
+.brief {
   font-size: 1.5rem;
   font-weight: 400;
   width: 70%;
@@ -89,7 +104,6 @@
 
 .pattern::before {
   content: "";
-  background-image: url("../../assets/topography-light.svg");
   position: absolute;
   background-repeat: repeat;
   top: 0px;
@@ -97,4 +111,12 @@
   bottom: 0px;
   left: 0px;
   opacity: 0.5;
+}
+
+.light.pattern::before {
+  background-image: url("../../assets/topography-light.svg");
+}
+
+.dark.pattern::before {
+  background-image: url("../../assets/topography-dark.svg");
 }/*# sourceMappingURL=Hero.module.css.map */

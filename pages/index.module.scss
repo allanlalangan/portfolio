@@ -13,12 +13,14 @@
 }
 
 .projects-heading {
-  color: map-get(colors.$primary, 'light');
   @include mixins.breakpoint('>=lg') {
     // color: map-get(colors.$text, 'main');
   }
 }
 
+.contrast-heading {
+  color: map-get(colors.$primary, 'light');
+}
 .projects {
   // background-color: map-get(colors.$card, 'dark');
   position: relative;

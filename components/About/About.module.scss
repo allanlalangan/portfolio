@@ -79,7 +79,6 @@
 
 .pattern::before {
   content: '';
-  background-image: url('../../assets/topography-light.svg');
   position: absolute;
   background-repeat: repeat;
   top: 0px;
@@ -87,4 +86,10 @@
   bottom: 0px;
   left: 0px;
   opacity: 0.5;
+}
+.light.pattern::before {
+  background-image: url('../../assets/topography-light.svg');
+}
+.dark.pattern::before {
+  background-image: url('../../assets/topography-dark.svg');
 }

@@ -13,11 +13,14 @@ import {
   NpmIcon,
 } from '../ui/icons';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { ThemeContext } from '../../store/ThemeContextProvider';
 
 const About = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <>
-      <div className={styles.pattern}></div>
+      <div className={`${styles.pattern} ${styles[theme]}`}></div>
       <section className={styles.container}>
         <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello 👋</h2>
         <article className={styles.bio}>

@@ -4,12 +4,12 @@
 
 .container {
   padding: 1.5rem;
-  background-color: map-get(colors.$card, 'light');
   border-radius: 0.75rem;
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   box-shadow: map-get(var.$shadow, 'card');
+  transition: background-color 0.2s ease;
 
   @include mixins.breakpoint('>=xs') {
     // grid-template-rows: repeat(8, 100%);
@@ -20,6 +20,13 @@
   }
   @include mixins.breakpoint('>=lg') {
   }
+}
+
+.container.light {
+  background-color: map-get(colors.$card, 'light');
+}
+.container.dark {
+  background-color: map-get(colors.$card, 'dark');
 }
 
 .project-header {
@@ -152,8 +159,8 @@
     grid-row: 3 / 5;
   }
   @include mixins.breakpoint('>=md') {
-    justify-content: center;
-    margin: auto;
+    // justify-content: center;
+    // margin: auto;
     grid-column: 1 / 7;
     grid-row: 3 / 8;
   }
@@ -161,6 +168,7 @@
     grid-column: 1 / 9; //odd
     // grid-column: 5 / 13;
     grid-row: 2 / 10;
+    padding: 1rem;
   }
 
   .__preview {
@@ -232,7 +240,6 @@
     .project-link-button {
       margin-top: 0.5rem;
       width: 100%;
-      @include mixins.filled-button(map-get(colors.$card, 'dark'));
       @include mixins.action-button-text();
 
       @include mixins.flex(column, center, center);
@@ -252,6 +259,14 @@
           padding: 0 0.5rem;
         }
       }
+    }
+
+    .light {
+      @include mixins.filled-button(map-get(colors.$card, 'dark'));
+    }
+
+    .dark {
+      @include mixins.filled-button(map-get(colors.$secondary, 'main'));
     }
 
     .project-link-button:hover {

@@ -1,0 +1,6 @@
+@use '../../scss/abstracts/colors' as colors;
+
+.app {
+  color: map-get(colors.$text, 'main');
+  background: colors.$gradientBg;
+}

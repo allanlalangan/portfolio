@@ -24,8 +24,11 @@ import {
 } from '../components/ui/icons';
 import { FaGithub } from 'react-icons/fa';
 import { SiNextdotjs } from 'react-icons/si';
+import { useContext } from 'react';
+import { ThemeContext } from '../store/ThemeContextProvider';
 
 export default function Home() {
+  const { theme } = useContext(ThemeContext);
   return (
     <>
       <Head>
@@ -35,7 +38,9 @@ export default function Home() {
       <>
         <Hero />
         {/* <Divider /> */}
-        <h1 className={`${styles.heading} ${styles['projects-heading']}`}>
+        <h1
+          className={`${styles[theme]} ${styles.heading} ${styles['contrast-heading']}`}
+        >
           Recent Projects
         </h1>
         <section className={styles.projects}>
@@ -47,12 +52,14 @@ export default function Home() {
         {/* <h1 className={styles.heading}>Primary Skills</h1> */}
         <Skills />
 
-        <h1 className={styles.heading}>More About Me</h1>
+        <h1 className={`${styles[theme]} ${styles.heading}`}>More About Me</h1>
         <section className={styles.about}>
           <About />
         </section>
         {/* <Divider /> */}
-        <h1 className={`${styles.heading} ${styles['contact-heading']}`}>
+        <h1
+          className={`${styles[theme]} ${styles.heading} ${styles['contrast-heading']}`}
+        >
           Contact
         </h1>
         <section className={styles.contact}>

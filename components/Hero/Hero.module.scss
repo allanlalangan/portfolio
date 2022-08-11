@@ -17,6 +17,7 @@
 .name {
   font-size: 3rem;
   letter-spacing: 2px;
+  transition: color 0.5s ease;
 
   @include mixins.breakpoint('>=sm') {
     font-size: 4rem;
@@ -26,17 +27,30 @@
   }
 }
 .title {
-  color: map-get(colors.$primary, 'main');
   font-size: 2rem;
   font-weight: 600;
-  border-bottom: 5px solid map-get(colors.$primary, 'main');
   @include mixins.breakpoint('>=md') {
     padding-left: 1rem;
   }
+  transition: color 0.5s ease, border-bottom 0.5s ease;
+}
+
+.title.light {
+  border-bottom: 5px solid map-get(colors.$primary, 'main');
+}
+.title.dark {
+  border-bottom: 5px solid map-get(colors.$secondary, 'main');
+}
+
+.light {
+  color: map-get(colors.$primary, 'main');
+}
+.dark {
+  color: map-get(colors.$secondary, 'main');
 }
 .brief {
   // width: fit-content;
-  color: map-get(colors.$primary, 'main');
+  // color: map-get(colors.$primary, 'main');
   font-size: 1.5rem;
   font-weight: 400;
   width: 70%;
@@ -67,13 +81,11 @@
   width: 100%;
   height: 100%;
   display: flex;
-  // background-color: map-get(colors.$primary, 'main');
   z-index: -1;
 }
 
 .pattern::before {
   content: '';
-  background-image: url('../../assets/topography-light.svg');
   position: absolute;
   background-repeat: repeat;
   top: 0px;
@@ -81,4 +93,10 @@
   bottom: 0px;
   left: 0px;
   opacity: 0.5;
+}
+.light.pattern::before {
+  background-image: url('../../assets/topography-light.svg');
+}
+.dark.pattern::before {
+  background-image: url('../../assets/topography-dark.svg');
 }

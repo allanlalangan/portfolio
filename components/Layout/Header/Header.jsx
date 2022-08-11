@@ -4,10 +4,13 @@ import { GiBullHorns } from 'react-icons/gi';
 import { FaTwitter, FaFileDownload, FaGithub } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Switch from '../../Switch/Switch';
+import { useContext } from 'react';
+import { ThemeContext } from '../../../store/ThemeContextProvider';
 
 const Header = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <header className={styles['header']}>
+    <header className={`${styles['header']} ${styles[theme]}`}>
       <div className={styles['main-banner']}>
         <Link className={styles['home-link']} href='/'>
           <figure className={styles.logo}>
@@ -26,40 +29,43 @@ const Header = () => {
           <stop stopColor='#000000' offset='90%' />
         </linearGradient>
       </svg> */}
-      <aside className={styles['menu-button__container']}>
-        <button className={styles['menu-button']}>
-          <GiHamburgerMenu className={styles['burger-icon']} />
-        </button>
-      </aside>
+
       <nav className={styles['nav']}>
         <ul className={styles['nav-links']}>
           <Link href='/'>
-            <li className={styles['nav-links__link']}>projects</li>
+            <li className={styles['__link']}>projects</li>
           </Link>
           <Link href='/'>
-            <li className={styles['nav-links__link']}>skills</li>
+            <li className={styles['__link']}>skills</li>
           </Link>
           <Link href='/about'>
-            <li className={styles['nav-links__link']}>me</li>
+            <li className={styles['__link']}>me</li>
           </Link>
           <Link href='/'>
-            <li className={`${styles['nav-links__link']} ${styles['cv-link']}`}>
-              <span className={`${styles['cv-link__text']}`}>cv</span>
-              <FaFileDownload className={styles['cv-icon']} />
-            </li>
-          </Link>
-          <Link href='/'>
-            <li className={styles['nav-links__link']}>
+            <li className={`${styles['__link']} ${styles['social']}`}>
               <FaTwitter className={styles['social-icon']} />
             </li>
           </Link>
           <Link href='/'>
-            <li className={styles['nav-links__link']}>
+            <li className={`${styles['__link']} ${styles['social']}`}>
               <FaGithub className={styles['social-icon']} />
             </li>
           </Link>
+          <Link href='/'>
+            <li className={`${styles['__link']} ${styles['cv-link']}`}>
+              <span className={`${styles['cv-link__text']}`}>cv</span>
+              <FaFileDownload className={styles['cv-icon']} />
+            </li>
+          </Link>
         </ul>
-        <Switch />
+        <aside className={styles['menu-button__container']}>
+          <Switch />
+          <button className={styles['menu-button']}>
+            <GiHamburgerMenu
+              className={`${styles[theme]} ${styles['burger-icon']}`}
+            />
+          </button>
+        </aside>
       </nav>
     </header>
   );

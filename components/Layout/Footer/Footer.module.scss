@@ -5,8 +5,14 @@
 .container {
   height: 25vh;
   padding: 2rem 3rem;
+  transition: background-color 0.2s ease;
+}
+
+.container.light {
   background-color: map-get(colors.$background, 'light');
-  // background-color: map-get(colors.$section, 'dark');
+}
+.container.dark {
+  background-color: map-get(colors.$background, 'dark');
 }
 
 .heading {

@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"Layout.module.css"}
+{"version":3,"sources":["../components/Layout/Layout.module.scss","../scss/abstracts/_colors.scss","Layout.module.css"],"names":[],"mappings":"AAEA;EACE,4BAAA;EACA,8ICoDW;ACrDb","file":"Layout.module.css"}

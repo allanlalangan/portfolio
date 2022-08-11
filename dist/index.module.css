@@ -14,9 +14,10 @@
   border-bottom: 5px solid hsl(240deg, 75%, 60%);
 }
 
-.projects-heading {
+.contrast-heading {
   color: hsl(240deg, 75%, 80%);
 }
+
 .projects {
   position: relative;
   padding: 0 1rem;

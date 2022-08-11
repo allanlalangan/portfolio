@@ -12,23 +12,30 @@
   align-items: center;
   justify-content: space-between;
   height: var.$headerHeight;
-
-  background-color: map-get(colors.$background, 'light');
-  // background-color: map-get(colors.$section, 'dark');
   z-index: 1000;
-  // @include mixins.shadow(0px, 0px, 15px, 2px, 0.1);
+  transition: background-color 0.2s ease;
 
   @include mixins.breakpoint('>=md') {
     justify-content: space-between;
   }
 }
 
+.header.light {
+  background-color: map-get(colors.$background, 'light');
+}
+.header.dark {
+  background-color: map-get(colors.$background, 'dark');
+}
+
 .main-banner {
   width: 100%;
+  position: absolute;
+  left: 0;
   @include mixins.flex(row, center, center);
 
   @include mixins.breakpoint('>=sm') {
     width: fit-content;
+    position: static;
   }
 
   .logo {
@@ -79,19 +86,26 @@
   position: absolute;
   right: 0;
   height: 100%;
-  padding: 1rem;
-  @include mixins.flex-column();
   justify-content: center;
-  @include mixins.breakpoint('>=md') {
-    display: none;
+  width: 100%;
+  @include mixins.flex(row, space-between, center);
+  @include mixins.breakpoint('>=sm') {
+    position: static;
+    width: fit-content;
+    @include mixins.flex(row, center, center);
   }
 
   .menu-button {
     // color: map-get(colors.$text, 'main');
+    margin-right: 1rem;
     @include mixins.flex-column();
+    @include mixins.breakpoint('>=md') {
+      display: none;
+    }
 
     .burger-icon {
       font-size: 2rem;
+      color: map-get(colors.$primary, 'main');
     }
   }
 }
@@ -122,18 +136,26 @@
       align-items: center;
     }
 
-    .nav-links__link {
+    .__link {
       padding: 0 1rem;
       @include mixins.flex(row, center, center);
       cursor: pointer;
+      transition: filter 0.25s ease;
 
       .social-icon {
         color: map-get(colors.$primary, 'main');
         font-size: 1.5rem;
       }
+
       .cv-icon {
         font-size: 1rem;
       }
+    }
+    .__link.social {
+      padding: 1rem;
+    }
+    .__link:hover {
+      filter: brightness(1.25);
     }
 
     .cv-link {
@@ -148,10 +170,6 @@
       .cv-link__text {
         padding: 0 0.25rem;
       }
-    }
-
-    .cv-link:hover {
-      @include mixins.filled-button--hover;
     }
   }
 }

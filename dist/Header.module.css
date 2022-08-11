@@ -8,8 +8,8 @@
   align-items: center;
   justify-content: space-between;
   height: 8vh;
-  background-color: hsl(205deg, 60%, 90%);
   z-index: 1000;
+  transition: background-color 0.2s ease;
 }
 @media (min-width: 56.25em) {
   .header {
@@ -17,8 +17,18 @@
   }
 }
 
+.header.light {
+  background-color: hsl(205deg, 60%, 90%);
+}
+
+.header.dark {
+  background-color: hsl(230deg, 30%, 15%);
+}
+
 .main-banner {
   width: 100%;
+  position: absolute;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -29,6 +39,7 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    position: static;
   }
 }
 .main-banner .logo {
@@ -79,22 +90,38 @@
   position: absolute;
   right: 0;
   height: 100%;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 37.5em) {
   .menu-button__container {
-    display: none;
+    position: static;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 .menu-button__container .menu-button {
+  margin-right: 1rem;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 56.25em) {
+  .menu-button__container .menu-button {
+    display: none;
+  }
+}
 .menu-button__container .menu-button .burger-icon {
   font-size: 2rem;
+  color: hsl(240deg, 75%, 60%);
 }
 
 .nav {
@@ -126,20 +153,27 @@
     align-items: center;
   }
 }
-.nav .nav-links .nav-links__link {
+.nav .nav-links .__link {
   padding: 0 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: filter 0.25s ease;
 }
-.nav .nav-links .nav-links__link .social-icon {
+.nav .nav-links .__link .social-icon {
   color: hsl(240deg, 75%, 60%);
   font-size: 1.5rem;
 }
-.nav .nav-links .nav-links__link .cv-icon {
+.nav .nav-links .__link .cv-icon {
   font-size: 1rem;
+}
+.nav .nav-links .__link.social {
+  padding: 1rem;
+}
+.nav .nav-links .__link:hover {
+  filter: brightness(1.25);
 }
 .nav .nav-links .cv-link {
   font-size: 0.8rem;
@@ -154,7 +188,4 @@
 }
 .nav .nav-links .cv-link .cv-link__text {
   padding: 0 0.25rem;
-}
-.nav .nav-links .cv-link:hover {
-  filter: brightness(1.25);
 }/*# sourceMappingURL=Header.module.css.map */
