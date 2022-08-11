@@ -14,6 +14,7 @@
   height: var.$headerHeight;
   z-index: 1000;
   transition: background-color 0.2s ease;
+  box-shadow: map-get(var.$shadow, 'header');
 
   @include mixins.breakpoint('>=md') {
     justify-content: space-between;
@@ -32,6 +33,8 @@
   position: absolute;
   left: 25%;
   z-index: 10;
+  transition: color 0.2s ease, filter 0.25s ease;
+
   @include mixins.flex(row, center, center);
 
   @include mixins.breakpoint('>=sm') {
@@ -44,16 +47,24 @@
     @include mixins.flex(row, center, center);
   }
 }
+.main-banner:hover {
+  color: map-get(colors.$primary, 'main');
+  filter: brightness(1.25);
+}
 
 .main-title {
   // color: map-get(colors.$primary, 'main');
   margin-left: 0.125rem;
-  font-weight: 800;
+  font-weight: 200;
   font-size: 1.75rem;
   display: none;
 
   @include mixins.breakpoint('>=sm') {
     display: flex;
+  }
+
+  strong {
+    font-weight: 600;
   }
 }
 
@@ -141,7 +152,7 @@
       padding: 0 1rem;
       @include mixins.flex(row, center, center);
       cursor: pointer;
-      transition: filter 0.25s ease;
+      transition: color 0.2s ease, filter 0.25s ease;
 
       .social-icon {
         color: map-get(colors.$primary, 'main');
@@ -152,10 +163,11 @@
         font-size: 1rem;
       }
     }
-    .__link.social {
-      padding: 1rem;
+    .__link.section:hover {
+      color: map-get(colors.$primary, 'main');
+      filter: brightness(1.5);
     }
-    .__link:hover {
+    .__link.button:hover {
       filter: brightness(1.25);
     }
 

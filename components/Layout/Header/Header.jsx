@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 import Link from 'next/link';
-import { GiBullHorns } from 'react-icons/gi';
+
 import { FaTwitter, FaFileDownload, FaGithub } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Switch from '../../Switch/Switch';
@@ -15,44 +15,50 @@ const Header = () => {
         <Link className={styles['home-link']} href='/'>
           <figure className={styles.logo}>
             <span className={styles['home-icon']}>👹</span>
-            {/* <GiBullHorns
-              style={{ fill: 'url(#logo-gradient)' }}
-              className={styles['home-icon']}
-            /> */}
-            <span className={styles['main-title']}>laDev</span>
+            <span className={styles['main-title']}>
+              la<strong>Dev</strong>
+            </span>
           </figure>
         </Link>
       </div>
-      {/* <svg position='absolute' width='0' height='0'>
-        <linearGradient id='logo-gradient' x1='%' y1='100%' x2='0%' y2='0%'>
-          <stop stopColor='#ff1d4e' offset='20%' />
-          <stop stopColor='#000000' offset='90%' />
-        </linearGradient>
-      </svg> */}
 
       <nav className={styles['nav']}>
         <ul className={styles['nav-links']}>
           <Link href='/'>
-            <li className={styles['__link']}>projects</li>
+            <li className={`${styles['__link']} ${styles['section']}`}>
+              projects
+            </li>
           </Link>
           <Link href='/'>
-            <li className={styles['__link']}>skills</li>
+            <li className={`${styles['__link']} ${styles['section']}`}>
+              skills
+            </li>
           </Link>
           <Link href='/about'>
-            <li className={styles['__link']}>me</li>
+            <li className={`${styles['__link']} ${styles['section']}`}>me</li>
           </Link>
-          <Link href='/'>
-            <li className={`${styles['__link']} ${styles['social']}`}>
+          <a
+            href='https://twitter.com/allanladev'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            <li className={`${styles['__link']} ${styles['button']}`}>
               <FaTwitter className={styles['social-icon']} />
             </li>
-          </Link>
-          <Link href='/'>
-            <li className={`${styles['__link']} ${styles['social']}`}>
+          </a>
+          <a
+            href='https://github.com/allanlalangan'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            <li className={`${styles['__link']} ${styles['button']}`}>
               <FaGithub className={styles['social-icon']} />
             </li>
-          </Link>
+          </a>
           <Link href='/'>
-            <li className={`${styles['__link']} ${styles['cv-link']}`}>
+            <li
+              className={`${styles['__link']} ${styles['cv-link']} ${styles['button']}`}
+            >
               <span className={`${styles['cv-link__text']}`}>cv</span>
               <FaFileDownload className={styles['cv-icon']} />
             </li>
