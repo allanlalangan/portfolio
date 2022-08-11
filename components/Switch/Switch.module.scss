@@ -10,6 +10,7 @@
     border: 2px solid map-get(colors.$primary, 'main');
     border-radius: 45%;
     padding: 0.25rem;
+    transition: all 0.2s ease;
     @include mixins.flex(row, center, center);
     .icon {
       font-size: 1.25rem;
@@ -20,5 +21,9 @@
     .moon {
       color: map-get(colors.$system, 'darkThemeIcon');
     }
+  }
+
+  .switch:hover {
+    filter: brightness(1.25);
   }
 }

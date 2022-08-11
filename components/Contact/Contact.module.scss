@@ -26,6 +26,7 @@
 
   strong {
     color: map-get(colors.$primary, 'light');
+    transition: color 0.2s ease;
   }
 
   .email {
@@ -35,7 +36,10 @@
     transition: all 0.25s ease;
   }
   .email:hover {
-    color: map-get(colors.$primary, 'light');
+    color: map-get(colors.$text, 'contrast');
     border-bottom: 3px solid map-get(colors.$secondary, 'main');
+    strong {
+      color: map-get(colors.$text, 'contrast');
+    }
   }
 }
