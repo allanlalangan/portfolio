@@ -5,12 +5,17 @@
 body {
   font-size: 16px;
   font-family: util.$font;
-  color: map-get(colors.$text, 'main');
-  // color: map-get(colors.$text, 'contrast');
+  transition: color 0.35s ease;
+}
 
+body.light {
+  color: map-get(colors.$text, 'main');
   background: colors.$gradientBg;
-  // background: colors.$gradientBg-dark;
-  // background: map-get(colors.$background, 'dark');
+}
+
+body.dark {
+  color: map-get(colors.$text, 'contrast');
+  background: colors.$gradientBg-dark;
 }
 
 main {
