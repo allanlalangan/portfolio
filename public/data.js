@@ -2,7 +2,7 @@ export const about = {
   name: { first: 'Allan', last: 'Lalangan' },
   alias: 'Allan LaDev',
   title: 'Front End Developer',
-  greeting: 'Hello, World! I am',
+  greeting: 'Hello World. I am',
   brief:
     'I build responsive and beautifully designed websites that are easy to use.',
   brief_2: 'I build things!',
@@ -170,6 +170,8 @@ export const projects = [
       'Locate and filter popular restaurants, hotels, and attractions anywhere in the world.',
     tech: ['react', 'css', 'material ui', 'google platform', 'rest api'],
     image: { src: nomad, alt: '' },
+    repo: 'https://github.com/allanlalangan/nomad-travel',
+    url: '/',
   },
   {
     title: 'project.Me',
@@ -185,6 +187,8 @@ export const projects = [
       'web tokens',
     ],
     image: { src: dashboard, alt: '' },
+    repo: 'https://github.com/allanlalangan/dashboard',
+    url: '/',
   },
   {
     title: 'Martial Masters Academy',
@@ -193,6 +197,8 @@ export const projects = [
     tech: ['next', 'tailwind css'],
     // tech: ['next', 'tailwind css', 'google platform', 'headless cms', 'seo'],
     image: { src: mma, alt: '' },
+    repo: 'https://github.com/allanlalangan/martial-masters-academy',
+    url: '/',
   },
   // {
   //   title: 'La Bodega',
