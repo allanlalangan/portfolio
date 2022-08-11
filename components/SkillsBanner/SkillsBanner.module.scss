@@ -1,0 +1,46 @@
+@use '../../scss/abstracts/colors' as colors;
+@use '../../scss/abstracts/mixins' as mixins;
+
+.skills {
+  padding: 2rem 0 12rem 0;
+  @include mixins.breakpoint('>=sm') {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include mixins.breakpoint('>=lg') {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include mixins.breakpoint('>=xl') {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  background-color: map-get(colors.$section, 'dark');
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
+}
+
+.icon-container {
+  margin: 0 auto;
+  @include mixins.flex(column, center, center);
+  @include mixins.breakpoint('>=xs') {
+    padding: 0.5rem 0;
+  }
+  @include mixins.breakpoint('>=md') {
+    padding: 0;
+  }
+
+  figcaption {
+    @include mixins.flex(column, center, center);
+    margin-top: 0.5rem;
+    color: map-get(colors.$text, 'contrast');
+    // @include mixins.action-button-text();
+  }
+}
+.svg-icon {
+  width: 3rem;
+}
+
+.skills__icon {
+  font-size: 3rem;
+  color: white;
+}

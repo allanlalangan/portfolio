@@ -1,46 +1,52 @@
 @use '../../scss/abstracts/colors' as colors;
 @use '../../scss/abstracts/mixins' as mixins;
+@use '../../scss/abstracts/variables' as var;
+
+.heading {
+  font-size: 2rem;
+}
 
 .skills {
-  padding: 2rem 0 12rem 0;
-  @include mixins.breakpoint('>=sm') {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  @include mixins.breakpoint('>=lg') {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  @include mixins.breakpoint('>=xl') {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-  background-color: map-get(colors.$section, 'dark');
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
-}
-
-.icon-container {
-  margin: 0 auto;
-  @include mixins.flex(column, center, center);
-  @include mixins.breakpoint('>=xs') {
-    padding: 0.5rem 0;
-  }
+  position: relative;
+  font-size: 1.25rem;
+  // min-height: calc((100vh - var.$headerHeight) - 5rem);
+  padding: 2rem;
+  margin-bottom: 4rem;
+  @include mixins.flex(column, center, flex-start);
   @include mixins.breakpoint('>=md') {
-    padding: 0;
-  }
-
-  figcaption {
-    @include mixins.flex(column, center, center);
-    margin-top: 0.5rem;
-    color: map-get(colors.$text, 'contrast');
-    // @include mixins.action-button-text();
+    padding: 4rem;
   }
 }
-.svg-icon {
-  width: 3rem;
+
+.list {
+  padding: 1rem;
 }
 
-.skills__icon {
-  font-size: 3rem;
-  color: white;
+.pattern {
+  position: absolute;
+  top: -12rem;
+  left: 0;
+  width: 100%;
+  min-height: 250vh;
+  max-height: 300vh;
+  display: flex;
+  // background-color: map-get(colors.$primary, 'main');
+  z-index: -1;
+}
+
+.pattern::before {
+  content: '';
+  position: absolute;
+  background-repeat: repeat;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+.light.pattern::before {
+  background-image: url('../../assets/topography-light.svg');
+}
+.dark.pattern::before {
+  background-image: url('../../assets/topography-dark.svg');
 }

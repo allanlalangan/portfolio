@@ -6,7 +6,7 @@ import { projects, about } from '../public/data';
 // components
 import {
   Hero,
-  Skills,
+  SkillsBanner,
   Divider,
   ProjectCard,
   About,
@@ -26,6 +26,7 @@ import { FaGithub } from 'react-icons/fa';
 import { SiNextdotjs } from 'react-icons/si';
 import { useContext } from 'react';
 import { ThemeContext } from '../store/ThemeContextProvider';
+import Skills from '../components/Skills/Skills';
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
@@ -50,6 +51,9 @@ export default function Home() {
         </section>
         {/* <Divider /> */}
         {/* <h1 className={styles.heading}>Primary Skills</h1> */}
+        <SkillsBanner />
+
+        <h1 className={`${styles[theme]} ${styles.heading}`}>Skills</h1>
         <Skills />
 
         <h1 className={`${styles[theme]} ${styles.heading}`}>More About Me</h1>

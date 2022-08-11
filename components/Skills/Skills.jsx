@@ -1,75 +1,27 @@
-import { FaGithub } from 'react-icons/fa';
-import {
-  HtmlIcon,
-  CssIcon,
-  JsIcon,
-  ReactIcon,
-  ReduxIcon,
-  SassIcon,
-  MuiIcon,
-  NpmIcon,
-} from '../ui/icons';
-
+import { useContext } from 'react';
+import { ThemeContext } from '../../store/ThemeContextProvider';
 import styles from './Skills.module.scss';
 
 const Skills = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <article className={`${styles.skills} grid-row`}>
-      <figure
-        className={`${styles['icon-container']} col-4-xs col-2-sm col-1-lg`}
-      >
-        <HtmlIcon className={styles['svg-icon']} />
-        <figcaption>html</figcaption>
-      </figure>
-      <figure
-        className={`${styles['icon-container']} col-4-xs col-2-sm col-1-lg`}
-      >
-        <CssIcon className={styles['svg-icon']} />
-        <figcaption>css</figcaption>
-      </figure>
-      <figure
-        className={`${styles['icon-container']} col-4-xs col-2-sm col-1-lg`}
-      >
-        <JsIcon className={styles['svg-icon']} />
-        <figcaption>javascript</figcaption>
-      </figure>
-      <figure
-        className={`${styles['icon-container']} col-4-xs col-2-sm col-1-lg`}
-      >
-        <ReactIcon className={styles['svg-icon']} />
-        <figcaption>react</figcaption>
-      </figure>
-      <figure
-        className={`${styles['icon-container']} col-4-xs col-2-sm col-1-lg`}
-      >
-        <ReduxIcon className={styles['svg-icon']} />
-        <figcaption>redux</figcaption>
-      </figure>
-      <figure
-        className={`${styles['icon-container']} col-4-xs col-3-sm col-1-lg`}
-      >
-        <SassIcon className={styles['svg-icon']} />
-        <figcaption>sass</figcaption>
-      </figure>
-      <figure
-        className={`${styles['icon-container']} col-4-xs col-3-sm col-1-lg`}
-      >
-        <MuiIcon className={styles['svg-icon']} />
-        <figcaption>material ui</figcaption>
-      </figure>
-      <figure
-        className={`${styles['icon-container']} col-4-xs col-3-sm col-1-lg`}
-      >
-        <FaGithub aria-label='github icon' className={styles['skills__icon']} />
-        <figcaption>github</figcaption>
-      </figure>
-      <figure
-        className={`${styles['icon-container']} col-4-xs col-3-sm col-1-lg`}
-      >
-        <NpmIcon className={styles['svg-icon']} />
-        <figcaption>npm</figcaption>
-      </figure>
-    </article>
+    <>
+      <section className={styles.skills}>
+        <div className={`${styles.pattern} ${styles[theme]}`}></div>
+        <h3 className={styles.heading}>My primary tools consist of:</h3>
+        <ul className={styles.list}>
+          <li>ReactJS, hooks and React Router</li>
+          <li>Javascript / ES6</li>
+          <li>Semantic html</li>
+          <li>
+            Styling and design with modern CSS, Sass and frameworks such as
+            Tailwind CSS and Material UI
+          </li>
+          <li>State management with Redux + RTK</li>
+          <li>Familiar with MERN stack, JSON Web Tokens (JWT)</li>
+        </ul>
+      </section>
+    </>
   );
 };
 export default Skills;
