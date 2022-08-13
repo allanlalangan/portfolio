@@ -35,7 +35,7 @@ $section: (
 
 $card: (
   'light': hsl(205, 60%, 90%),
-  'dark': hsl(230, 30%, 25%),
+  'dark': hsl(230, 30%, 30%),
 );
 
 $bezel: (
@@ -50,7 +50,6 @@ $system: (
   'error': hsl(0, 75%, 60%),
   'info': hsl(200, 65%, 65%),
   'lightThemeIcon': hsl(40, 80%, 70%),
-  // 'lightThemeIcon': map-get($secondary, 'light'),
   'darkThemeIcon': map-get($primary, 'light'),
 );
 
