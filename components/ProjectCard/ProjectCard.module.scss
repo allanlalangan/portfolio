@@ -140,7 +140,7 @@
   grid-column: span 12;
   grid-row: 2 / 3;
   padding: 1rem 0;
-  @include mixins.flex(column, flex-start, flex-start);
+  @include mixins.flex(column, center, flex-start);
 
   @include mixins.breakpoint('>=md') {
     grid-column: 1 / 13;
@@ -155,9 +155,9 @@
 }
 
 .previews {
-  height: fit-content;
+  // height: fit-content;
   padding: 1rem;
-  @include mixins.flex(column, flex-start, center);
+  @include mixins.flex(column, center, center);
   @include mixins.breakpoint('>=xs') {
     grid-column: span 12;
     grid-row: 3 / 5;
@@ -176,14 +176,11 @@
   }
 
   .__preview {
-    background-color: map-get(colors.$bezel, 'light');
+    // background-color: map-get(colors.$bezel, 'light');
     box-shadow: map-get(var.$shadow, 'bezel');
     border-radius: 0.5rem;
 
     @include mixins.flex(column, center, center);
-    @include mixins.breakpoint('>=xs') {
-      // height: 100%;
-    }
 
     .__image {
       border-radius: 0.5rem;
