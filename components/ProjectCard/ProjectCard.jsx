@@ -3,54 +3,23 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../store/ThemeContextProvider';
 import { FaGithub, FaLink, FaSearch } from 'react-icons/fa';
 import { AiFillApi } from 'react-icons/ai';
-import {
-  SiCss3,
-  SiJavascript,
-  SiReact,
-  SiRedux,
-  SiSass,
-  SiMaterialui,
-  SiMongodb,
-  SiExpress,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiGooglemaps,
-  SiReactrouter,
-  SiJsonwebtokens,
-  SiDatabricks,
-} from 'react-icons/si';
-import styles from './ProjectCard.module.scss';
 
-const TechIcon = ({ tech, styles }) => {
-  if (tech === 'css') return <SiCss3 className={styles} />;
-  if (tech.includes('javascript')) return <SiJavascript className={styles} />;
-  if (tech === 'react') return <SiReact className={styles} />;
-  if (tech.includes('redux')) return <SiRedux className={styles} />;
-  if (tech.includes('sass')) return <SiSass className={styles} />;
-  if (tech.includes('material')) return <SiMaterialui className={styles} />;
-  if (tech.includes('mongo')) return <SiMongodb className={styles} />;
-  if (tech.includes('express')) return <SiExpress className={styles} />;
-  if (tech.includes('next')) return <SiNextdotjs className={styles} />;
-  if (tech.includes('tailwind')) return <SiTailwindcss className={styles} />;
-  if (tech.includes('google')) return <SiGooglemaps className={styles} />;
-  if (tech.includes('rest')) return <AiFillApi className={styles} />;
-  if (tech.includes('router')) return <SiReactrouter className={styles} />;
-  if (tech.includes('token')) return <SiJsonwebtokens className={styles} />;
-  if (tech.includes('cms')) return <SiDatabricks className={styles} />;
-  if (tech.includes('seo')) return <FaSearch className={styles} />;
-};
+import styles from './ProjectCard.module.scss';
+import TechIcon from '../ui/TechIcon/TechIcon';
 
 const ProjectCard = ({
-  project: { title, description, tech, image, repo, url },
+  project: { title, description, tech, image, repo, url, complete },
 }) => {
   const { theme } = useContext(ThemeContext);
   return (
     <article className={`${styles['container']} ${styles[theme]}`}>
       <section className={styles['project-header']}>
         <h2 className={styles.__title}>{title}</h2>
-        <span className={styles['progress-message']}>
-          currently building...
-        </span>
+        {!complete && (
+          <span className={styles['progress-message']}>
+            currently building...
+          </span>
+        )}
       </section>
       <h3 className={styles['tech-heading']}>Tech Stack</h3>
       <ul className={`${styles['tech-list']} grid-row`}>
@@ -94,7 +63,7 @@ const ProjectCard = ({
           <div className={styles['button-divider']} />
           <a
             className={styles.link}
-            href={repo}
+            href={url}
             target='_blank'
             rel='noreferrer noopener'
           >

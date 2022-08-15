@@ -10,15 +10,9 @@
   grid-template-columns: repeat(12, 1fr);
   box-shadow: map-get(var.$shadow, 'card');
   transition: background-color 0.2s ease;
-
-  @include mixins.breakpoint('>=xs') {
-    // grid-template-rows: repeat(8, 100%);
-  }
   @include mixins.breakpoint('>=md') {
     grid-template-rows: repeat(8, 1fr);
     padding: 2rem;
-  }
-  @include mixins.breakpoint('>=lg') {
   }
 }
 
