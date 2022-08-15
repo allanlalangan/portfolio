@@ -167,16 +167,17 @@ export const projects = [
   {
     title: 'Nomad Travel',
     description:
-      'Locate and filter popular restaurants, hotels, and attractions anywhere in the world.',
+      'Locate and filter popular restaurants, hotels, and attractions anywhere in the world. Implements multiple REST APIs.',
     tech: ['react', 'css', 'material ui', 'google platform', 'rest api'],
     image: { src: nomad, alt: '' },
     repo: 'https://github.com/allanlalangan/nomad-travel',
-    url: '/',
+    url: 'https://nononomad.netlify.app/',
+    complete: false,
   },
   {
     title: 'project.Me',
     description:
-      'A fullstack to-do list app. Registered users can save goals..and view the weather.',
+      'A fullstack to-do list app. Registered users can save goals. Register new user or Login with username: demo@demo.com password: demo',
     tech: [
       'express',
       'mongodb',
@@ -189,27 +190,28 @@ export const projects = [
     image: { src: dashboard, alt: '' },
     repo: 'https://github.com/allanlalangan/dashboard',
     url: '/',
+    complete: false,
   },
   {
     title: 'Martial Masters Academy',
     description:
-      'A responsive landing page for the best martial arts gym in all of Portland',
+      'A responsive landing page design for the best martial arts gym in all of Portland. Implements headless cms to easily manage content',
     tech: ['next', 'tailwind css'],
-    // tech: ['next', 'tailwind css', 'google platform', 'headless cms', 'seo'],
     image: { src: mma, alt: '' },
     repo: 'https://github.com/allanlalangan/martial-masters-academy',
     url: '/',
+    complete: true,
   },
-  // {
-  //   title: 'La Bodega',
-  //   description: 'E-commerce app for pop up shop.',
-  //   tech: ['next', 'sass', 'stripe'],
-  //   image: { src: nomad, alt: '' },
-  // },
-  // {
-  //   title: 'Portfolio',
-  //   description: '',
-  //   tech: ['next', 'sass'],
-  //   image: { src: nomad, alt: '' },
-  // },
+];
+
+export const otherProjects = [
+  {
+    title: 'Personal Portfolio',
+    description:
+      'This static portfolio site is created with Next.js and styled with SASS.',
+    tech: ['next', 'sass'],
+    repo: 'https://github.com/allanlalangan/portfolio',
+    url: '/',
+    complete: true,
+  },
 ];
