@@ -1,0 +1,225 @@
+@use '../../scss/abstracts/colors' as colors;
+@use '../../scss/abstracts/mixins' as mixins;
+@use '../../scss/abstracts/variables' as var;
+
+.container {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.container.light {
+  background-color: map-get(colors.$card, 'light');
+}
+.container.dark {
+  background-color: map-get(colors.$card, 'dark');
+}
+
+.project-header {
+  grid-column: span 6;
+  grid-row: span 1;
+
+  @include mixins.flex(column, center, flex-start);
+  @include mixins.breakpoint('>=sm') {
+    @include mixins.flex(row, flex-start, center);
+  }
+
+  .__title {
+    padding-bottom: 0.5rem;
+    border-bottom: 5px solid map-get(colors.$primary, 'main');
+  }
+
+  .progress-message {
+    font-weight: 500;
+    // color: map-get(colors.$primary, 'main');
+    margin-top: 1rem;
+    padding: 0.25rem 1rem;
+    border: 2px solid map-get(colors.$primary, 'main');
+    border-radius: 0.35rem;
+    @include mixins.breakpoint('>=sm') {
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.description {
+  padding: 1rem;
+  grid-column: 1 / 12;
+  @include mixins.breakpoint('>=lg') {
+    grid-column: 1 / 7;
+  }
+}
+
+.tech-heading {
+  width: fit-content;
+  border-bottom: 5px solid map-get(colors.$secondary, 'main');
+  margin-top: 1rem;
+  @include mixins.breakpoint('>=xs') {
+    grid-column: 1 / 13;
+  }
+  @include mixins.breakpoint('>=md') {
+    margin-top: 0;
+    margin-left: 1rem;
+    grid-column: 1 / 13;
+  }
+  @include mixins.breakpoint('>=lg') {
+    // grid-column: 1 / 9; //odd
+    grid-column: 1 / 7;
+  }
+}
+.tech-list {
+  // @include mixins.action-button-text();
+  height: fit-content;
+  @include mixins.breakpoint('>=xs') {
+    padding: 1rem;
+    grid-column: span 12;
+  }
+  @include mixins.breakpoint('>=md') {
+    padding: 1rem;
+    grid-column: 1 / 13;
+
+    @include mixins.flex(row, flex-start, center);
+  }
+  @include mixins.breakpoint('>=lg') {
+    padding: 1rem 1rem 0 1rem;
+    // grid-column: 1 / 9; //odd
+    grid-column: 1 / 7;
+
+    @include mixins.flex(row, flex-start, center);
+  }
+
+  .tech {
+    height: fit-content;
+    @include mixins.flex(column, center, center);
+    @include mixins.breakpoint('>=xs') {
+      padding-bottom: 1rem;
+    }
+    @include mixins.breakpoint('>=md') {
+      @include mixins.flex(row, flex-start, center);
+      padding: 0;
+      margin-bottom: 0.5rem;
+    }
+    @include mixins.breakpoint('>=lg') {
+      @include mixins.flex(column, center, center);
+      padding-bottom: 1rem;
+    }
+  }
+  .tech-icon {
+    font-size: 2rem;
+    @include mixins.breakpoint('>=md') {
+      font-size: 1.5rem;
+      // display: none;
+    }
+    @include mixins.breakpoint('>=lg') {
+      display: initial;
+      font-size: 2rem;
+    }
+  }
+
+  .tech-caption {
+    @include mixins.breakpoint('>=md') {
+      padding-left: 0.5rem;
+    }
+    @include mixins.breakpoint('>=lg') {
+      padding-left: 0;
+    }
+  }
+}
+
+.links {
+  margin-bottom: 0;
+  @include mixins.breakpoint('>=xs') {
+    grid-column: span 12;
+  }
+  @include mixins.breakpoint('>=md') {
+    grid-column: 1 / 13;
+  }
+  @include mixins.breakpoint('>=lg') {
+    padding: 1rem;
+    grid-column: 9 / 13; //odd
+    grid-row: 1 / 5;
+  }
+
+  .button-group {
+    width: 100%;
+    @include mixins.flex(row, center, center);
+    @include mixins.breakpoint('>=sm') {
+    }
+    @include mixins.breakpoint('>=lg') {
+      height: 100%;
+      @include mixins.flex(column, center, center);
+    }
+
+    .button-divider {
+      width: 0.5rem;
+      height: 100%;
+      background-color: colors.$divider;
+      @include mixins.breakpoint('>=lg') {
+        display: none;
+      }
+    }
+
+    .link {
+      width: 100%;
+    }
+    .project-link-button {
+      margin-top: 0.5rem;
+      width: 100%;
+      @include mixins.action-button-text();
+
+      @include mixins.flex(column, center, center);
+      @include mixins.breakpoint('>=sm') {
+        @include mixins.flex(row, center, center);
+      }
+      @include mixins.breakpoint('>=lg') {
+      }
+
+      .project-link-button__icon {
+        @include mixins.flex(row, center, center);
+        font-size: 1.5rem;
+      }
+
+      .project-link-button__text {
+        @include mixins.breakpoint('>=sm') {
+          padding: 0 0.5rem;
+        }
+      }
+    }
+
+    .light {
+      @include mixins.filled-button(map-get(colors.$card, 'dark'));
+    }
+
+    .dark {
+      @include mixins.filled-button(map-get(colors.$secondary, 'main'));
+    }
+
+    .project-link-button:hover {
+      @include mixins.filled-button--hover();
+    }
+
+    .project-link-button--github {
+      @include mixins.breakpoint('>=xs') {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      @include mixins.breakpoint('>=lg') {
+        border-top-right-radius: var.$borderRad__action-button;
+        border-bottom-right-radius: var.$borderRad__action-button;
+      }
+    }
+    .project-link-button--live {
+      @include mixins.breakpoint('>=xs') {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      @include mixins.breakpoint('>=lg') {
+        border-top-left-radius: var.$borderRad__action-button;
+        border-bottom-left-radius: var.$borderRad__action-button;
+      }
+    }
+  }
+}

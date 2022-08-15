@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from './index.module.scss';
-import { projects, about } from '../public/data';
+import { projects, otherProjects, about } from '../public/data';
 
 // components
 import {
@@ -27,6 +27,7 @@ import { SiNextdotjs } from 'react-icons/si';
 import { useContext } from 'react';
 import { ThemeContext } from '../store/ThemeContextProvider';
 import Skills from '../components/Skills/Skills';
+import OtherProject from '../components/OtherProject/OtherProject';
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
@@ -45,10 +46,18 @@ export default function Home() {
           Recent Projects
         </h1>
         <section className={styles.projects}>
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
+          <ul>
+            {projects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </ul>
+          <ul>
+            {otherProjects.map((project) => (
+              <OtherProject key={project.title} project={project} />
+            ))}
+          </ul>
         </section>
+        <section className={styles['other-projects']}></section>
         {/* <Divider /> */}
         {/* <h1 className={styles.heading}>Primary Skills</h1> */}
         <SkillsBanner />
