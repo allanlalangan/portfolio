@@ -20,7 +20,6 @@ const About = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <>
-      {/* <div className={`${styles.pattern} ${styles[theme]}`}></div> */}
       <section className={styles.container}>
         <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello! 👋</h2>
         <article className={styles.bio}>

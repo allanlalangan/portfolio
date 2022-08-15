@@ -7,7 +7,6 @@ const Skills = () => {
   return (
     <>
       <section className={styles.skills}>
-        <div className={`${styles.pattern} ${styles[theme]}`}></div>
         <h3 className={styles.heading}>My primary tools consist of:</h3>
         <ul className={styles.list}>
           <li>ReactJS, hooks and React Router</li>
