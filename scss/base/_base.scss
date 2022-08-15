@@ -3,7 +3,7 @@
 @use '../util/' as util;
 
 body {
-  font-size: 16px;
+  font-size: 1.125rem;
   font-family: util.$font;
   transition: color 0.2s ease;
 }
