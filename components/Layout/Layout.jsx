@@ -17,17 +17,6 @@ const Layout = ({ children }) => {
 
       document.body.classList.remove('light');
     }
-
-    // 👇️ adding multiple classes to body tag
-    // document.body.classList.add(
-    //   'bg-salmon',
-    //   'my-class-1',
-    //   'my-class-2',
-    //   'my-class-3'
-    // );
-
-    // 👇️ removing classes from body element
-    // document.body.classList.remove('my-class-3');
   }, [theme]);
   return (
     <>
