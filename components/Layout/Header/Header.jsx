@@ -4,11 +4,12 @@ import Link from 'next/link';
 import { FaTwitter, FaFileDownload, FaGithub } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Switch from '../../Switch/Switch';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeContext } from '../../../store/ThemeContextProvider';
 
 const Header = () => {
   const { theme } = useContext(ThemeContext);
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header className={`${styles['header']} ${styles[theme]}`}>
       <div className={styles['main-banner']}>
@@ -23,7 +24,11 @@ const Header = () => {
       </div>
 
       <nav className={styles['nav']}>
-        <ul className={styles['nav-links']}>
+        <ul
+          className={`${styles['nav-links']} ${styles[theme]} ${
+            menuOpen ? styles.active : ''
+          }`}
+        >
           <Link href='/'>
             <li className={`${styles['__link']} ${styles['section']}`}>
               projects
@@ -66,7 +71,12 @@ const Header = () => {
         </ul>
         <aside className={styles['menu-button__container']}>
           <Switch />
-          <button className={styles['menu-button']}>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className={`${styles['menu-button']} ${
+              menuOpen ? styles.active : ''
+            }`}
+          >
             <GiHamburgerMenu
               className={`${styles[theme]} ${styles['burger-icon']}`}
             />
