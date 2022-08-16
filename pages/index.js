@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from './index.module.scss';
-import { projects, otherProjects, about } from '../public/data';
+import { projects, otherProjects } from '../public/data';
 
 // components
 import { Hero, SkillsBanner, ProjectCard, About, Contact } from '../components';
@@ -9,7 +9,7 @@ import { ThemeContext } from '../store/ThemeContextProvider';
 import Skills from '../components/Skills/Skills';
 import OtherProject from '../components/OtherProject/OtherProject';
 
-export default function Home() {
+const Home = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <>
@@ -57,4 +57,6 @@ export default function Home() {
       </>
     </>
   );
-}
+};
+
+export default Home;

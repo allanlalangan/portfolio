@@ -156,7 +156,9 @@
     top: 0;
     left: -40%;
     opacity: 0;
+    pointer-events: none;
     &.active {
+      pointer-events: all;
       left: 0;
       opacity: 1;
     }
@@ -173,7 +175,8 @@
     font-size: 0.85rem;
     letter-spacing: 1.75px;
     text-transform: uppercase;
-    transition: opacity 0.3s ease-out, left 0.4s ease-out;
+    transition: opacity 0.3s ease-out, left 0.35s ease-out,
+      background-color 0.2s ease;
 
     // background-color: map-get(colors.$background, 'dark');
 
@@ -184,6 +187,7 @@
     }
 
     @include mixins.breakpoint('>=md') {
+      pointer-events: all;
       opacity: 1;
       height: 100%;
       position: static;
