@@ -2,7 +2,7 @@ import styles from './Header.module.scss';
 import Link from 'next/link';
 
 import { FaTwitter, FaFileDownload, FaGithub } from 'react-icons/fa';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { MdMenu, MdClose } from 'react-icons/md';
 import Switch from '../../Switch/Switch';
 import { useContext, useState } from 'react';
 import { ThemeContext } from '../../../store/ThemeContextProvider';
@@ -77,9 +77,11 @@ const Header = () => {
               menuOpen ? styles.active : ''
             }`}
           >
-            <GiHamburgerMenu
-              className={`${styles[theme]} ${styles['burger-icon']}`}
-            />
+            {menuOpen ? (
+              <MdClose className={`${styles[theme]} ${styles['close-icon']}`} />
+            ) : (
+              <MdMenu className={`${styles[theme]} ${styles['burger-icon']}`} />
+            )}
           </button>
         </aside>
       </nav>

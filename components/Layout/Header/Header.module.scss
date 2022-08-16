@@ -124,6 +124,10 @@
       font-size: 1.25rem;
       color: map-get(colors.$primary, 'main');
     }
+    .close-icon {
+      font-size: 1.25rem;
+      color: map-get(colors.$primary, 'light');
+    }
 
     &:hover {
       font-size: 1.25rem;
@@ -134,6 +138,7 @@
       font-size: 1.25rem;
       border: 2px solid
         rgba($color: map-get(colors.$primary, 'main'), $alpha: 1);
+      background-color: map-get(colors.$primary, 'main');
     }
   }
 }
