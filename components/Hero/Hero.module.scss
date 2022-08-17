@@ -15,20 +15,23 @@
 }
 
 .name {
-  font-size: 3rem;
+  font-size: 2rem;
   letter-spacing: 2px;
   transition: color 0.5s ease;
 
   @include mixins.breakpoint('>=sm') {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   @include mixins.breakpoint('>=lg') {
     font-size: 4.5rem;
   }
 }
 .title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  @include mixins.breakpoint('>=sm') {
+    font-size: 2rem;
+  }
   @include mixins.breakpoint('>=md') {
     padding-left: 1rem;
   }
@@ -49,13 +52,12 @@
   color: map-get(colors.$secondary, 'main');
 }
 .brief {
-  // width: fit-content;
-  // color: map-get(colors.$primary, 'main');
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
   width: 70%;
   padding-top: 1rem;
   @include mixins.breakpoint('>=sm') {
+    font-size: 1.5rem;
     width: 60%;
   }
   @include mixins.breakpoint('>=md') {
