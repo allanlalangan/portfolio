@@ -18,7 +18,7 @@
 }
 
 .project-header {
-  grid-column: span 6;
+  grid-column: span 12;
   grid-row: span 1;
 
   @include mixins.flex(column, center, flex-start);
@@ -39,7 +39,6 @@
     border: 2px solid map-get(colors.$primary, 'main');
     border-radius: 0.35rem;
     @include mixins.breakpoint('>=sm') {
-      margin-top: 0;
       margin-left: 1rem;
     }
   }
@@ -140,7 +139,7 @@
   @include mixins.breakpoint('>=lg') {
     padding: 1rem;
     grid-column: 9 / 13; //odd
-    grid-row: 1 / 5;
+    grid-row: 2 / 5;
   }
 
   .button-group {
