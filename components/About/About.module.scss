@@ -5,6 +5,7 @@
 .container {
   min-height: calc((100vh - var.$headerHeight) - 5rem);
   padding: 2rem;
+  padding-bottom: 6rem;
   margin-bottom: 4rem;
   @include mixins.breakpoint('>=md') {
     padding: 4rem;

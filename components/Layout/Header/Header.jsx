@@ -35,6 +35,7 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
                 behavior: 'smooth',
                 block: 'start',
               });
+              setMenuOpen(false);
             }}
             className={`${styles['__link']} ${styles['section']}`}
           >
@@ -47,6 +48,7 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
                 behavior: 'smooth',
                 block: 'nearest',
               });
+              setMenuOpen(false);
             }}
             className={`${styles['__link']} ${styles['section']}`}
           >
@@ -59,6 +61,7 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
                 behavior: 'smooth',
                 block: 'start',
               });
+              setMenuOpen(false);
             }}
             className={`${styles['__link']} ${styles['section']}`}
           >
@@ -68,8 +71,9 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
             onClick={() => {
               contactRef.current.scrollIntoView({
                 behavior: 'smooth',
-                block: 'center',
+                block: 'end',
               });
+              setMenuOpen(false);
             }}
             className={`${styles['__link']} ${styles['section']}`}
           >

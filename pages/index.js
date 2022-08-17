@@ -69,12 +69,11 @@ const Home = () => {
         </section>
 
         <h1
-          ref={contactRef}
           className={`${styles[theme]} ${styles.heading} ${styles['contrast-heading']}`}
         >
           Contact
         </h1>
-        <section className={styles.contact}>
+        <section ref={contactRef} className={styles.contact}>
           <Contact />
         </section>
         <Footer />
