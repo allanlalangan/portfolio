@@ -1,5 +1,7 @@
 @use '../../scss/abstracts/colors' as colors;
+@use '../../scss/abstracts/variables' as var;
 
 .main-content {
+  margin-top: var.$headerHeight;
   position: relative;
 }

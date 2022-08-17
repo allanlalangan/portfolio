@@ -23,6 +23,7 @@
   @include mixins.breakpoint('>=md') {
     width: 60%;
   }
+  margin-bottom: 1rem;
 
   strong {
     color: map-get(colors.$primary, 'light');

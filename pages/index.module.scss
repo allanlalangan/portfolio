@@ -1,5 +1,6 @@
 @use '../scss/abstracts/mixins' as mixins;
 @use '../scss/abstracts/colors' as colors;
+@use '../scss/abstracts/variables' as var;
 
 .heading {
   @include mixins.flex(row, center, center);
@@ -10,11 +11,16 @@
   font-weight: 700;
   font-size: 2.5rem;
   border-bottom: 5px solid map-get(colors.$primary, 'main');
+  @include mixins.breakpoint('>=lg') {
+    // color: map-get(colors.$text, 'main');
+    padding-top: var.$headerHeight;
+  }
 }
 
 .projects-heading {
   @include mixins.breakpoint('>=lg') {
     // color: map-get(colors.$text, 'main');
+    padding-top: var.$headerHeight;
   }
 }
 

@@ -18,12 +18,6 @@ const Layout = ({ children }) => {
       document.body.classList.remove('light');
     }
   }, [theme]);
-  return (
-    <>
-      <Header />
-      <main className={styles['main-content']}>{children}</main>
-      <Footer />
-    </>
-  );
+  return <main className={styles['main-content']}>{children}</main>;
 };
 export default Layout;

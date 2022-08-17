@@ -7,7 +7,7 @@ import Switch from '../../Switch/Switch';
 import { useContext, useState } from 'react';
 import { ThemeContext } from '../../../store/ThemeContextProvider';
 
-const Header = () => {
+const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
   const { theme } = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
@@ -29,19 +29,56 @@ const Header = () => {
             menuOpen ? styles.active : ''
           }`}
         >
-          <Link href='/'>
-            <li className={`${styles['__link']} ${styles['section']}`}>
-              projects
-            </li>
-          </Link>
-          <Link href='/'>
-            <li className={`${styles['__link']} ${styles['section']}`}>
-              skills
-            </li>
-          </Link>
-          <Link href='/about'>
-            <li className={`${styles['__link']} ${styles['section']}`}>me</li>
-          </Link>
+          {/* <Link href='/'> */}
+          <li
+            onClick={() => {
+              projectsRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }}
+            className={`${styles['__link']} ${styles['section']}`}
+          >
+            projects
+          </li>
+          {/* </Link> */}
+          {/* <Link href='/'> */}
+          <li
+            onClick={() => {
+              skillsRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+              });
+            }}
+            className={`${styles['__link']} ${styles['section']}`}
+          >
+            skills
+          </li>
+          {/* </Link> */}
+          {/* <Link href='/about'> */}
+          <li
+            onClick={() => {
+              aboutRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }}
+            className={`${styles['__link']} ${styles['section']}`}
+          >
+            me
+          </li>
+          <li
+            onClick={() => {
+              contactRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+              });
+            }}
+            className={`${styles['__link']} ${styles['section']}`}
+          >
+            contact
+          </li>
+          {/* </Link> */}
           <a
             href='https://twitter.com/allanladev'
             target='_blank'

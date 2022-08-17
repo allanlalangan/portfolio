@@ -32,9 +32,9 @@
 
   figcaption {
     @include mixins.flex(column, center, center);
+    font-size: 1rem;
     margin-top: 0.5rem;
     color: map-get(colors.$text, 'contrast');
-    // @include mixins.action-button-text();
   }
 }
 .svg-icon {

@@ -3,7 +3,7 @@ import { about } from '../../public/data';
 import { ThemeContext } from '../../store/ThemeContextProvider';
 import styles from './Hero.module.scss';
 
-const Hero = () => {
+const Hero = ({ projectsRef }) => {
   const { theme } = useContext(ThemeContext);
   return (
     <>
@@ -20,7 +20,17 @@ const Hero = () => {
           </span>
           <p className={styles.brief}>{about.brief}</p>
         </article>
-        <button className={styles['action-button']}>{about.actionCall}</button>
+        <button
+          onClick={() => {
+            projectsRef.current.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }}
+          className={styles['action-button']}
+        >
+          {about.actionCall}
+        </button>
       </section>
     </>
   );

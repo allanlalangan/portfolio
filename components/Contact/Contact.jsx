@@ -16,6 +16,19 @@ const Contact = () => {
         </Link>
         , tell me about your project!
       </p>
+      <p className={styles.text}>
+        You can also send me a message on{' '}
+        <a
+          href='https://twitter.com/allanladev'
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          <span className={styles.email}>
+            <strong>Twitter</strong>
+          </span>
+        </a>
+        !
+      </p>
     </article>
   );
 };
