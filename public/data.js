@@ -33,24 +33,24 @@ export const projects = [
     url: 'https://nononomad.netlify.app/',
     complete: false,
   },
-  // {
-  //   title: 'project.Me',
-  //   description:
-  //     'A fullstack to-do list app. Registered users can save goals. Register new user or Login with username: demo@demo.com password: demo',
-  //   tech: [
-  //     'express',
-  //     'mongodb',
-  //     'react',
-  //     'react router',
-  //     'sass',
-  //     'redux',
-  //     'web tokens',
-  //   ],
-  //   image: { src: dashboard, alt: '' },
-  //   repo: 'https://github.com/allanlalangan/dashboard',
-  //   url: '',
-  //   complete: false,
-  // },
+  {
+    title: 'project.Me',
+    description:
+      'A fullstack to-do list app. Registered users can save goals. Currently building backend.',
+    tech: [
+      'express',
+      'mongodb',
+      'react',
+      'react router',
+      'sass',
+      'redux',
+      'web tokens',
+    ],
+    image: { src: dashboard, alt: '' },
+    repo: 'https://github.com/allanlalangan/dashboard',
+    url: '',
+    complete: false,
+  },
   {
     title: 'Martial Masters Academy',
     description:
