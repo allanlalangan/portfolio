@@ -11,7 +11,7 @@ const About = () => {
         <article className={styles.bio}>
           <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello! 👋</h2>
           <p className={styles.__text}>
-            I&apos;m Allan. A life long learner and dreamer. I am a Web
+            I&apos;m Allan. A life long learner, artist, and dreamer. I am a Web
             Developer specializing in front end technologies. I build responsive
             web apps that look good and are easy to use. All designed, themed
             and styled by me.
