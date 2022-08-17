@@ -24,7 +24,7 @@
 }
 
 .skill {
-  @include mixins.flex(row, flex-start, center);
+  @include mixins.flex(row, flex-start, flex-start);
 
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -32,6 +32,7 @@
   .bullet-container {
     width: 30px;
     height: 100%;
+    padding-top: 0.25rem;
   }
 
   .bullet,
