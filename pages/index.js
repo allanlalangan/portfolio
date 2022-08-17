@@ -4,13 +4,15 @@ import { projects, otherProjects } from '../public/data';
 
 // components
 import { Hero, SkillsBanner, ProjectCard, About, Contact } from '../components';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import { ThemeContext } from '../store/ThemeContextProvider';
 import Skills from '../components/Skills/Skills';
 import OtherProject from '../components/OtherProject/OtherProject';
 
 const Home = () => {
   const { theme } = useContext(ThemeContext);
+
+  const projectsRef = useRef();
   return (
     <>
       <Head>
@@ -34,8 +36,6 @@ const Home = () => {
             <OtherProject key={project.title} project={project} />
           ))}
         </section>
-        <section className={styles['other-projects']}></section>
-
         <SkillsBanner />
 
         <h1 className={`${styles[theme]} ${styles.heading}`}>Skills</h1>

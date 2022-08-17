@@ -212,6 +212,6 @@ export const otherProjects = [
     tech: ['next', 'sass'],
     repo: 'https://github.com/allanlalangan/portfolio',
     url: '/',
-    complete: true,
+    complete: false,
   },
 ];
