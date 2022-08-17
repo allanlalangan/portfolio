@@ -24,16 +24,6 @@ import mma from '../assets/mma.png';
 
 export const projects = [
   {
-    title: 'Martial Masters Academy',
-    description:
-      'A responsive landing page design for the best martial arts gym in all of Portland.',
-    tech: ['next', 'tailwind css'],
-    image: { src: mma, alt: '' },
-    repo: 'https://github.com/allanlalangan/martial-masters-academy',
-    url: 'https://mma-acdmy.netlify.app/',
-    complete: true,
-  },
-  {
     title: 'Nomad Travel',
     description:
       'Locate and filter popular restaurants, hotels, and attractions anywhere in the world. Implements multiple REST APIs.',
@@ -42,6 +32,16 @@ export const projects = [
     repo: 'https://github.com/allanlalangan/nomad-travel',
     url: 'https://nononomad.netlify.app/',
     complete: false,
+  },
+  {
+    title: 'Martial Masters Academy',
+    description:
+      'A responsive landing page design for the best martial arts gym in all of Portland.',
+    tech: ['next', 'tailwind css'],
+    image: { src: mma, alt: '' },
+    repo: 'https://github.com/allanlalangan/martial-masters-academy',
+    url: 'https://mm-acdmy.netlify.app/',
+    complete: true,
   },
   {
     title: 'project.Me',
