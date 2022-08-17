@@ -37,7 +37,7 @@ export const projects = [
     title: 'Nomad Travel',
     description:
       'Locate and filter popular restaurants, hotels, and attractions anywhere in the world. Implements multiple REST APIs.',
-    tech: ['react', 'css', 'material ui', 'google apis', 'rest api'],
+    tech: ['react', 'material ui', 'google apis', 'rest api'],
     image: { src: nomad, alt: '' },
     repo: 'https://github.com/allanlalangan/nomad-travel',
     url: 'https://nononomad.netlify.app/',
