@@ -58,7 +58,7 @@ export const projects = [
     ],
     image: { src: dashboard, alt: '' },
     repo: 'https://github.com/allanlalangan/dashboard',
-    url: 'https://ladev-projectme.netlify.app/',
+    url: null,
     complete: false,
   },
 ];

@@ -68,6 +68,7 @@ const ProjectCard = ({
             rel='noreferrer noopener'
           >
             <button
+              disabled={!url}
               className={`${styles['project-link-button']} ${styles['project-link-button--live']} ${styles[theme]}`}
             >
               <FaLink className={styles['project-link-button__icon']} />
