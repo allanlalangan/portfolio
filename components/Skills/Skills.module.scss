@@ -15,6 +15,7 @@
   @include mixins.flex(column, center, flex-start);
   @include mixins.breakpoint('>=md') {
     padding: 4rem;
+    width: 75%;
   }
 }
 
@@ -23,8 +24,39 @@
 }
 
 .skill {
-  list-style: circle;
-  margin-bottom: 0.5rem;
+  @include mixins.flex(row, flex-start, center);
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  .bullet-container {
+    width: 30px;
+    height: 100%;
+  }
+
+  .bullet,
+  strong {
+    transition: color 0.2s ease;
+  }
+
+  & .bullet {
+    margin-right: 1rem;
+    &.light {
+      color: map-get(colors.$secondary, 'main');
+    }
+    &.dark {
+      color: map-get(colors.$primary, 'main');
+    }
+  }
+
+  & strong {
+    &.light {
+      color: map-get(colors.$primary, 'main');
+    }
+    &.dark {
+      color: map-get(colors.$secondary, 'light');
+    }
+  }
 }
 
 .pattern {
