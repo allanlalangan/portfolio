@@ -25,7 +25,11 @@ const Skills = () => {
             <span className={styles['bullet-container']}>
               <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
             </span>
-            <p className={styles.caption}>Javascript / ES6</p>
+            <p className={styles.caption}>
+              <strong className={`${styles.strong} ${styles[theme]}`}>
+                Javascript / ES6
+              </strong>
+            </p>
           </li>
           <li className={styles.skill}>
             <span className={styles['bullet-container']}>
@@ -51,7 +55,11 @@ const Skills = () => {
               <strong className={`${styles.strong} ${styles[theme]}`}>
                 Sass
               </strong>{' '}
-              and frameworks such as strong and{' '}
+              and frameworks such as{' '}
+              <strong className={`${styles.strong} ${styles[theme]}`}>
+                Tailwind CSS
+              </strong>{' '}
+              and{' '}
               <strong className={`${styles.strong} ${styles[theme]}`}>
                 Material UI
               </strong>
