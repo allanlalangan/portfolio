@@ -1,28 +1,15 @@
-import { SiNextdotjs, SiSass, SiTailwindcss } from 'react-icons/si';
 import styles from './About.module.scss';
-import { FaGithub } from 'react-icons/fa';
-
-import {
-  HtmlIcon,
-  CssIcon,
-  JsIcon,
-  ReactIcon,
-  ReduxIcon,
-  SassIcon,
-  MuiIcon,
-  NpmIcon,
-} from '../ui/icons';
-import Link from 'next/link';
 import { useContext } from 'react';
 import { ThemeContext } from '../../store/ThemeContextProvider';
+import Image from 'next/image';
 
 const About = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <>
       <section className={styles.container}>
-        <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello! 👋</h2>
         <article className={styles.bio}>
+          <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello! 👋</h2>
           <p className={styles.__text}>
             I&apos;m Allan. Web developer, life long learner, and dreamer. I
             build responsive web apps that look good and are easy to use. All
@@ -42,28 +29,9 @@ const About = () => {
             experience.
           </p>
         </article>
-
-        {/* <h2 className={`${styles.heading}`}>What I am currently learning:</h2>
-
-        <article className={`${styles['currently-learning']}`}>
-          <h3 className={styles.__subheading}>ARIA and accessibility</h3>
-          <p className={styles.__blurb}>
-            Inclusivity is important! Tech is growing fast and I believe its our
-            responsibility as developers to ensure no one gets left behind
-            during its evolution. Design, semantic HTML, and ARIA are a few ways
-            to make apps more accessible. The web should be for everyone!
-          </p>
-          <h3 className={styles.__subheading}>Styling Options</h3>
-          <figure className={styles.icons}>
-            <SiSass className={styles.icon} />
-            <SiTailwindcss className={styles.icon} />
-          </figure>
-          <p className={styles.__blurb}>
-            I love CSS and I strongly believe in using pure CSS in my projects.
-            SASS has made styling an easier and more streamlined process with
-            mixins, variables etc.
-          </p>
-        </article> */}
+        {/* <figure className={styles.portrait}>
+          <Image src={about.portrait} alt='Allan Lalangan' />
+        </figure> */}
       </section>
     </>
   );
