@@ -29,7 +29,6 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
             menuOpen ? styles.active : ''
           }`}
         >
-          {/* <Link href='/'> */}
           <li
             onClick={() => {
               projectsRef.current.scrollIntoView({
@@ -41,8 +40,7 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
           >
             projects
           </li>
-          {/* </Link> */}
-          {/* <Link href='/'> */}
+
           <li
             onClick={() => {
               skillsRef.current.scrollIntoView({
@@ -54,8 +52,7 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
           >
             skills
           </li>
-          {/* </Link> */}
-          {/* <Link href='/about'> */}
+
           <li
             onClick={() => {
               aboutRef.current.scrollIntoView({
@@ -78,7 +75,7 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
           >
             contact
           </li>
-          {/* </Link> */}
+
           <a
             href='https://twitter.com/allanladev'
             target='_blank'
@@ -97,14 +94,14 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
               <FaGithub className={styles['social-icon']} />
             </li>
           </a>
-          <Link href='/'>
+          {/* <Link href='/'>
             <li
               className={`${styles['__link']} ${styles['cv-link']} ${styles['button']}`}
             >
               <span className={`${styles['cv-link__text']}`}>cv</span>
               <FaFileDownload className={styles['cv-icon']} />
             </li>
-          </Link>
+          </Link> */}
         </ul>
         <aside className={styles['menu-button__container']}>
           <Switch />
