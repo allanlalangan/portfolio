@@ -14,7 +14,7 @@ const Contact = () => {
             <strong>allanlalangan@gmail.com</strong>
           </span>
         </Link>
-        , tell me about your project!
+        , tell me about your project.
       </p>
       <p className={styles.text}>
         You can also send me a message on{' '}
@@ -27,7 +27,6 @@ const Contact = () => {
             <strong>Twitter</strong>
           </span>
         </a>
-        !
       </p>
     </article>
   );

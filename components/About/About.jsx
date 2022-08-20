@@ -11,10 +11,10 @@ const About = () => {
         <article className={styles.bio}>
           <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello! 👋</h2>
           <p className={styles.__text}>
-            I&apos;m Allan. A life long learner, artist, and dreamer. I am a Web
-            Developer specializing in front end technologies. I build responsive
-            web apps that look good and are easy to use. All designed, themed
-            and styled by me.
+            I&apos;m Allan. A life long learner, artist, and dreamer. I&apos;m a
+            Web Developer specializing in front end technologies. I build
+            responsive and visually appealing apps that are easy to use. All
+            designed, themed and styled by me.
           </p>
           <p className={styles.__text}>
             I&apos;ve been coding for 3 years and currently transitioning
@@ -23,11 +23,9 @@ const About = () => {
             and conventions.
           </p>
           <p className={styles.__text}>
-            I build single and multi page applications with client and server
-            side rendering. I can build static or dynamic websites that
-            implement a backend and interact with users. I am here to help you
-            grow your vision and improve your product through better user
-            experience.
+            I build full-stack, single and multi page applications with client
+            and server side rendering. Together, we can improve your product
+            through better user experience.
           </p>
         </article>
         {/* <figure className={styles.portrait}>
