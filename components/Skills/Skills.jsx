@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <>
       <section className={styles.skills}>
-        <h3 className={styles.heading}>My primary tools consist of:</h3>
+        <h3 className={styles.heading}>My primary tools include:</h3>
         <ul className={styles.list}>
           <li className={styles.skill}>
             <span className={styles['bullet-container']}>
