@@ -34,8 +34,9 @@ export const projects = [
     complete: false,
   },
   {
-    title: 'Martial Masters Academy',
-    description: 'A responsive landing page design for a Martial Arts Gym.',
+    title: 'Martial Arts Academy',
+    description:
+      'A responsive landing page design for a high level martial arts gym.',
     tech: ['next', 'tailwind css'],
     image: { src: mma, alt: '' },
     repo: 'https://github.com/allanlalangan/martial-masters-academy',
