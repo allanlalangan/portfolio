@@ -4,7 +4,7 @@ export const about = {
   title: 'Front End Developer',
   greeting: 'Hello World. I am',
   brief:
-    'I build responsive and beautifully designed websites that are easy to use.',
+    'I build responsive, and beautifully designed websites that are easy to use.',
   actionCall: 'View my work',
   cv: '/',
 };

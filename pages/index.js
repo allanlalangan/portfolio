@@ -4,7 +4,7 @@ import { projects, otherProjects } from '../public/data';
 
 // components
 import { Hero, SkillsBanner, ProjectCard, About, Contact } from '../components';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { ThemeContext } from '../store/ThemeContextProvider';
 import Skills from '../components/Skills/Skills';
 import OtherProject from '../components/OtherProject/OtherProject';
@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Allan Lalangan | Web Developer</title>
+        <title>Allan Lalangan | Front End Developer</title>
         <link
           rel='icon'
           href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👹</text></svg>"
