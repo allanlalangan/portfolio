@@ -56,7 +56,7 @@ const SkillsBanner = () => {
         className={`${styles['icon-container']} col-4-xs col-3-sm col-1-lg`}
       >
         <TwIcon className={styles['svg-icon']} />
-        <figcaption>tailwind css</figcaption>
+        <figcaption>tailwind</figcaption>
       </figure>
       <figure
         className={`${styles['icon-container']} col-4-xs col-3-sm col-1-lg`}

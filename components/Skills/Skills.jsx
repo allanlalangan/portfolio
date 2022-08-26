@@ -16,9 +16,9 @@ const Skills = () => {
             </span>
             <p className={styles.caption}>
               <strong className={`${styles.strong} ${styles[theme]}`}>
-                ReactJS
-              </strong>
-              , hooks and React Router
+                Semantic
+              </strong>{' '}
+              html
             </p>
           </li>
           <li className={styles.skill}>
@@ -29,17 +29,6 @@ const Skills = () => {
               <strong className={`${styles.strong} ${styles[theme]}`}>
                 Javascript / ES6
               </strong>
-            </p>
-          </li>
-          <li className={styles.skill}>
-            <span className={styles['bullet-container']}>
-              <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
-            </span>
-            <p className={styles.caption}>
-              <strong className={`${styles.strong} ${styles[theme]}`}>
-                Semantic
-              </strong>{' '}
-              html
             </p>
           </li>
           <li className={styles.skill}>
@@ -70,9 +59,31 @@ const Skills = () => {
               <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
             </span>
             <p className={styles.caption}>
+              <strong className={`${styles.strong} ${styles[theme]}`}>
+                ReactJS
+              </strong>
+              , hooks and React Router
+            </p>
+          </li>
+          <li className={styles.skill}>
+            <span className={styles['bullet-container']}>
+              <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
+            </span>
+            <p className={styles.caption}>
               State management with{' '}
               <strong className={`${styles.strong} ${styles[theme]}`}>
                 Redux + RTK
+              </strong>
+            </p>
+          </li>
+          <li className={styles.skill}>
+            <span className={styles['bullet-container']}>
+              <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
+            </span>
+            <p className={styles.caption}>
+              {`Source control with `}
+              <strong className={`${styles.strong} ${styles[theme]}`}>
+                Github
               </strong>
             </p>
           </li>
