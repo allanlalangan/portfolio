@@ -33,7 +33,7 @@ const OtherProject = ({
         ))}
       </ul>
 
-      <section className={styles.links}>
+      {/* <section className={styles.links}>
         <div className={styles['button-group']}>
           <a
             className={styles.link}
@@ -63,7 +63,7 @@ const OtherProject = ({
             </button>
           </a>
         </div>
-      </section>
+      </section> */}
     </article>
   );
 };

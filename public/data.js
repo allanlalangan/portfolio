@@ -66,8 +66,7 @@ export const projects = [
 export const otherProjects = [
   {
     title: 'Personal Portfolio',
-    description:
-      'This static portfolio site is created with Next.js and styled with SASS.',
+    description: 'This static portfolio site is built with Next.js.',
     tech: ['next', 'sass'],
     repo: 'https://github.com/allanlalangan/portfolio',
     url: '/',

@@ -128,91 +128,91 @@
   }
 }
 
-.links {
-  margin-bottom: 0;
-  @include mixins.breakpoint('>=xs') {
-    grid-column: span 12;
-  }
-  @include mixins.breakpoint('>=md') {
-    grid-column: 1 / 13;
-  }
-  @include mixins.breakpoint('>=lg') {
-    padding: 1rem;
-    grid-column: 9 / 13; //odd
-    grid-row: 2 / 5;
-  }
+// .links {
+//   margin-bottom: 0;
+//   @include mixins.breakpoint('>=xs') {
+//     grid-column: span 12;
+//   }
+//   @include mixins.breakpoint('>=md') {
+//     grid-column: 1 / 13;
+//   }
+//   @include mixins.breakpoint('>=lg') {
+//     padding: 1rem;
+//     grid-column: 9 / 13; //odd
+//     grid-row: 2 / 5;
+//   }
 
-  .button-group {
-    width: 100%;
-    @include mixins.flex(row, center, center);
-    @include mixins.breakpoint('>=sm') {
-    }
-    @include mixins.breakpoint('>=lg') {
-      height: 100%;
-      @include mixins.flex(column, center, center);
-    }
+//   .button-group {
+//     width: 100%;
+//     @include mixins.flex(row, center, center);
+//     @include mixins.breakpoint('>=sm') {
+//     }
+//     @include mixins.breakpoint('>=lg') {
+//       height: 100%;
+//       @include mixins.flex(column, center, center);
+//     }
 
-    .button-divider {
-      width: 0.5rem;
-      height: 100%;
-      background-color: colors.$divider;
-      @include mixins.breakpoint('>=lg') {
-        display: none;
-      }
-    }
+//     .button-divider {
+//       width: 0.5rem;
+//       height: 100%;
+//       background-color: colors.$divider;
+//       @include mixins.breakpoint('>=lg') {
+//         display: none;
+//       }
+//     }
 
-    .link {
-      width: 100%;
-    }
-    .project-link-button {
-      margin-top: 0.5rem;
-      width: 100%;
-      @include mixins.action-button-text();
+//     .link {
+//       width: 100%;
+//     }
+//     .project-link-button {
+//       margin-top: 0.5rem;
+//       width: 100%;
+//       @include mixins.action-button-text();
 
-      // @include mixins.flex(column, center, center);
-      @include mixins.flex(row, center, center);
+//       // @include mixins.flex(column, center, center);
+//       @include mixins.flex(row, center, center);
 
-      .project-link-button__icon {
-        @include mixins.flex(row, center, center);
-        font-size: 1.5rem;
-      }
+//       .project-link-button__icon {
+//         @include mixins.flex(row, center, center);
+//         font-size: 1.5rem;
+//       }
 
-      .project-link-button__text {
-        padding: 0 0.5rem;
-      }
-    }
+//       .project-link-button__text {
+//         padding: 0 0.5rem;
+//       }
+//     }
 
-    .light {
-      @include mixins.filled-button(map-get(colors.$card, 'dark'));
-    }
+//     .light {
+//       @include mixins.filled-button(map-get(colors.$card, 'dark'));
+//     }
 
-    .dark {
-      @include mixins.filled-button(map-get(colors.$secondary, 'main'));
-    }
+//     .dark {
+//       @include mixins.filled-button(map-get(colors.$secondary, 'main'));
+//     }
 
-    .project-link-button:hover {
-      @include mixins.filled-button--hover();
-    }
+//     .project-link-button:hover {
+//       @include mixins.filled-button--hover();
+//     }
 
-    .project-link-button--github {
-      @include mixins.breakpoint('>=xs') {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-      @include mixins.breakpoint('>=lg') {
-        border-top-right-radius: var.$borderRad__action-button;
-        border-bottom-right-radius: var.$borderRad__action-button;
-      }
-    }
-    .project-link-button--live {
-      @include mixins.breakpoint('>=xs') {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-      @include mixins.breakpoint('>=lg') {
-        border-top-left-radius: var.$borderRad__action-button;
-        border-bottom-left-radius: var.$borderRad__action-button;
-      }
-    }
-  }
-}
+//     .project-link-button--github {
+//       @include mixins.breakpoint('>=xs') {
+//         border-top-right-radius: 0;
+//         border-bottom-right-radius: 0;
+//       }
+//       @include mixins.breakpoint('>=lg') {
+//         border-top-right-radius: var.$borderRad__action-button;
+//         border-bottom-right-radius: var.$borderRad__action-button;
+//       }
+//     }
+//     .project-link-button--live {
+//       @include mixins.breakpoint('>=xs') {
+//         border-top-left-radius: 0;
+//         border-bottom-left-radius: 0;
+//       }
+//       @include mixins.breakpoint('>=lg') {
+//         border-top-left-radius: var.$borderRad__action-button;
+//         border-bottom-left-radius: var.$borderRad__action-button;
+//       }
+//     }
+//   }
+// }
