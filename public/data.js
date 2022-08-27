@@ -26,7 +26,7 @@ export const projects = [
   {
     title: 'Nomad Travel',
     description:
-      'Locate and filter popular restaurants, hotels, and attractions anywhere in the world. Implements REST API.',
+      'Locate and filter popular restaurants, hotels, and attractions anywhere in the world.',
     tech: ['react', 'material ui', 'google apis', 'rest api'],
     image: { src: nomad, alt: '' },
     repo: 'https://github.com/allanlalangan/nomad-travel',
@@ -54,6 +54,7 @@ export const projects = [
       'sass',
       'redux',
       'web tokens',
+      'rest api',
     ],
     image: { src: dashboard, alt: '' },
     repo: 'https://github.com/allanlalangan/dashboard',
