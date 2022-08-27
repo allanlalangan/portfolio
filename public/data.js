@@ -45,8 +45,7 @@ export const projects = [
   },
   {
     title: 'project.Me',
-    description:
-      'A fullstack to-do list app. Registered users can save goals. Currently building backend.',
+    description: 'A fullstack to-do list app. Registered users can save goals.',
     tech: [
       'express',
       'mongodb',
@@ -58,7 +57,7 @@ export const projects = [
     ],
     image: { src: dashboard, alt: '' },
     repo: 'https://github.com/allanlalangan/dashboard',
-    url: null,
+    url: 'https://ladev-projectme.netlify.app',
     complete: false,
   },
 ];
