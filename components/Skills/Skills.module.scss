@@ -10,7 +10,8 @@
   position: relative;
   font-size: 1.25rem;
   // min-height: calc((100vh - var.$headerHeight) - 5rem);
-  padding: 2rem;
+  padding: 2rem 1rem;
+
   margin-bottom: 4rem;
   @include mixins.flex(column, center, flex-start);
   @include mixins.breakpoint('>=md') {

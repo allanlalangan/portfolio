@@ -70,7 +70,7 @@ const Skills = () => {
               <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
             </span>
             <p className={styles.caption}>
-              State management with{' '}
+              {`State management with `}
               <strong className={`${styles.strong} ${styles[theme]}`}>
                 Redux + RTK
               </strong>
@@ -92,7 +92,33 @@ const Skills = () => {
               <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
             </span>
             <p className={styles.caption}>
-              Familiar with MERN stack, JSON Web Tokens (JWT)
+              Building {` `}
+              <strong className={`${styles.strong} ${styles[theme]}`}>
+                RESTful APIs
+              </strong>
+              {` `}with{` `}
+              <strong className={`${styles.strong} ${styles[theme]}`}>
+                MongoDB
+              </strong>
+              {', '}
+              <strong className={`${styles.strong} ${styles[theme]}`}>
+                Express
+              </strong>
+              {', and '}
+              <strong className={`${styles.strong} ${styles[theme]}`}>
+                Node.js
+              </strong>
+            </p>
+          </li>
+          <li className={styles.skill}>
+            <span className={styles['bullet-container']}>
+              <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
+            </span>
+            <p className={styles.caption}>
+              {`Familiar with `}
+              <strong className={`${styles.strong} ${styles[theme]}`}>
+                JSON Web Tokens (JWT)
+              </strong>
             </p>
           </li>
         </ul>

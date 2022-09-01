@@ -8,8 +8,8 @@ const About = () => {
   return (
     <>
       <section className={styles.container}>
+        <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello! 👋</h2>
         <article className={styles.bio}>
-          <h2 className={`${styles.greeting} ${styles.greeting}`}>Hello! 👋</h2>
           <p className={styles.__text}>
             I&apos;m Allan. A life-long student, artist, and dreamer. I&apos;m a
             Software Developer specializing in front end web technologies. I
