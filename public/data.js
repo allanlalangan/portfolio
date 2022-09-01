@@ -19,7 +19,7 @@ export const contact = {
 };
 
 import nomad from '../assets/nomad-travel.png';
-import dashboard from '../assets/dashboard.png';
+import projectMe from '../assets/project-me.png';
 import mma from '../assets/mma.png';
 
 export const projects = [
@@ -56,7 +56,7 @@ export const projects = [
       'web tokens',
       'rest api',
     ],
-    image: { src: dashboard, alt: '' },
+    image: { src: projectMe, alt: '' },
     repo: 'https://github.com/allanlalangan/dashboard',
     url: 'https://ladev-projectme.netlify.app',
     complete: false,

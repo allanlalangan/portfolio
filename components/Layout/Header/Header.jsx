@@ -1,7 +1,7 @@
 import styles from './Header.module.scss';
 import Link from 'next/link';
 
-import { FaTwitter, FaFileDownload, FaGithub } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { MdMenu, MdClose } from 'react-icons/md';
 import Switch from '../../Switch/Switch';
 import { useContext, useState } from 'react';
@@ -87,6 +87,15 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
           >
             <li className={`${styles['__link']} ${styles['button']}`}>
               <FaTwitter className={styles['social-icon']} />
+            </li>
+          </a>
+          <a
+            href='https://www.linkedin.com/in/allan-lalangan-16a86a243/'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            <li className={`${styles['__link']} ${styles['button']}`}>
+              <FaLinkedin className={styles['social-icon']} />
             </li>
           </a>
           <a
