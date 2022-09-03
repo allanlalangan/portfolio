@@ -60,6 +60,7 @@ export const projects = [
     repo: 'https://github.com/allanlalangan/dashboard',
     url: 'https://ladev-projectme.netlify.app',
     complete: false,
+    demo: { email: 'demo@demo', password: 'demo' },
   },
 ];
 

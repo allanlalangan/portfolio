@@ -8,7 +8,7 @@ import styles from './ProjectCard.module.scss';
 import TechIcon from '../ui/TechIcon/TechIcon';
 
 const ProjectCard = ({
-  project: { title, description, tech, image, repo, url, complete },
+  project: { title, description, tech, image, repo, url, complete, demo },
 }) => {
   const { theme } = useContext(ThemeContext);
   return (
@@ -45,6 +45,25 @@ const ProjectCard = ({
       <article className={`${styles['project-info']} `}>
         <p>{description}</p>
       </article>
+      {demo?.email && demo?.password && (
+        <section className={styles['demo']}>
+          <h4 className={styles['demo-heading']}>Try it out!</h4>
+          <article className={styles['demo-login-info']}>
+            <p className={styles['demo-field']}>
+              <span>
+                <strong>email: </strong>
+              </span>
+              <span className={styles['demo-email']}> {demo.email}</span>
+            </p>
+            <p className={styles['demo-field']}>
+              <span>
+                <strong>password: </strong>
+              </span>
+              <span className={styles['demo-password']}> {demo.password}</span>
+            </p>
+          </article>
+        </section>
+      )}
       <section className={`${styles.links}`}>
         <div className={styles['button-group']}>
           <a

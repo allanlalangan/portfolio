@@ -68,7 +68,7 @@
   @include mixins.breakpoint('>=lg') {
     // grid-column: 1 / 9; //odd
     grid-column: 1 / 13;
-    grid-row: 10 / 11;
+    grid-row: 9 / 10;
   }
 }
 .tech-list {
@@ -89,7 +89,7 @@
     padding: 1rem 1rem 0 1rem;
     // grid-column: 1 / 9; //odd
     grid-column: 1 / 13;
-    grid-row: 11 / 13;
+    grid-row: 10 / 13;
     @include mixins.flex(row, flex-start, center);
   }
 
@@ -144,8 +144,45 @@
     padding: 1rem;
     grid-column: 9 / 13; //odd
     // grid-column: 1 / 5;
-    grid-row: 2 / 6;
+    grid-row: 2 / 5;
   }
+}
+
+.demo-heading {
+  @include mixins.breakpoint('>=lg') {
+    margin-top: 2rem;
+  }
+}
+
+.demo {
+  grid-column: 1 / 13;
+  margin-top: 1rem;
+  @include mixins.breakpoint('>=md') {
+  }
+  @include mixins.breakpoint('>=lg') {
+    padding-left: 1rem;
+    grid-column: 9 / 13; //odd
+    grid-row: 4 / 6;
+  }
+}
+
+.demo-login-info {
+  // @include mixins.flex(row, center, center);
+  @include mixins.flex(column, center, flex-start);
+  @include mixins.breakpoint('>=lg') {
+  }
+}
+
+.demo-field {
+  @include mixins.flex(row, center, center);
+}
+
+.demo-email {
+  padding-left: 0.5rem;
+}
+
+.demo-password {
+  padding-left: 0.5rem;
 }
 
 .previews {
@@ -165,7 +202,7 @@
   @include mixins.breakpoint('>=lg') {
     grid-column: 1 / 9; //odd
     // grid-column: 5 / 13;
-    grid-row: 2 / 10;
+    grid-row: 2 / 9;
     padding: 1rem;
   }
 
