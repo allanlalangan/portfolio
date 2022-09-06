@@ -18,7 +18,7 @@ const About = () => {
             and design.
           </p>
           <p className={styles.__text}>
-            I&apos;ve been coding for 3 years and currently transitioning
+            I&apos;ve been coding for 5 years and currently transitioning
             careers from the service industry. My focus is to gain experience
             and continue to improve my skills while learning industry standards
             and practices.

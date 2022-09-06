@@ -1,10 +1,10 @@
 export const about = {
   name: { first: 'Allan', last: 'Lalangan' },
   alias: 'Allan LaDev',
-  title: 'Front End Developer',
+  title: 'Software Developer',
   greeting: 'Hello World. I am',
   brief:
-    'I build responsive, and beautifully designed websites that are easy to use.',
+    'I build responsive, and beautifully designed websites and digital products.',
   actionCall: 'View my work',
   cv: '/',
 };
