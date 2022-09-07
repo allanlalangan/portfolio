@@ -1,3 +1,5 @@
+import portrait from '../assets/portrait.png';
+
 export const about = {
   name: { first: 'Allan', last: 'Lalangan' },
   alias: 'Allan LaDev',
@@ -7,6 +9,7 @@ export const about = {
     'I build responsive, and beautifully designed websites and digital products.',
   actionCall: 'View my work',
   cv: '/',
+  portrait,
 };
 
 export const contact = {
