@@ -1,0 +1,31 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 1rem;
+}
+.container .switch {
+  border: 2px solid hsl(240deg, 75%, 60%);
+  border-radius: 45%;
+  padding: 0.25rem;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container .switch .icon {
+  font-size: 1.25rem;
+}
+.container .switch .sun {
+  color: hsl(40deg, 80%, 70%);
+}
+.container .switch .moon {
+  color: hsl(240deg, 85%, 75%);
+}
+.container .switch:hover {
+  filter: brightness(1.25);
+}/*# sourceMappingURL=Switch.module.css.map */
