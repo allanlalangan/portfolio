@@ -27,6 +27,27 @@ const Contact = () => {
             <strong>Twitter</strong>
           </span>
         </a>
+        , connect with me on{' '}
+        <a
+          href='https://www.linkedin.com/in/allan-lalangan-16a86a243/'
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          <span className={styles.email}>
+            <strong>LinkedIn</strong>
+          </span>
+        </a>
+        , and view my{' '}
+        <a
+          href='https://github.com/allanlalangan'
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          <span className={styles.email}>
+            <strong>GitHub</strong>
+          </span>
+        </a>
+        .
       </p>
     </article>
   );
