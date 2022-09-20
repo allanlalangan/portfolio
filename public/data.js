@@ -74,6 +74,6 @@ export const otherProjects = [
     tech: ['next', 'sass'],
     repo: 'https://github.com/allanlalangan/portfolio',
     url: '/',
-    complete: false,
+    complete: true,
   },
 ];

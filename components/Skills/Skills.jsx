@@ -18,7 +18,7 @@ const Skills = () => {
               <strong className={`${styles.strong} ${styles[theme]}`}>
                 Semantic
               </strong>{' '}
-              html
+              HTML
             </p>
           </li>
           <li className={styles.skill}>
@@ -62,7 +62,10 @@ const Skills = () => {
               <strong className={`${styles.strong} ${styles[theme]}`}>
                 ReactJS
               </strong>
-              , hooks and React Router
+              , hooks and React{' '}
+              <strong className={`${styles.strong} ${styles[theme]}`}>
+                Router
+              </strong>
             </p>
           </li>
           <li className={styles.skill}>
