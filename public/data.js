@@ -5,14 +5,14 @@ export const about = {
   alias: 'Allan LaDev',
   title: 'Software Developer',
   greeting: 'Hello World. I am',
-  brief: 'I build responsive full-stack web applications and digital products.',
+  brief: 'I design and build responsive full-stack web applications.',
   actionCall: 'View my work',
   cv: '/',
   portrait,
 };
 
 export const contact = {
-  me: { email: 'allanlalangan@gmail.com', phone: '666-420-1312' },
+  me: { email: 'allanlalangan@gmail.com' },
   socialMedia: [
     { name: 'linkedin', icon: '', url: '/' },
     { name: 'twitter', icon: '', url: '/' },
