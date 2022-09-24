@@ -15,7 +15,7 @@ const About = () => {
             <p className={styles.__text}>
               I&apos;m Allan. A life-long student, artist, and dreamer. I&apos;m
               a Software Developer specializing in front end web technologies. I
-              build responsive and user-friendly applications. With my
+              build and design mobile-responsive web applications. With my
               background in traditional art, I strive to bridge the gap between
               engineering and design.
             </p>
@@ -26,9 +26,10 @@ const About = () => {
               standards and practices.
             </p>
             <p className={styles.__text}>
-              I build full-stack, single and multi page applications with client
-              and server side rendering. Together, we can improve your product
-              through intuitive and visually satisfying user experiences.
+              I build full-stack, single and multi page web applications, with
+              client and server side rendering. Together, we can improve your
+              product through intuitive and visually satisfying user
+              experiences.
             </p>
           </article>
           <figure

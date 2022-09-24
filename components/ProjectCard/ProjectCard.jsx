@@ -47,7 +47,9 @@ const ProjectCard = ({
       </article>
       {demo?.email && demo?.password && (
         <section className={styles['demo']}>
-          <h4 className={styles['demo-heading']}>Try it out!</h4>
+          <h4 className={`${styles['demo-heading']} ${styles[theme]}`}>
+            Try it out!
+          </h4>
           <article className={styles['demo-login-info']}>
             <p className={styles['demo-field']}>
               <span>
@@ -68,20 +70,6 @@ const ProjectCard = ({
         <div className={styles['button-group']}>
           <a
             className={styles.link}
-            href={repo}
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            <button
-              className={`${styles['project-link-button']} ${styles['project-link-button--github']} ${styles[theme]}`}
-            >
-              <FaGithub className={styles['project-link-button__icon']} />
-              <span className={styles['project-link-button__text']}>Code</span>
-            </button>
-          </a>
-          <div className={styles['button-divider']} />
-          <a
-            className={styles.link}
             href={url}
             target='_blank'
             rel='noreferrer noopener'
@@ -92,6 +80,20 @@ const ProjectCard = ({
             >
               <FaLink className={styles['project-link-button__icon']} />
               <span className={styles['project-link-button__text']}>Demo</span>
+            </button>
+          </a>
+          <div className={styles['button-divider']} />
+          <a
+            className={styles.link}
+            href={repo}
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            <button
+              className={`${styles['project-link-button']} ${styles['project-link-button--github']} ${styles[theme]}`}
+            >
+              <FaGithub className={styles['project-link-button__icon']} />
+              <span className={styles['project-link-button__text']}>Code</span>
             </button>
           </a>
         </div>
