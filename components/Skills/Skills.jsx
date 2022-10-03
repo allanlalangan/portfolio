@@ -36,7 +36,7 @@ const Skills = () => {
               <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
             </span>
             <p className={styles.caption}>
-              Styling and design with modern{' '}
+              Styling and design with{' '}
               <strong className={`${styles.strong} ${styles[theme]}`}>
                 CSS
               </strong>
@@ -118,9 +118,8 @@ const Skills = () => {
               <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
             </span>
             <p className={styles.caption}>
-              {`Familiar with `}
               <strong className={`${styles.strong} ${styles[theme]}`}>
-                JSON Web Tokens (JWT)
+                User authentication
               </strong>
             </p>
           </li>

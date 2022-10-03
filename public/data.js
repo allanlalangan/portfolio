@@ -70,7 +70,8 @@ export const projects = [
 export const otherProjects = [
   {
     title: 'Personal Portfolio',
-    description: 'This static portfolio site is built with Next.js.',
+    description:
+      'This static portfolio site is built with Next.js. UI designed by me.',
     tech: ['next', 'sass'],
     repo: 'https://github.com/allanlalangan/portfolio',
     url: '/',

@@ -19,7 +19,6 @@ const OtherProject = ({
         )}
       </section>
       <p className={styles.description}>{description}</p>
-
       <h3 className={styles['tech-heading']}>Tech Stack</h3>
       <ul className={`${styles['tech-list']} grid-row`}>
         {tech?.map((t) => (

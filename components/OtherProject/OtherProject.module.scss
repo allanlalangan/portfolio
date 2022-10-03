@@ -47,9 +47,9 @@
 .description {
   padding: 1rem;
   grid-column: 1 / 12;
-  @include mixins.breakpoint('>=lg') {
-    grid-column: 1 / 7;
-  }
+  // @include mixins.breakpoint('>=lg') {
+  //   grid-column: 1 / 7;
+  // }
 }
 
 .tech-heading {

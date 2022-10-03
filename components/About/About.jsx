@@ -14,16 +14,18 @@ const About = () => {
           <article className={styles.bio}>
             <p className={styles.__text}>
               I&apos;m Allan. A life-long student, artist, and dreamer. I&apos;m
-              a Software Developer specializing in front end web technologies. I
-              build and design mobile-responsive web applications. With my
-              background in traditional art, I strive to bridge the gap between
-              engineering and design.
+              a Software Engineer specializing in fullstack web development. I
+              build and design mobile-responsive websites and applications. With
+              my background in traditional art, I strive to bridge the gap
+              between engineering and design.
             </p>
             <p className={styles.__text}>
-              I&apos;ve been coding for 5 years and currently transitioning
-              careers from the service industry. My focus is to gain experience
-              and continue to improve my skills while learning industry
-              standards and practices.
+              I&apos;ve been coding for 5 years and have a background in
+              production freight, retail management, and customer service.
+              Acquired skills include team coordinating, public speaking,
+              tracking inventory data, and time management. My focus is to gain
+              experience and continue to improve my skills while learning
+              industry standards and practices.
             </p>
             <p className={styles.__text}>
               I build full-stack, single and multi page web applications, with
