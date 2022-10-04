@@ -75,7 +75,7 @@ const Skills = () => {
             <p className={styles.caption}>
               {`State management with `}
               <strong className={`${styles.strong} ${styles[theme]}`}>
-                Redux + RTK
+                Redux + Toolkit
               </strong>
             </p>
           </li>

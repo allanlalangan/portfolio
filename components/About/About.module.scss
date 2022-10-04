@@ -36,10 +36,7 @@
   padding: 1rem;
   @include mixins.flex(column-reverse, center, center);
   @include mixins.breakpoint('>=md') {
-    @include mixins.flex(row, space-evenly, flex-start);
-  }
-  @include mixins.breakpoint('>=lg') {
-    align-items: center;
+    @include mixins.flex(row, space-evenly, center);
   }
 }
 
@@ -62,14 +59,15 @@
 .portrait-container {
   position: relative;
   margin: 2rem;
-  @include mixins.breakpoint('>=md') {
-    margin: 3rem;
-  }
+  @include mixins.flex(column, center, center);
   transition: background-color 0.2s ease;
 
-  @include mixins.flex(column, center, center);
-  @include mixins.breakpoint('>=md') {
+  @include mixins.breakpoint('>=sm') {
     width: 50%;
+  }
+  @include mixins.breakpoint('>=md') {
+    margin: 3rem;
+    width: 30%;
   }
 }
 
