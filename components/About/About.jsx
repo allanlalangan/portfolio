@@ -15,9 +15,7 @@ const About = () => {
             <p className={styles.__text}>
               I&apos;m Allan. A life-long student, artist, and dreamer. I&apos;m
               a Software Engineer specializing in fullstack web development. I
-              build and design mobile-responsive websites and applications. With
-              my background in traditional art, I strive to bridge the gap
-              between engineering and design.
+              build and design mobile-responsive websites and applications.
             </p>
             <p className={styles.__text}>
               I&apos;ve been coding for 5 years and have a background in
