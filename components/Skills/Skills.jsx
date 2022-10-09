@@ -118,6 +118,17 @@ const Skills = () => {
               <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
             </span>
             <p className={styles.caption}>
+              API testing with{` `}
+              <strong className={`${styles.strong} ${styles[theme]}`}>
+                Postman
+              </strong>
+            </p>
+          </li>
+          <li className={styles.skill}>
+            <span className={styles['bullet-container']}>
+              <CgShapeRhombus className={`${styles.bullet} ${styles[theme]}`} />
+            </span>
+            <p className={styles.caption}>
               <strong className={`${styles.strong} ${styles[theme]}`}>
                 User authentication
               </strong>
