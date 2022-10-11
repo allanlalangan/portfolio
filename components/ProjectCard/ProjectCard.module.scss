@@ -257,8 +257,6 @@
   .button-group {
     width: 100%;
     @include mixins.flex(row, center, center);
-    @include mixins.breakpoint('>=sm') {
-    }
     @include mixins.breakpoint('>=lg') {
       height: 100%;
       @include mixins.flex(column, flex-end, center);
@@ -288,13 +286,6 @@
       @include mixins.action-button-text();
       @include mixins.flex(row, center, center);
 
-      &.light {
-        @include mixins.filled-button(map-get(colors.$card, 'dark'));
-      }
-      &.dark {
-        @include mixins.filled-button(map-get(colors.$secondary, 'main'));
-      }
-
       .project-link-button__icon {
         @include mixins.flex(row, center, center);
         font-size: 1.5rem;
@@ -304,30 +295,35 @@
         padding: 0 0.5rem;
       }
     }
+  }
+}
 
-    .project-link-button:hover {
-      @include mixins.filled-button--hover();
-    }
-
-    .project-link-button--live {
-      @include mixins.breakpoint('>=xs') {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-      @include mixins.breakpoint('>=lg') {
-        border-top-right-radius: var.$borderRad__action-button;
-        border-bottom-right-radius: var.$borderRad__action-button;
-      }
-    }
-    .project-link-button--github {
-      @include mixins.breakpoint('>=xs') {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-      @include mixins.breakpoint('>=lg') {
-        border-top-left-radius: var.$borderRad__action-button;
-        border-bottom-left-radius: var.$borderRad__action-button;
-      }
-    }
+.light {
+  @include mixins.filled-button(map-get(colors.$card, 'dark'));
+}
+.dark {
+  @include mixins.filled-button(map-get(colors.$secondary, 'main'));
+}
+.project-link-button:hover {
+  @include mixins.filled-button--hover();
+}
+.project-link-button--live {
+  @include mixins.breakpoint('>=xs') {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  @include mixins.breakpoint('>=lg') {
+    border-top-right-radius: var.$borderRad__action-button;
+    border-bottom-right-radius: var.$borderRad__action-button;
+  }
+}
+.project-link-button--github {
+  @include mixins.breakpoint('>=xs') {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  @include mixins.breakpoint('>=lg') {
+    border-top-left-radius: var.$borderRad__action-button;
+    border-bottom-left-radius: var.$borderRad__action-button;
   }
 }

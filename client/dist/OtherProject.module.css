@@ -52,11 +52,6 @@
   padding: 1rem;
   grid-column: 1/12;
 }
-@media (min-width: 75em) {
-  .description {
-    grid-column: 1/7;
-  }
-}
 
 .tech-heading {
   width: -webkit-fit-content;

@@ -199,18 +199,24 @@
   }
 }
 
-@media (min-width: 75em) {
-  .demo-heading {
-    margin-top: 2rem;
-  }
+.demo-heading {
+  border-top: 5px solid hsl(210deg, 85%, 50%);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+.demo-heading.light {
+  color: hsl(210deg, 85%, 50%);
+}
+.demo-heading.dark {
+  color: hsl(210deg, 85%, 70%);
 }
 
 .demo {
-  grid-column: 1/13;
-  margin-top: 1rem;
+  grid-column: 1/7;
 }
 @media (min-width: 75em) {
   .demo {
+    margin-top: 1rem;
     padding-left: 1rem;
     grid-column: 9/13;
     grid-row: 4/6;
@@ -372,43 +378,48 @@
 .links .button-group .project-link-button .project-link-button__text {
   padding: 0 0.5rem;
 }
-.links .button-group .light {
+
+.light {
   color: hsl(230deg, 75%, 85%);
   background-color: hsl(230deg, 30%, 30%);
   border-radius: 0.75rem;
   padding: 1rem 2rem;
   transition: all 0.25s ease;
 }
-.links .button-group .dark {
+
+.dark {
   color: hsl(230deg, 75%, 85%);
   background-color: hsl(210deg, 85%, 50%);
   border-radius: 0.75rem;
   padding: 1rem 2rem;
   transition: all 0.25s ease;
 }
-.links .button-group .project-link-button:hover {
+
+.project-link-button:hover {
   filter: brightness(1.25);
 }
+
 @media (min-width: 0em) {
-  .links .button-group .project-link-button--github {
+  .project-link-button--live {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 }
 @media (min-width: 75em) {
-  .links .button-group .project-link-button--github {
+  .project-link-button--live {
     border-top-right-radius: 0.75rem;
     border-bottom-right-radius: 0.75rem;
   }
 }
+
 @media (min-width: 0em) {
-  .links .button-group .project-link-button--live {
+  .project-link-button--github {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
 }
 @media (min-width: 75em) {
-  .links .button-group .project-link-button--live {
+  .project-link-button--github {
     border-top-left-radius: 0.75rem;
     border-bottom-left-radius: 0.75rem;
   }
