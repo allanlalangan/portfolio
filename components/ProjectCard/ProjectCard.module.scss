@@ -294,16 +294,23 @@
       .project-link-button__text {
         padding: 0 0.5rem;
       }
+
+      &.light {
+        @include mixins.filled-button(map-get(colors.$card, 'dark'));
+      }
+      &.dark {
+        @include mixins.filled-button(map-get(colors.$secondary, 'main'));
+      }
     }
   }
 }
 
-.light {
-  @include mixins.filled-button(map-get(colors.$card, 'dark'));
-}
-.dark {
-  @include mixins.filled-button(map-get(colors.$secondary, 'main'));
-}
+// .light {
+//   @include mixins.filled-button(map-get(colors.$card, 'dark'));
+// }
+// .dark {
+//   @include mixins.filled-button(map-get(colors.$secondary, 'main'));
+// }
 .project-link-button:hover {
   @include mixins.filled-button--hover();
 }

@@ -47,9 +47,7 @@ const ProjectCard = ({
       </article>
       {demo?.email && demo?.password && (
         <section className={styles['demo']}>
-          <h4 className={`${styles['demo-heading']} ${styles[theme]}`}>
-            Try it out!
-          </h4>
+          <h4 className={`${styles['demo-heading']}`}>Try it out!</h4>
           <article className={styles['demo-login-info']}>
             <p className={styles['demo-field']}>
               <span>
