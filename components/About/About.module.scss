@@ -99,10 +99,6 @@
   border-color: map-get(colors.$background, 'main');
 }
 
-.portrait {
-  transform: scaleX(-1);
-}
-
 .skills {
   font-size: 1.25rem;
 }
