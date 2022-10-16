@@ -253,64 +253,55 @@
     // grid-column: 1 / 5;
     grid-row: 6 / 9;
   }
+}
 
-  .button-group {
-    width: 100%;
-    @include mixins.flex(row, center, center);
-    @include mixins.breakpoint('>=lg') {
-      height: 100%;
-      @include mixins.flex(column, flex-end, center);
-    }
-
-    .button-divider {
-      width: 0.5rem;
-      height: 100%;
-      background-color: colors.$divider;
-      @include mixins.breakpoint('>=lg') {
-        display: none;
-      }
-    }
-
-    .link {
-      width: 100%;
-      button:disabled {
-        cursor: default;
-        pointer-events: none;
-        background-color: map-get(colors.$grey, 'dark');
-      }
-    }
-
-    .project-link-button {
-      margin-top: 0.5rem;
-      width: 100%;
-      @include mixins.action-button-text();
-      @include mixins.flex(row, center, center);
-
-      .project-link-button__icon {
-        @include mixins.flex(row, center, center);
-        font-size: 1.5rem;
-      }
-
-      .project-link-button__text {
-        padding: 0 0.5rem;
-      }
-
-      &.light {
-        @include mixins.filled-button(map-get(colors.$card, 'dark'));
-      }
-      &.dark {
-        @include mixins.filled-button(map-get(colors.$secondary, 'main'));
-      }
-    }
+.button-group {
+  width: 100%;
+  @include mixins.flex(row, center, center);
+  @include mixins.breakpoint('>=lg') {
+    height: 100%;
+    @include mixins.flex(column, flex-end, center);
   }
 }
 
-// .light {
-//   @include mixins.filled-button(map-get(colors.$card, 'dark'));
-// }
-// .dark {
-//   @include mixins.filled-button(map-get(colors.$secondary, 'main'));
-// }
+.button-divider {
+  width: 0.5rem;
+  height: 100%;
+  background-color: colors.$divider;
+  @include mixins.breakpoint('>=lg') {
+    display: none;
+  }
+}
+
+.link {
+  width: 100%;
+  button:disabled {
+    cursor: default;
+    pointer-events: none;
+    background-color: map-get(colors.$grey, 'dark');
+  }
+}
+
+.project-link-button {
+  margin-top: 0.5rem;
+  width: 100%;
+  @include mixins.action-button-text();
+  @include mixins.flex(row, center, center);
+  @include mixins.filled-button(map-get(colors.$card, 'dark'));
+}
+.project-link-button__icon {
+  @include mixins.flex(row, center, center);
+  font-size: 1.5rem;
+}
+
+.project-link-button__text {
+  padding: 0 0.5rem;
+}
+
+.project-link-button.dark {
+  background-color: (map-get(colors.$secondary, 'main'));
+}
+
 .project-link-button:hover {
   @include mixins.filled-button--hover();
 }
