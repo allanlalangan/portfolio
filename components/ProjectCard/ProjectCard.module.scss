@@ -60,8 +60,9 @@
 .tech-stack {
   grid-column: span 12;
   grid-row: 6 / 7;
-  padding: 1rem;
+  padding-top: 1rem;
   @include mixins.breakpoint('>=md') {
+    padding: 1rem;
     grid-column: 9 / 13;
     grid-row: 3 / 7;
   }
@@ -85,12 +86,16 @@
 
   .tech {
     // padding: 0 0.5rem;
-    width: 25%;
+    margin-bottom: 0.5rem;
+    width: 50%;
     @include mixins.flex(column, center, center);
-    @include mixins.breakpoint('>=xs') {
+    @include mixins.breakpoint('>=sm') {
+      width: 25%;
     }
     @include mixins.breakpoint('>=md') {
+      padding-top: 0.5rem;
       width: 100%;
+      margin-bottom: 0;
       @include mixins.flex(row, flex-start, center);
       // padding: 0;
     }
@@ -111,7 +116,7 @@
 
   .tech-caption {
     @include mixins.breakpoint('>=md') {
-      padding: 0.5rem;
+      margin-left: 0.5rem;
     }
   }
 }
@@ -149,7 +154,7 @@
 .demo {
   // font-size: 0.75rem;
   grid-column: 1 / 7;
-  padding: 1rem 0;
+  margin-top: 1rem;
   @include mixins.breakpoint('>=md') {
     padding: 1rem;
     grid-column: 9 / 13; //odd
@@ -169,11 +174,11 @@
 }
 
 .demo-email {
-  // padding-left: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .demo-password {
-  // padding-left: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .previews {
