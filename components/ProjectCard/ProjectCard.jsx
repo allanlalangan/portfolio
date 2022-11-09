@@ -21,18 +21,17 @@ const ProjectCard = ({
           </span>
         )}
       </section>
-      <h3 className={styles['tech-heading']}>Tech Stack</h3>
-      <ul className={`${styles['tech-list']} grid-row`}>
-        {tech?.map((t) => (
-          <li
-            className={`${styles.tech} col-6-xs col-4-sm col-12-md col-3-lg`}
-            key={t}
-          >
-            <TechIcon tech={t} styles={styles['tech-icon']} />
-            <span className={styles['tech-caption']}>{t}</span>
-          </li>
-        ))}
-      </ul>
+      <section className={styles['tech-stack']}>
+        <h3 className={styles['tech-heading']}>Tech Stack</h3>
+        <ul className={`${styles['tech-list']} grid-row`}>
+          {tech?.map((t) => (
+            <li className={styles.tech} key={t}>
+              <TechIcon tech={t} styles={styles['tech-icon']} />
+              <span className={styles['tech-caption']}>{t}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <section className={`${styles['previews']} `}>
         <figure className={`${styles['__preview']}`}>
