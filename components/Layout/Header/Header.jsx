@@ -81,12 +81,12 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
           </li>
 
           <a
-            href='https://twitter.com/allanladev'
+            href='https://github.com/allanlalangan'
             target='_blank'
             rel='noreferrer noopener'
           >
             <li className={`${styles['__link']} ${styles['button']}`}>
-              <FaTwitter className={styles['social-icon']} />
+              <FaGithub className={styles['social-icon']} />
             </li>
           </a>
           <a
@@ -99,12 +99,12 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
             </li>
           </a>
           <a
-            href='https://github.com/allanlalangan'
+            href='https://twitter.com/allanladev'
             target='_blank'
             rel='noreferrer noopener'
           >
             <li className={`${styles['__link']} ${styles['button']}`}>
-              <FaGithub className={styles['social-icon']} />
+              <FaTwitter className={styles['social-icon']} />
             </li>
           </a>
           {/* <Link href='/'>
