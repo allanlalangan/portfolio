@@ -194,12 +194,15 @@
       @include mixins.flex(row, center, center);
     }
 
-    .__link {
+    .nav__link {
       padding: 0 1rem;
       @include mixins.flex(row, center, center);
       cursor: pointer;
       transition: color 0.2s ease, filter 0.25s ease;
 
+      .social-link {
+        @include mixins.flex(row, center, center);
+      }
       .social-icon {
         color: map-get(colors.$primary, 'main');
         font-size: 1.5rem;
@@ -209,11 +212,11 @@
         font-size: 1rem;
       }
     }
-    .__link.section:hover {
+    .nav__link:hover {
       color: map-get(colors.$primary, 'main');
       filter: brightness(1.5);
     }
-    .__link.button:hover {
+    .nav__link.button:hover {
       filter: brightness(1.25);
     }
 

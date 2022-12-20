@@ -10,6 +10,7 @@ import { ThemeContext } from '../../../store/ThemeContextProvider';
 const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
   const { theme } = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className={`${styles['header']} ${styles[theme]}`}>
       <div className={styles['main-banner']}>
@@ -37,7 +38,7 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
               });
               setMenuOpen(false);
             }}
-            className={`${styles['__link']} ${styles['section']}`}
+            className={`${styles['nav__link']}`}
           >
             projects
           </li>
@@ -50,7 +51,7 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
               });
               setMenuOpen(false);
             }}
-            className={`${styles['__link']} ${styles['section']}`}
+            className={`${styles['nav__link']}`}
           >
             skills
           </li>
@@ -63,7 +64,7 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
               });
               setMenuOpen(false);
             }}
-            className={`${styles['__link']} ${styles['section']}`}
+            className={`${styles['nav__link']}`}
           >
             me
           </li>
@@ -75,41 +76,43 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
               });
               setMenuOpen(false);
             }}
-            className={`${styles['__link']} ${styles['section']}`}
+            className={`${styles['nav__link']}`}
           >
             contact
           </li>
 
-          <a
-            href='https://github.com/allanlalangan'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            <li className={`${styles['__link']} ${styles['button']}`}>
+          <li className={`${styles['nav__link']} ${styles['button']}`}>
+            <a
+              className={styles['social-link']}
+              href='https://github.com/allanlalangan'
+              target='_blank'
+              rel='noreferrer noopener'
+            >
               <FaGithub className={styles['social-icon']} />
-            </li>
-          </a>
-          <a
-            href='https://www.linkedin.com/in/allan-lalangan-16a86a243/'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            <li className={`${styles['__link']} ${styles['button']}`}>
+            </a>
+          </li>
+          <li className={`${styles['nav__link']} ${styles['button']}`}>
+            <a
+              className={styles['social-link']}
+              href='https://www.linkedin.com/in/allan-lalangan-16a86a243/'
+              target='_blank'
+              rel='noreferrer noopener'
+            >
               <FaLinkedin className={styles['social-icon']} />
-            </li>
-          </a>
+            </a>
+          </li>
           <a
             href='https://twitter.com/allanladev'
             target='_blank'
             rel='noreferrer noopener'
           >
-            <li className={`${styles['__link']} ${styles['button']}`}>
+            <li className={`${styles['nav__link']} ${styles['button']}`}>
               <FaTwitter className={styles['social-icon']} />
             </li>
           </a>
           {/* <Link href='/'>
             <li
-              className={`${styles['__link']} ${styles['cv-link']} ${styles['button']}`}
+              className={`${styles['nav__link']} ${styles['cv-link']} ${styles['button']}`}
             >
               <span className={`${styles['cv-link__text']}`}>cv</span>
               <FaFileDownload className={styles['cv-icon']} />
