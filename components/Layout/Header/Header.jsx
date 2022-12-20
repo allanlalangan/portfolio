@@ -17,9 +17,7 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
         <Link className={styles['home-link']} href='/'>
           <figure className={styles.logo}>
             <span className={styles['home-icon']}>👹</span>
-            <span className={styles['main-title']}>
-              la<strong>Dev</strong>
-            </span>
+            <span className={styles['main-title']}>laDev</span>
           </figure>
         </Link>
       </div>
@@ -81,38 +79,48 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
             contact
           </li>
 
-          <li className={`${styles['nav__link']} ${styles['button']}`}>
+          <li className={`${styles['nav__link']}`}>
             <a
+              title='Github'
               className={styles['social-link']}
               href='https://github.com/allanlalangan'
               target='_blank'
               rel='noreferrer noopener'
             >
-              <FaGithub className={styles['social-icon']} />
+              <FaGithub aria-hidden='true' className={styles['social-icon']} />
+              <span className={styles['social-link__text']}>Github</span>
             </a>
           </li>
-          <li className={`${styles['nav__link']} ${styles['button']}`}>
+          <li className={`${styles['nav__link']}`}>
             <a
+              title='LinkedIn'
               className={styles['social-link']}
               href='https://www.linkedin.com/in/allan-lalangan-16a86a243/'
               target='_blank'
               rel='noreferrer noopener'
             >
-              <FaLinkedin className={styles['social-icon']} />
+              <FaLinkedin
+                aria-hidden='true'
+                className={styles['social-icon']}
+              />
+              <span className={styles['social-link__text']}>LinkedIn</span>
             </a>
           </li>
-          <a
-            href='https://twitter.com/allanladev'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            <li className={`${styles['nav__link']} ${styles['button']}`}>
-              <FaTwitter className={styles['social-icon']} />
-            </li>
-          </a>
+          <li className={`${styles['nav__link']}`}>
+            <a
+              title='Twitter'
+              className={styles['social-link']}
+              href='https://twitter.com/allanladev'
+              target='_blank'
+              rel='noreferrer noopener'
+            >
+              <FaTwitter aria-hidden='true' className={styles['social-icon']} />
+              <span className={styles['social-link__text']}>Twitter</span>
+            </a>
+          </li>
           {/* <Link href='/'>
             <li
-              className={`${styles['nav__link']} ${styles['cv-link']} ${styles['button']}`}
+              className={`${styles['nav__link']} ${styles['cv-link']}`}
             >
               <span className={`${styles['cv-link__text']}`}>cv</span>
               <FaFileDownload className={styles['cv-icon']} />
