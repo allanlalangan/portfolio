@@ -130,6 +130,7 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
         <aside className={styles['menu-button__container']}>
           <Switch />
           <button
+            aria-label='Theme Switch'
             onClick={() => setMenuOpen(!menuOpen)}
             className={`${styles['menu-button']} ${
               menuOpen ? styles.active : ''
