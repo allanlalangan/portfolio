@@ -1,56 +1,56 @@
 $primary: (
-  'main': hsl(240, 75%, 60%),
-  'light': hsl(240, 85%, 75%),
-  'dark': hsl(240, 75%, 40%),
+  "main": hsl(240, 75%, 60%),
+  "light": hsl(240, 85%, 75%),
+  "dark": hsl(240, 75%, 40%),
 );
 $secondary: (
-  'main': hsl(210, 85%, 50%),
-  'light': hsl(210, 85%, 70%),
-  'dark': hsl(210, 85%, 30%),
+  "main": hsl(210, 85%, 50%),
+  "light": hsl(210, 85%, 70%),
+  "dark": hsl(210, 85%, 30%),
 );
 
 $grey: (
-  'cool': hsl(205, 15%, 90%),
-  'main': hsl(230, 15%, 90%),
-  'dark': hsl(230, 15%, 65%),
-  'darker': hsl(210, 15%, 30%),
-  'warm': hsl(255, 15%, 90%),
+  "cool": hsl(205, 15%, 90%),
+  "main": hsl(230, 15%, 90%),
+  "dark": hsl(230, 15%, 65%),
+  "darker": hsl(210, 15%, 30%),
+  "warm": hsl(255, 15%, 90%),
 );
 
 $text: (
-  'main': hsl(220, 25%, 15%),
-  'contrast': hsl(230, 75%, 85%),
+  "main": hsl(220, 25%, 15%),
+  "contrast": hsl(230, 75%, 90%),
 );
 
 $background: (
-  'main': hsl(220, 70%, 85%),
-  'light': hsl(205, 60%, 90%),
-  'dark': hsl(230, 30%, 15%),
+  "main": hsl(220, 70%, 85%),
+  "light": hsl(205, 60%, 90%),
+  "dark": hsl(230, 30%, 15%),
 );
 
 $section: (
-  'light': hsl(205, 60%, 90%),
-  'dark': hsl(230, 35%, 20%),
+  "light": hsl(205, 60%, 90%),
+  "dark": hsl(230, 35%, 20%),
 );
 
 $card: (
-  'light': hsl(205, 60%, 90%),
-  'dark': hsl(230, 30%, 30%),
+  "light": hsl(205, 60%, 90%),
+  "dark": hsl(230, 30%, 30%),
 );
 
 $bezel: (
-  'light': hsl(215, 70%, 90%),
-  'dark': hsl(215, 70%, 25%),
+  "light": hsl(215, 70%, 90%),
+  "dark": hsl(215, 70%, 25%),
 );
 
 $divider: hsl(215, 75%, 80%);
 
 $system: (
-  'success': hsl(140, 65%, 65%),
-  'error': hsl(0, 75%, 60%),
-  'info': hsl(200, 65%, 65%),
-  'lightThemeIcon': hsl(40, 80%, 70%),
-  'darkThemeIcon': map-get($primary, 'light'),
+  "success": hsl(140, 65%, 65%),
+  "error": hsl(0, 75%, 60%),
+  "info": hsl(200, 65%, 65%),
+  "lightThemeIcon": hsl(40, 80%, 70%),
+  "darkThemeIcon": map-get($primary, "light"),
 );
 
 $gradientBg: linear-gradient(
@@ -58,14 +58,14 @@ $gradientBg: linear-gradient(
   hsl(220, 95%, 80%) 0%,
   hsl(220, 70%, 85%) 25%,
 
-  map-get($background, 'light') 85%,
+  map-get($background, "light") 85%,
   hsl(220, 90%, 80%) 100%
 );
 $gradientBg-dark: linear-gradient(
   20deg,
   hsl(230, 35%, 20%) 0%,
-  map-get($background, 'dark') 25%,
+  map-get($background, "dark") 25%,
 
-  map-get($background, 'dark') 85%,
+  map-get($background, "dark") 85%,
   hsl(230, 35%, 20%) 100%
 );
