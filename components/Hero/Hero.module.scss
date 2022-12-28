@@ -69,13 +69,18 @@
 }
 
 .action-button {
-  @include mixins.filled-button(map-get(colors.$primary, "dark"));
+  @include mixins.outlined-button(
+    map-get(colors.$primary, "main"),
+    map-get(colors.$background, "dark")
+  );
   @include mixins.action-button-text();
   margin: 1rem auto;
 }
 
 .action-button:hover {
-  @include mixins.filled-button--hover();
+  // @include mixins.filled-button--hover();
+  // border: map-get(colors.$primary, "dark");
+  @include mixins.filled-button(map-get(colors.$primary, "dark"));
 }
 
 .pattern {
