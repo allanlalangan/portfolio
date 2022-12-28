@@ -1,37 +1,7 @@
 @font-face {
-  font-family: 'Syne';
-  src: url('../../assets/fonts/Syne/Syne-Regular.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'Syne';
-  src: url('../../assets/fonts/Syne/Syne-Medium.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'Syne';
-  src: url('../../assets/fonts/Syne/Syne-SemiBold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 600;
-}
-@font-face {
-  font-family: 'Syne';
-  src: url('../../assets/fonts/Syne/Syne-Bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: bold;
-}
-@font-face {
-  font-family: 'Syne';
-  src: url('../../assets/fonts/Syne/Syne-ExtraBold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 800;
-}
-@font-face {
-  font-family: 'SpaceGrotesk';
-  src: url('../../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf')
-    format('truetype');
+  font-family: "SpaceGrotesk";
+  src: url("../../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf")
+    format("truetype");
 }
 
-$font: 'SpaceGrotesk', sans-serif;
+$font: "SpaceGrotesk", sans-serif;

@@ -1,0 +1,23 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.container {
+  height: 25vh;
+  padding: 2rem 3rem;
+  transition: background-color 0.2s ease;
+}
+
+.container.light {
+  background-color: hsl(205deg, 60%, 90%);
+}
+
+.container.dark {
+  background-color: hsl(230deg, 30%, 15%);
+}
+
+.heading {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 5px solid hsl(240deg, 85%, 75%);
+}/*# sourceMappingURL=Footer.module.css.map */

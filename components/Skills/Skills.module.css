@@ -1,0 +1,102 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.heading {
+  font-size: 2rem;
+}
+@media (min-width: 56.25em) {
+  .heading {
+    padding-left: 0;
+  }
+}
+
+.skills {
+  position: relative;
+  font-size: 1.25rem;
+  padding: 2rem 1rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (min-width: 56.25em) {
+  .skills {
+    padding: 4rem 2rem;
+  }
+}
+@media (min-width: 56.25em) and (min-width: 37.5em) {
+  .skills {
+    padding: 2rem;
+  }
+}
+@media (min-width: 75em) {
+  .skills {
+    padding: 4rem;
+  }
+}
+
+.list {
+  padding: 1rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.skill .bullet-container {
+  width: 30px;
+  height: 100%;
+  padding-top: 0.25rem;
+}
+.skill .bullet,
+.skill strong {
+  transition: color 0.2s ease;
+}
+.skill .bullet {
+  margin-right: 1rem;
+}
+.skill .bullet.light {
+  color: hsl(210deg, 85%, 50%);
+}
+.skill .bullet.dark {
+  color: hsl(240deg, 75%, 60%);
+}
+.skill strong.light {
+  color: hsl(240deg, 75%, 60%);
+}
+.skill strong.dark {
+  color: hsl(210deg, 85%, 70%);
+}
+
+.pattern {
+  position: absolute;
+  top: -12rem;
+  left: 0;
+  width: 100%;
+  min-height: 265vh;
+  max-height: 300vh;
+  display: flex;
+  z-index: -1;
+}
+
+.pattern::before {
+  content: "";
+  position: absolute;
+  background-repeat: repeat;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+
+.light.pattern::before {
+  background-image: url("../../assets/topography-light.svg");
+}
+
+.dark.pattern::before {
+  background-image: url("../../assets/topography-dark.svg");
+}/*# sourceMappingURL=Skills.module.css.map */

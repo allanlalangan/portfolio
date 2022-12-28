@@ -1,0 +1,150 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 1rem;
+  padding: 1rem 1rem 1rem 0;
+  font-weight: 700;
+  font-size: 2.5rem;
+  border-bottom: 5px solid hsl(240deg, 75%, 60%);
+  padding-top: 8vh;
+}
+@media (min-width: 37.5em) {
+  .heading {
+    margin-left: 2rem;
+  }
+}
+
+.contrast-heading {
+  color: hsl(240deg, 85%, 75%);
+}
+
+.projects {
+  position: relative;
+  padding: 0 1rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 37.5em) {
+  .projects {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .projects {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+@media (min-width: 75em) {
+  .projects {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+}
+@media (min-width: 96em) {
+  .projects {
+    padding: 0;
+    padding: 6rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3rem;
+  }
+}
+
+.projects::before {
+  content: "";
+  background: hsl(230deg, 35%, 20%);
+  height: 107%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
+  z-index: -1;
+}
+@media (min-width: 56.25em) {
+  .projects::before {
+    height: 112%;
+  }
+}
+@media (min-width: 75em) {
+  .projects::before {
+    height: 110%;
+  }
+}
+
+.about {
+  position: relative;
+}
+
+.skills {
+  position: relative;
+}
+
+@media (min-width: 56.25em) {
+  .currently-learning {
+    width: 50%;
+  }
+}
+
+.contact {
+  position: relative;
+}
+
+.contact-heading {
+  margin-top: 4rem;
+  color: hsl(240deg, 85%, 75%);
+}
+
+.contact::before {
+  content: "";
+  background: hsl(230deg, 35%, 20%);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 75%;
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
+  z-index: -1;
+}
+@media (min-width: 56.25em) {
+  .contact::before {
+    height: 100%;
+  }
+}
+@media (min-width: 75em) {
+  .contact::before {
+    height: 100%;
+  }
+}
+
+.svg-icon {
+  width: 3rem;
+  margin: 0.5rem;
+}
+
+.font-icon {
+  font-size: 3rem;
+  margin: 0.5rem;
+}
+
+.action-button {
+  color: #d2d9f9;
+  background-color: hsl(210deg, 85%, 50%);
+  border-radius: 0.75rem;
+  border: 2px solid hsl(210deg, 85%, 50%);
+  padding: 1rem 2rem;
+  transition: all 0.25s ease;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+}/*# sourceMappingURL=index.module.css.map */

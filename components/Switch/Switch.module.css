@@ -1,0 +1,36 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 1rem;
+  cursor: pointer;
+  border: 2px solid hsl(240deg, 75%, 60%);
+  border-radius: 45%;
+  padding: 0.25rem;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.label .checkbox {
+  display: none;
+}
+.label .icon {
+  font-size: 1.25rem;
+}
+.label .sun {
+  color: hsl(40deg, 80%, 70%);
+}
+.label .moon {
+  color: hsl(240deg, 85%, 75%);
+}
+.label .label-text {
+  display: none;
+}
+.label .switch:hover {
+  filter: brightness(1.25);
+}/*# sourceMappingURL=Switch.module.css.map */

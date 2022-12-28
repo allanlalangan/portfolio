@@ -1,0 +1,62 @@
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.skills {
+  padding: 2rem 0 12rem 0;
+  margin-top: -1px;
+  background-color: hsl(230deg, 35%, 20%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
+}
+@media (min-width: 37.5em) {
+  .skills {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 75em) {
+  .skills {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 96em) {
+  .skills {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.icon-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 0em) {
+  .icon-container {
+    padding: 0.5rem 0;
+  }
+}
+@media (min-width: 56.25em) {
+  .icon-container {
+    padding: 0;
+  }
+}
+.icon-container figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #d2d9f9;
+}
+
+.svg-icon {
+  width: 3rem;
+}
+
+.skills__icon {
+  font-size: 3rem;
+  color: white;
+}/*# sourceMappingURL=SkillsBanner.module.css.map */
