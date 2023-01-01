@@ -3,107 +3,118 @@
 @use "../../scss/abstracts/mixins" as mixins;
 
 .hero {
-  height: var.$mainContentHeight;
-  padding: 0 2rem;
-  @include mixins.flex(column);
-  justify-content: center;
+	height: var.$mainContentHeight;
+	padding: 0 2rem;
+	@include mixins.flex(column);
+	justify-content: center;
 }
 
 .greeting {
-  font-size: 1.25rem;
-  font-weight: 500;
+	font-size: 1.25rem;
+	font-weight: 500;
 }
 
 .name {
-  font-size: 2rem;
-  letter-spacing: 2px;
-  transition: color 0.5s ease;
+	font-size: 2rem;
+	font-weight: bolder;
+	letter-spacing: 2px;
+	transition: color 0.5s ease;
 
-  @include mixins.breakpoint(">=sm") {
-    font-size: 3rem;
-  }
-  @include mixins.breakpoint(">=lg") {
-    font-size: 4.5rem;
-  }
+	@include mixins.breakpoint(">=sm") {
+		font-size: 3rem;
+	}
+	@include mixins.breakpoint(">=lg") {
+		font-size: 4.5rem;
+	}
 }
 .title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  @include mixins.breakpoint(">=sm") {
-    font-size: 2rem;
-  }
-  @include mixins.breakpoint(">=md") {
-    padding-left: 1rem;
-  }
-  transition: color 0.5s ease, border-bottom 0.5s ease;
+	font-size: 1.5rem;
+	font-weight: 600;
+	@include mixins.breakpoint(">=sm") {
+		font-size: 2rem;
+	}
+	@include mixins.breakpoint(">=md") {
+		padding-left: 1rem;
+	}
+	transition: color 0.5s ease, border-bottom 0.5s ease;
 }
 
 .title.light {
-  border-bottom: 5px solid map-get(colors.$primary, "main");
+	border-bottom: 5px solid map-get(colors.$primary, "main");
 }
 .title.dark {
-  border-bottom: 5px solid map-get(colors.$secondary, "main");
+	border-bottom: 5px solid map-get(colors.$secondary, "main");
 }
 
 .light {
-  color: map-get(colors.$primary, "main");
+	color: map-get(colors.$primary, "main");
 }
 .dark {
-  color: map-get(colors.$secondary, "main");
+	color: map-get(colors.$secondary, "main");
 }
 .brief {
-  font-size: 1.25rem;
-  font-weight: 400;
-  width: 80%;
-  padding-top: 1rem;
-  @include mixins.breakpoint(">=sm") {
-    font-size: 1.5rem;
-    width: 65%;
-  }
-  @include mixins.breakpoint(">=md") {
-    width: 50%;
-  }
-  @include mixins.breakpoint(">=lg") {
-    width: 40%;
-  }
+	font-size: 1.25rem;
+	font-weight: 400;
+	width: 80%;
+	padding-top: 1rem;
+	@include mixins.breakpoint(">=sm") {
+		font-size: 1.5rem;
+		width: 65%;
+	}
+	@include mixins.breakpoint(">=md") {
+		width: 50%;
+	}
+	@include mixins.breakpoint(">=lg") {
+		width: 40%;
+	}
 }
 
 .action-button {
-  @include mixins.outlined-button(
-    map-get(colors.$primary, "main"),
-    map-get(colors.$background, "dark")
-  );
-  @include mixins.action-button-text();
-  margin: 1rem auto;
+	@include mixins.action-button-text();
+	margin: 1rem auto;
+	&.dark {
+		@include mixins.outlined-button(
+			map-get(colors.$primary, "main"),
+			map-get(colors.$background, "dark"),
+			map-get(colors.$text, "contrast")
+		);
+	}
+	&.light {
+		@include mixins.outlined-button(
+			map-get(colors.$primary, "main"),
+			map-get(colors.$background, "light"),
+			map-get(colors.$text, "main")
+		);
+	}
 }
 
 .action-button:hover {
-  // @include mixins.filled-button--hover();
-  // border: map-get(colors.$primary, "dark");
-  @include mixins.filled-button(map-get(colors.$primary, "dark"));
+	// @include mixins.filled-button--hover();
+	// border: map-get(colors.$primary, "dark");
+	@include mixins.filled-button(map-get(colors.$primary, "dark"));
 }
 
 .pattern {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	z-index: -1;
 }
 
 .pattern::before {
-  content: "";
-  position: absolute;
-  background-repeat: repeat;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.5;
+	content: "";
+	position: absolute;
+	background-repeat: repeat;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.5;
 }
 .light.pattern::before {
-  background-image: url("../../assets/topography-light.svg");
+	background-image: url("../../assets/topography-light.svg");
 }
 .dark.pattern::before {
-  background-image: url("../../assets/topography-dark.svg");
+	background-image: url("../../assets/topography-dark.svg");
 }
