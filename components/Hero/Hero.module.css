@@ -14,6 +14,7 @@
 
 .name {
   font-size: 2rem;
+  font-weight: bolder;
   letter-spacing: 2px;
   transition: color 0.5s ease;
 }
@@ -84,17 +85,27 @@
 }
 
 .action-button {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  margin: 1rem auto;
+}
+.action-button.dark {
   border: 2px solid hsl(240deg, 75%, 60%);
   background-color: hsl(230deg, 30%, 15%);
   color: #d2d9f9;
   border-radius: 0.75rem;
   padding: 1rem 2rem;
   transition: all 0.25s ease;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
-  margin: 1rem auto;
+}
+.action-button.light {
+  border: 2px solid hsl(240deg, 75%, 60%);
+  background-color: hsl(205deg, 60%, 90%);
+  color: hsl(220deg, 25%, 15%);
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  transition: all 0.25s ease;
 }
 
 .action-button:hover {

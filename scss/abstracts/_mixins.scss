@@ -3,76 +3,76 @@
 @use "../abstracts/variables" as var;
 
 @mixin breakpoint($size) {
-  @media (min-width: map-get($breakpoints-up, $size)) {
-    @content;
-  }
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
 }
 
 @mixin preview--desktop($h) {
-  height: $h;
-  width: (16/9) * $h;
+	height: $h;
+	width: (16/9) * $h;
 }
 
 @mixin preview--mobile($w) {
-  width: $w;
-  height: (16/9) * $w;
+	width: $w;
+	height: (16/9) * $w;
 }
 
 @mixin flex($direction: row, $justifyContent: null, $alignItems: null) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justifyContent;
-  align-items: $alignItems;
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
 }
 
 @mixin flex-row() {
-  display: flex;
+	display: flex;
 }
 
 @mixin flex-column() {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 @mixin action-button-text() {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 1.75px;
+	text-transform: uppercase;
 }
 @mixin filled-button(
-  $backgroundColor,
-  $borderRad: var.$borderRad__action-button,
-  $pY: 1rem,
-  $pX: 2rem
+	$backgroundColor,
+	$borderRad: var.$borderRad__action-button,
+	$pY: 1rem,
+	$pX: 2rem
 ) {
-  color: map-get(colors.$text, "contrast");
-  background-color: $backgroundColor;
-  border-radius: $borderRad;
-  border: 2px solid $backgroundColor;
-  padding: $pY $pX;
-  transition: all 0.25s ease;
+	color: map-get(colors.$text, "contrast");
+	background-color: $backgroundColor;
+	border-radius: $borderRad;
+	border: 2px solid $backgroundColor;
+	padding: $pY $pX;
+	transition: all 0.25s ease;
 }
 @mixin outlined-button(
-  $borderColor,
-  $backgroundColor,
-  $borderRad: var.$borderRad__action-button,
-  $pY: 1rem,
-  $pX: 2rem
+	$borderColor,
+	$backgroundColor,
+	$color,
+	$pY: 1rem,
+	$pX: 2rem
 ) {
-  border: 2px solid $borderColor;
-  background-color: $backgroundColor;
-  color: map-get(colors.$text, "contrast");
-  border-radius: $borderRad;
-  padding: $pY $pX;
-  transition: all 0.25s ease;
+	border: 2px solid $borderColor;
+	background-color: $backgroundColor;
+	color: $color;
+	border-radius: var.$borderRad__action-button;
+	padding: $pY $pX;
+	transition: all 0.25s ease;
 }
 
 @mixin filled-button--hover() {
-  // box-shadow: 0px 0px 2.5px 1px rgba(0, 0, 0, 0.2);
-  filter: brightness(1.25);
+	// box-shadow: 0px 0px 2.5px 1px rgba(0, 0, 0, 0.2);
+	filter: brightness(1.25);
 }
 
 @mixin shadow($offsetX, $offsetY, $blur, $spread, $alpha) {
-  box-shadow: $offsetX $offsetY $blur $spread rgba(0, 0, 0, $alpha);
+	box-shadow: $offsetX $offsetY $blur $spread rgba(0, 0, 0, $alpha);
 }
