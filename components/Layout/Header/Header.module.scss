@@ -1,251 +1,245 @@
-@use '../../../scss/abstracts/colors' as colors;
-@use '../../../scss/abstracts/variables' as var;
-@use '../../../scss/abstracts/mixins' as mixins;
+@use "../../../scss/abstracts/colors" as colors;
+@use "../../../scss/abstracts/variables" as var;
+@use "../../../scss/abstracts/mixins" as mixins;
 
 .header {
-  width: 100%;
-  padding: 0 2rem;
+	width: 100%;
+	padding: 0 2rem;
 
-  position: fixed;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: var.$headerHeight;
-  z-index: 1000;
-  transition: background-color 0.2s ease;
-  box-shadow: map-get(var.$shadow, 'header');
+	position: fixed;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: var.$headerHeight;
+	z-index: 1000;
+	transition: background-color 0.2s ease;
+	box-shadow: map-get(var.$shadow, "header");
 
-  @include mixins.breakpoint('>=md') {
-    justify-content: space-between;
-  }
+	@include mixins.breakpoint(">=md") {
+		justify-content: space-between;
+	}
 }
 
 .header.light {
-  background-color: map-get(colors.$background, 'light');
+	background-color: map-get(colors.$background, "light");
 }
 .header.dark {
-  background-color: map-get(colors.$background, 'dark');
+	background-color: map-get(colors.$background, "dark");
 }
 
 .main-banner {
-  width: 50%;
-  position: absolute;
-  left: 25%;
-  z-index: 10;
-  transition: color 0.2s ease, filter 0.25s ease;
+	width: 50%;
+	position: absolute;
+	left: 25%;
+	z-index: 10;
+	transition: color 0.2s ease, filter 0.25s ease;
 
-  @include mixins.flex(row, center, center);
+	@include mixins.flex(row, center, center);
 
-  @include mixins.breakpoint('>=sm') {
-    width: fit-content;
-    position: static;
-  }
+	@include mixins.breakpoint(">=sm") {
+		width: fit-content;
+		position: static;
+	}
 
-  .logo {
-    cursor: pointer;
-    @include mixins.flex(row, center, center);
-  }
+	.logo {
+		cursor: pointer;
+		@include mixins.flex(row, center, center);
+	}
 }
 .main-banner:hover {
-  color: map-get(colors.$primary, 'main');
-  filter: brightness(1.25);
+	color: map-get(colors.$primary, "main");
+	filter: brightness(1.25);
 }
 
 .main-title {
-  // color: map-get(colors.$primary, 'main');
-  margin-left: 0.125rem;
-  font-weight: 200;
-  font-size: 1.75rem;
-  display: none;
+	// color: map-get(colors.$primary, 'main');
+	margin-left: 0.125rem;
+	font-weight: 200;
+	font-size: 1.75rem;
+	display: none;
 
-  @include mixins.breakpoint('>=sm') {
-    display: flex;
-  }
+	@include mixins.breakpoint(">=sm") {
+		display: flex;
+	}
 
-  strong {
-    font-weight: 600;
-  }
+	strong {
+		font-weight: 600;
+	}
 }
 
 .alias {
-  font-weight: 800;
-  font-size: 1.75rem;
-  width: 100%;
-  @include mixins.flex-row();
-  justify-content: center;
+	font-weight: 800;
+	font-size: 1.75rem;
+	width: 100%;
+	@include mixins.flex-row();
+	justify-content: center;
 
-  @include mixins.breakpoint('>=sm') {
-    // width: 25%;
-    justify-content: space-between;
-  }
+	@include mixins.breakpoint(">=sm") {
+		// width: 25%;
+		justify-content: space-between;
+	}
 }
 
 .home-icon {
-  font-size: 2.25rem;
-  @include mixins.breakpoint('>=sm') {
-    // font-size: 3rem;
-    font-size: 1;
-  }
-  display: flex;
-  background-color: transparent;
-  // border-radius: 50%;
-  // padding: 0.25rem;
-  // @include mixins.shadow(0px, 1px, 3px, 0px, 0.1);
+	font-size: 3rem;
+	font-weight: 900;
+	font-style: italic;
+	display: flex;
 }
 
 .menu-button__container {
-  position: absolute;
-  z-index: 5;
-  right: 0;
-  height: 100%;
-  justify-content: center;
-  width: 100%;
+	position: absolute;
+	z-index: 5;
+	right: 0;
+	height: 100%;
+	justify-content: center;
+	width: 100%;
 
-  @include mixins.flex(row, space-between, center);
-  @include mixins.breakpoint('>=sm') {
-    position: static;
-    width: fit-content;
-    @include mixins.flex(row, center, center);
-  }
+	@include mixins.flex(row, space-between, center);
+	@include mixins.breakpoint(">=sm") {
+		position: static;
+		width: fit-content;
+		@include mixins.flex(row, center, center);
+	}
 
-  .menu-button {
-    border: 2px solid rgba($color: map-get(colors.$primary, 'main'), $alpha: 0);
-    border-radius: 45%;
-    padding: 0.25rem;
-    margin-right: 1rem;
-    transition: border 0.2s ease;
-    @include mixins.flex(column);
-    @include mixins.breakpoint('>=md') {
-      display: none;
-    }
+	.menu-button {
+		border: 2px solid rgba($color: map-get(colors.$primary, "main"), $alpha: 0);
+		border-radius: 45%;
+		padding: 0.25rem;
+		margin-right: 1rem;
+		transition: border 0.2s ease;
+		@include mixins.flex(column);
+		@include mixins.breakpoint(">=md") {
+			display: none;
+		}
 
-    .burger-icon {
-      font-size: 1.25rem;
-      color: map-get(colors.$primary, 'main');
-    }
-    .close-icon {
-      font-size: 1.25rem;
-      color: map-get(colors.$primary, 'light');
-    }
+		.burger-icon {
+			font-size: 1.25rem;
+			color: map-get(colors.$primary, "main");
+		}
+		.close-icon {
+			font-size: 1.25rem;
+			color: map-get(colors.$primary, "light");
+		}
 
-    &:hover {
-      font-size: 1.25rem;
-      border: 2px solid
-        rgba($color: map-get(colors.$primary, 'light'), $alpha: 1);
-    }
-    &.active {
-      font-size: 1.25rem;
-      border: 2px solid
-        rgba($color: map-get(colors.$primary, 'main'), $alpha: 1);
-      background-color: map-get(colors.$primary, 'main');
-    }
-  }
+		&:hover {
+			font-size: 1.25rem;
+			border: 2px solid
+				rgba($color: map-get(colors.$primary, "light"), $alpha: 1);
+		}
+		&.active {
+			font-size: 1.25rem;
+			border: 2px solid
+				rgba($color: map-get(colors.$primary, "main"), $alpha: 1);
+			background-color: map-get(colors.$primary, "main");
+		}
+	}
 }
 
 .nav {
-  @include mixins.flex(row, center, center);
+	@include mixins.flex(row, center, center);
 
-  height: 100%;
+	height: 100%;
 
-  .nav-links {
-    width: 100%;
-    height: 100vh;
-    // on mobile
-    position: absolute;
-    top: 0;
-    left: -40%;
-    opacity: 0;
-    pointer-events: none;
-    &.active {
-      pointer-events: all;
-      left: 0;
-      opacity: 1;
-    }
-    &.light {
-      // color: map-get(colors.$text, 'main');
-      background-color: map-get(colors.$background, 'light');
-    }
-    &.dark {
-      // color: map-get(colors.$text, 'contrast');
-      background-color: map-get(colors.$background, 'dark');
-    }
+	.nav-links {
+		width: 100%;
+		height: 100vh;
+		// on mobile
+		position: absolute;
+		top: 0;
+		left: -40%;
+		opacity: 0;
+		pointer-events: none;
+		&.active {
+			pointer-events: all;
+			left: 0;
+			opacity: 1;
+		}
+		&.light {
+			// color: map-get(colors.$text, 'main');
+			background-color: map-get(colors.$background, "light");
+		}
+		&.dark {
+			// color: map-get(colors.$text, 'contrast');
+			background-color: map-get(colors.$background, "dark");
+		}
 
-    font-weight: 600;
-    font-size: 0.75rem;
-    letter-spacing: 1.75px;
-    text-transform: uppercase;
-    transition: opacity 0.3s ease-out, left 0.35s ease-out,
-      background-color 0.2s ease;
+		font-weight: 600;
+		font-size: 0.75rem;
+		letter-spacing: 1.75px;
+		text-transform: uppercase;
+		transition: opacity 0.3s ease-out, left 0.35s ease-out,
+			background-color 0.2s ease;
 
-    // background-color: map-get(colors.$background, 'dark');
+		// background-color: map-get(colors.$background, 'dark');
 
-    @include mixins.flex(column, space-evenly, center);
-    @include mixins.breakpoint('>=sm') {
-      margin: 0;
-      padding: 0;
-    }
+		@include mixins.flex(column, space-evenly, center);
+		@include mixins.breakpoint(">=sm") {
+			margin: 0;
+			padding: 0;
+		}
 
-    @include mixins.breakpoint('>=md') {
-      pointer-events: all;
-      opacity: 1;
-      height: 100%;
-      position: static;
-      @include mixins.flex(row, center, center);
-    }
+		@include mixins.breakpoint(">=md") {
+			pointer-events: all;
+			opacity: 1;
+			height: 100%;
+			position: static;
+			@include mixins.flex(row, center, center);
+		}
 
-    .nav__link {
-      padding: 0 1rem;
-      @include mixins.flex(row, center, center);
-      cursor: pointer;
-      transition: color 0.2s ease, filter 0.25s ease;
+		.nav__link {
+			padding: 0 1rem;
+			@include mixins.flex(row, center, center);
+			cursor: pointer;
+			transition: color 0.2s ease, filter 0.25s ease;
 
-      .social-link {
-        @include mixins.flex(column, center, center);
-      }
-      .social-icon {
-        color: map-get(colors.$primary, 'main');
-        font-size: 1.5rem;
-      }
+			.social-link {
+				@include mixins.flex(column, center, center);
+			}
+			.social-icon {
+				color: map-get(colors.$primary, "main");
+				font-size: 1.5rem;
+			}
 
-      .social-link__text {
-        border: 0 !important;
-        clip: rect(1px, 1px, 1px, 1px) !important;
-        -webkit-clip-path: inset(50%) !important;
-        clip-path: inset(50%) !important;
-        height: 1px !important;
-        overflow: hidden !important;
-        margin: -1px !important;
-        padding: 0 !important;
-        position: absolute !important;
-        width: 1px !important;
-        white-space: nowrap !important;
-      }
+			.social-link__text {
+				border: 0 !important;
+				clip: rect(1px, 1px, 1px, 1px) !important;
+				-webkit-clip-path: inset(50%) !important;
+				clip-path: inset(50%) !important;
+				height: 1px !important;
+				overflow: hidden !important;
+				margin: -1px !important;
+				padding: 0 !important;
+				position: absolute !important;
+				width: 1px !important;
+				white-space: nowrap !important;
+			}
 
-      .cv-icon {
-        font-size: 1rem;
-      }
-    }
-    .nav__link:hover {
-      color: map-get(colors.$primary, 'main');
-      filter: brightness(1.5);
-      filter: brightness(1.25);
-    }
-    // .nav__link.button:hover {
-    // }
+			.cv-icon {
+				font-size: 1rem;
+			}
+		}
+		.nav__link:hover {
+			color: map-get(colors.$primary, "main");
+			filter: brightness(1.5);
+			filter: brightness(1.25);
+		}
+		// .nav__link.button:hover {
+		// }
 
-    .cv-link {
-      @include mixins.action-button-text();
+		.cv-link {
+			@include mixins.action-button-text();
 
-      @include mixins.filled-button(
-        map-get(colors.$primary, 'main'),
-        0.5rem,
-        0.5rem,
-        1.5rem
-      );
-      .cv-link__text {
-        padding: 0 0.25rem;
-      }
-    }
-  }
+			@include mixins.filled-button(
+				map-get(colors.$primary, "main"),
+				0.5rem,
+				0.5rem,
+				1.5rem
+			);
+			.cv-link__text {
+				padding: 0 0.25rem;
+			}
+		}
+	}
 }

@@ -17,8 +17,8 @@ const Header = ({ projectsRef, skillsRef, aboutRef, contactRef }) => {
 			<div className={styles["main-banner"]}>
 				<Link className={styles["home-link"]} href="/">
 					<figure className={styles.logo}>
-						<span className={styles["home-icon"]}>👹</span>
-						<span className={styles["main-title"]}>laDev</span>
+						<span className={styles["home-icon"]}>ᾰ</span>
+						{/* <span className={styles["main-title"]}>alLa</span> */}
 					</figure>
 				</Link>
 			</div>
