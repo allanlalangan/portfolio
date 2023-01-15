@@ -1,123 +1,123 @@
-@use "../scss/abstracts/mixins" as mixins;
-@use "../scss/abstracts/colors" as colors;
-@use "../scss/abstracts/variables" as var;
+@use '../scss/abstracts/mixins' as mixins;
+@use '../scss/abstracts/colors' as colors;
+@use '../scss/abstracts/variables' as var;
 
 .heading {
-  @include mixins.flex(row, center, center);
-  width: fit-content;
-  margin-left: 1rem;
-  @include mixins.breakpoint(">=sm") {
-    margin-left: 2rem;
-  }
-  padding: 1rem 1rem 1rem 0;
-  font-weight: 700;
-  font-size: 2.5rem;
-  border-bottom: 5px solid map-get(colors.$primary, "main");
-  padding-top: var.$headerHeight;
+	@include mixins.flex(row, center, center);
+	width: fit-content;
+	margin-left: 1rem;
+	@include mixins.breakpoint('>=sm') {
+		margin-left: 2rem;
+	}
+	padding: 1rem 1rem 1rem 0;
+	font-weight: 700;
+	font-size: 2.5rem;
+	border-bottom: 5px solid map-get(colors.$primary, 'main');
+	padding-top: var.$headerHeight;
 }
 
 .contrast-heading {
-  color: map-get(colors.$primary, "light");
+	color: map-get(colors.$primary, 'light');
 }
 .projects {
-  // background-color: map-get(colors.$card, 'dark');
-  position: relative;
-  padding: 0 1rem;
-  padding-bottom: 4rem;
-  @include mixins.breakpoint(">=sm") {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  @include mixins.breakpoint(">=md") {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-  @include mixins.breakpoint(">=lg") {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-  @include mixins.breakpoint(">=xl") {
-    padding: 0;
-    padding: 6rem;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 3rem;
-  }
+	// background-color: map-get(colors.$card, 'dark');
+	position: relative;
+	padding: 0 1rem;
+	padding-bottom: 4rem;
+	@include mixins.breakpoint('>=sm') {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	@include mixins.breakpoint('>=md') {
+		padding-left: 6rem;
+		padding-right: 6rem;
+	}
+	@include mixins.breakpoint('>=lg') {
+		padding-left: 12rem;
+		padding-right: 12rem;
+	}
+	@include mixins.breakpoint('>=xl') {
+		padding-left: 24rem;
+		padding-right: 24rem;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 3rem;
+	}
 }
 
 .projects::before {
-  content: "";
-  background: map-get(colors.$section, "dark");
-  height: 107%;
-  @include mixins.breakpoint(">=md") {
-    height: 112%;
-  }
-  @include mixins.breakpoint(">=lg") {
-    height: 110%;
-  }
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  // clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
+	content: '';
+	background: map-get(colors.$section, 'dark');
+	height: 107%;
+	@include mixins.breakpoint('>=md') {
+		height: 112%;
+	}
+	@include mixins.breakpoint('>=lg') {
+		height: 110%;
+	}
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	// clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
 
-  z-index: -1;
+	z-index: -1;
 }
 
 .about {
-  position: relative;
+	position: relative;
 }
 
 .skills {
-  position: relative;
+	position: relative;
 }
 
 .currently-learning {
-  @include mixins.breakpoint(">=md") {
-    width: 50%;
-  }
+	@include mixins.breakpoint('>=md') {
+		width: 50%;
+	}
 }
 
 .contact {
-  position: relative;
+	position: relative;
 }
 
 .contact-heading {
-  margin-top: 4rem;
-  color: map-get(colors.$primary, "light");
+	margin-top: 4rem;
+	color: map-get(colors.$primary, 'light');
 }
 
 .contact::before {
-  content: "";
-  background: map-get(colors.$section, "dark");
-  height: 100%;
-  width: 100%;
-  left: 0;
-  bottom: 75%;
-  position: absolute;
-  // clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
+	content: '';
+	background: map-get(colors.$section, 'dark');
+	height: 100%;
+	width: 100%;
+	left: 0;
+	bottom: 75%;
+	position: absolute;
+	// clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
 
-  z-index: -1;
-  @include mixins.breakpoint(">=md") {
-    height: 100%;
-  }
-  @include mixins.breakpoint(">=lg") {
-    height: 100%;
-  }
+	z-index: -1;
+	@include mixins.breakpoint('>=md') {
+		height: 100%;
+	}
+	@include mixins.breakpoint('>=lg') {
+		height: 100%;
+	}
 }
 
 .svg-icon {
-  width: 3rem;
-  margin: 0.5rem;
+	width: 3rem;
+	margin: 0.5rem;
 }
 .font-icon {
-  font-size: 3rem;
-  margin: 0.5rem;
+	font-size: 3rem;
+	margin: 0.5rem;
 }
 
 .action-button {
-  @include mixins.filled-button(map-get(colors.$secondary, "main"));
-  @include mixins.action-button-text();
+	@include mixins.filled-button(map-get(colors.$secondary, 'main'));
+	@include mixins.action-button-text();
 }
