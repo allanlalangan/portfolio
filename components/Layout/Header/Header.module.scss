@@ -1,6 +1,6 @@
-@use "../../../scss/abstracts/colors" as colors;
-@use "../../../scss/abstracts/variables" as var;
-@use "../../../scss/abstracts/mixins" as mixins;
+@use '../../../scss/abstracts/colors' as colors;
+@use '../../../scss/abstracts/variables' as var;
+@use '../../../scss/abstracts/mixins' as mixins;
 
 .header {
 	width: 100%;
@@ -14,18 +14,18 @@
 	height: var.$headerHeight;
 	z-index: 1000;
 	transition: background-color 0.2s ease;
-	box-shadow: map-get(var.$shadow, "header");
+	box-shadow: map-get(var.$shadow, 'header');
 
-	@include mixins.breakpoint(">=md") {
+	@include mixins.breakpoint('>=md') {
 		justify-content: space-between;
 	}
 }
 
 .header.light {
-	background-color: map-get(colors.$background, "light");
+	background-color: map-get(colors.$background, 'light');
 }
 .header.dark {
-	background-color: map-get(colors.$background, "dark");
+	background-color: map-get(colors.$background, 'dark');
 }
 
 .main-banner {
@@ -37,7 +37,7 @@
 
 	@include mixins.flex(row, center, center);
 
-	@include mixins.breakpoint(">=sm") {
+	@include mixins.breakpoint('>=sm') {
 		width: fit-content;
 		position: static;
 	}
@@ -48,7 +48,7 @@
 	}
 }
 .main-banner:hover {
-	color: map-get(colors.$primary, "main");
+	color: map-get(colors.$primary, 'main');
 	filter: brightness(1.25);
 }
 
@@ -59,7 +59,7 @@
 	font-size: 1.75rem;
 	display: none;
 
-	@include mixins.breakpoint(">=sm") {
+	@include mixins.breakpoint('>=sm') {
 		display: flex;
 	}
 
@@ -75,13 +75,14 @@
 	@include mixins.flex-row();
 	justify-content: center;
 
-	@include mixins.breakpoint(">=sm") {
+	@include mixins.breakpoint('>=sm') {
 		// width: 25%;
 		justify-content: space-between;
 	}
 }
 
 .home-icon {
+	font-family: 'Times New Roman', serif;
 	font-size: 3rem;
 	font-weight: 900;
 	font-style: italic;
@@ -97,42 +98,42 @@
 	width: 100%;
 
 	@include mixins.flex(row, space-between, center);
-	@include mixins.breakpoint(">=sm") {
+	@include mixins.breakpoint('>=sm') {
 		position: static;
 		width: fit-content;
 		@include mixins.flex(row, center, center);
 	}
 
 	.menu-button {
-		border: 2px solid rgba($color: map-get(colors.$primary, "main"), $alpha: 0);
+		border: 2px solid rgba($color: map-get(colors.$primary, 'main'), $alpha: 0);
 		border-radius: 45%;
 		padding: 0.25rem;
 		margin-right: 1rem;
 		transition: border 0.2s ease;
 		@include mixins.flex(column);
-		@include mixins.breakpoint(">=md") {
+		@include mixins.breakpoint('>=md') {
 			display: none;
 		}
 
 		.burger-icon {
 			font-size: 1.25rem;
-			color: map-get(colors.$primary, "main");
+			color: map-get(colors.$primary, 'main');
 		}
 		.close-icon {
 			font-size: 1.25rem;
-			color: map-get(colors.$primary, "light");
+			color: map-get(colors.$primary, 'light');
 		}
 
 		&:hover {
 			font-size: 1.25rem;
 			border: 2px solid
-				rgba($color: map-get(colors.$primary, "light"), $alpha: 1);
+				rgba($color: map-get(colors.$primary, 'light'), $alpha: 1);
 		}
 		&.active {
 			font-size: 1.25rem;
 			border: 2px solid
-				rgba($color: map-get(colors.$primary, "main"), $alpha: 1);
-			background-color: map-get(colors.$primary, "main");
+				rgba($color: map-get(colors.$primary, 'main'), $alpha: 1);
+			background-color: map-get(colors.$primary, 'main');
 		}
 	}
 }
@@ -158,11 +159,11 @@
 		}
 		&.light {
 			// color: map-get(colors.$text, 'main');
-			background-color: map-get(colors.$background, "light");
+			background-color: map-get(colors.$background, 'light');
 		}
 		&.dark {
 			// color: map-get(colors.$text, 'contrast');
-			background-color: map-get(colors.$background, "dark");
+			background-color: map-get(colors.$background, 'dark');
 		}
 
 		font-weight: 600;
@@ -175,12 +176,12 @@
 		// background-color: map-get(colors.$background, 'dark');
 
 		@include mixins.flex(column, space-evenly, center);
-		@include mixins.breakpoint(">=sm") {
+		@include mixins.breakpoint('>=sm') {
 			margin: 0;
 			padding: 0;
 		}
 
-		@include mixins.breakpoint(">=md") {
+		@include mixins.breakpoint('>=md') {
 			pointer-events: all;
 			opacity: 1;
 			height: 100%;
@@ -198,7 +199,7 @@
 				@include mixins.flex(column, center, center);
 			}
 			.social-icon {
-				color: map-get(colors.$primary, "main");
+				color: map-get(colors.$primary, 'main');
 				font-size: 1.5rem;
 			}
 
@@ -221,7 +222,7 @@
 			}
 		}
 		.nav__link:hover {
-			color: map-get(colors.$primary, "main");
+			color: map-get(colors.$primary, 'main');
 			filter: brightness(1.5);
 			filter: brightness(1.25);
 		}
@@ -232,7 +233,7 @@
 			@include mixins.action-button-text();
 
 			@include mixins.filled-button(
-				map-get(colors.$primary, "main"),
+				map-get(colors.$primary, 'main'),
 				0.5rem,
 				0.5rem,
 				1.5rem
