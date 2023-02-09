@@ -9,10 +9,10 @@ export const socialURLs = {
 export const about = {
 	name: { first: 'Allan', last: 'Lalangan' },
 	alias: 'Allan LaDev',
-	title: 'Front-end Engineer',
+	title: 'Front-End Engineer',
 	greeting: 'Hello World. I am',
 	brief:
-		'I build responsive, accessible and beautifully designed full-stack web applications.',
+		'I build responsive and beautifully designed full-stack web applications.',
 	actionCall: 'View my work',
 	cv: '/',
 	portrait,
